@@ -141,6 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa3dd2b95b40114fb535af1f2309f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNormal: {fileID: 0}
+  fantasmaNormal: {fileID: 0}
   velocidad: 10
   puedoMoverme: 1
