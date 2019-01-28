@@ -17,6 +17,8 @@ public class Fantasma_normal : MonoBehaviour
     public float velocidad = 10f;
     public bool puedoMoverme = true;
 
+    Fantasma_normal scriptFantasma;
+
     //Declaramos el rb del fantasma
     Rigidbody2D rb;
 
@@ -24,6 +26,7 @@ public class Fantasma_normal : MonoBehaviour
     {
         //Obtenemos el rb de el fantasma
         rb = GetComponent<Rigidbody2D>();
+        scriptFantasma = GetComponent<Fantasma_normal>();
     }
 
     // Update is called once per frame
@@ -98,7 +101,25 @@ public class Fantasma_normal : MonoBehaviour
     //Cuando choco con un colider puedo volver a moverme
     private void OnCollisionEnter2D(Collision2D col)
     {
-        puedoMoverme = true;
-        
+        if (col.gameObject.CompareTag("Player"))
+        {
+            if (!col.transform.parent==transform)
+            {
+                transform.SetParent(col.transform);
+                Destroy(scriptFantasma);
+                Destroy(rb);
+            }
+            
+
+        }
+        else
+        {
+            puedoMoverme = true;
+
+        }
+
+
     }
+
+
 }
