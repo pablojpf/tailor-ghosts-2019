@@ -40,7 +40,8 @@ public class Iman : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             transform.SetParent(col.gameObject.transform);
-            Destroy(col.gameObject.GetComponent<Rigidbody2D>());
+            Destroy(transform.GetComponent<Rigidbody2D>());
+            Destroy(GetComponent<Iman>());
         }
     }
 }

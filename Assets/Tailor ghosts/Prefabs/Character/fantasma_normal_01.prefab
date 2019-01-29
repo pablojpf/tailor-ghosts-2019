@@ -12,7 +12,11 @@ GameObject:
   - component: {fileID: 1152498468390340344}
   - component: {fileID: 9221384491767030402}
   - component: {fileID: 6536278766204637810}
+<<<<<<< HEAD
   - component: {fileID: 3186006314364404271}
+=======
+  - component: {fileID: 2339024453399215421}
+>>>>>>> 16476cb9c2a9455ba95bcc4f647210ee3a2583ca
   m_Layer: 0
   m_Name: fantasma_normal_01
   m_TagString: Player
@@ -117,14 +121,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 10
   puedoMoverme: 1
+<<<<<<< HEAD
 --- !u!61 &3186006314364404271
 BoxCollider2D:
+=======
+--- !u!95 &2339024453399215421
+Animator:
+  serializedVersion: 3
+>>>>>>> 16476cb9c2a9455ba95bcc4f647210ee3a2583ca
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6115159087392803820}
   m_Enabled: 1
+<<<<<<< HEAD
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -143,3 +154,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+=======
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 283f9975a5c83e44295d8a456f9df35c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+>>>>>>> 16476cb9c2a9455ba95bcc4f647210ee3a2583ca
