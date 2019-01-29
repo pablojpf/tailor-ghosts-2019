@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7343553086763852188}
   - component: {fileID: 9221384491767030402}
   - component: {fileID: 6536278766204637810}
+  - component: {fileID: 2339024453399215421}
   m_Layer: 0
   m_Name: fantasma_normal_01
   m_TagString: Player
@@ -185,3 +186,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 10
   puedoMoverme: 1
+--- !u!95 &2339024453399215421
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115159087392803820}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 283f9975a5c83e44295d8a456f9df35c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
