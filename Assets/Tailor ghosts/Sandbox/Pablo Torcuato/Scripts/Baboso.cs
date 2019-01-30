@@ -9,7 +9,8 @@ public class Baboso : MonoBehaviour
     Vector2 posicionInicial;
     Rigidbody2D rb;
     GameObject nuevaBaba;
-
+    SpriteRenderer sr;
+    
     //Variables de los Controles
     Vector3 pincho;
     Vector3 suelto;
@@ -23,6 +24,7 @@ public class Baboso : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         posicionInicial = transform.position;
         rb = GetComponent<Rigidbody2D>();
         nuevaBaba = Instantiate(baba, transform.position, transform.rotation);
@@ -72,10 +74,6 @@ public class Baboso : MonoBehaviour
         Vector3 dif = suelto - pincho;
         if (puedoMoverme)
         {
-
-            //Si el valor absoluto en x es mayor que el valor absoluto en y
-            //Entonces la velocidad irá en el eje x
-            //dependiendo de si la dirección es positiva o negativa irá hacia arriba o hacia abajo
             if (Mathf.Abs(dif.x) > Mathf.Abs(dif.y))
             {
                 if (dif.x > 0)
@@ -91,8 +89,6 @@ public class Baboso : MonoBehaviour
 
                 puedoMoverme = false;
             }
-            //Si no, la velocidad irá en el eje y
-            //dependiendo de si la dirección es positiva o negativa irá hacia derecha o izquierda
             else
             {
                 if (dif.y > 0)
@@ -121,6 +117,7 @@ public class Baboso : MonoBehaviour
                 transform.SetParent(col.transform);
                 Destroy(GetComponent<Baboso>());
                 Destroy(rb);
+                sr.sprite = col.gameObject.GetComponent<SpriteRenderer>().sprite;
             }
 
 
@@ -130,10 +127,10 @@ public class Baboso : MonoBehaviour
             puedoMoverme = true;
 
         }
-        bool baja = false;
-        bool sube = false;
-        bool izda = false;
-        bool dcha = false;
+        baja = false;
+        sube = false;
+        izda = false;
+        dcha = false;
 
     }
 
