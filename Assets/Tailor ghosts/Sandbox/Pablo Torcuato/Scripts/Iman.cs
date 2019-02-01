@@ -10,6 +10,7 @@ public class Iman : MonoBehaviour
     public float distancia = 1f;
     public float velocidad = 5f;
     public float altura;
+    public GameObject fantasmaNormal;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,9 +40,12 @@ public class Iman : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            transform.SetParent(col.gameObject.transform);
-            Destroy(transform.GetComponent<Rigidbody2D>());
-            Destroy(GetComponent<Iman>());
+            if (!col.transform.parent == transform)
+            {
+                Instantiate(fantasmaNormal, transform.position, transform.rotation);
+                fantasmaNormal.transform.SetParent(col.transform);
+                Destroy(gameObject);
+            }
         }
     }
 }
