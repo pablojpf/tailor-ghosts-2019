@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Baboso : MonoBehaviour
+public class Fantasma_Baboso: MonoBehaviour
 {
     public GameObject baba;
+    public GameObject fantasmaNormal;
     Vector2 posicionActual;
     Vector2 posicionInicial;
     Rigidbody2D rb;
@@ -114,10 +115,8 @@ public class Baboso : MonoBehaviour
         {
             if (!col.transform.parent == transform)
             {
-                transform.SetParent(col.transform);
-                Destroy(GetComponent<Baboso>());
-                Destroy(rb);
-                sr.sprite = col.gameObject.GetComponent<SpriteRenderer>().sprite;
+                Instantiate(fantasmaNormal, transform.position, transform.rotation);
+                Destroy(gameObject);
             }
 
 
