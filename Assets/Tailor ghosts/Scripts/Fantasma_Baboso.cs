@@ -10,7 +10,6 @@ public class Fantasma_Baboso: MonoBehaviour
     Vector2 posicionInicial;
     Rigidbody2D rb;
     GameObject nuevaBaba;
-    SpriteRenderer sr;
     
     //Variables de los Controles
     Vector3 pincho;
@@ -25,7 +24,6 @@ public class Fantasma_Baboso: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
         posicionInicial = transform.position;
         rb = GetComponent<Rigidbody2D>();
         nuevaBaba = Instantiate(baba, transform.position, transform.rotation);

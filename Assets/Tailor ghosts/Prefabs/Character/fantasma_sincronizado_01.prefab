@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 379339873803493720}
   - component: {fileID: 1840277671442822081}
   - component: {fileID: 996669352}
+  - component: {fileID: 276240259}
+  - component: {fileID: 276240260}
   m_Layer: 0
   m_Name: fantasma_sincronizado_01
   m_TagString: Untagged
@@ -148,3 +150,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &276240259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537543369673402806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8166ffdf0008ac49bd50749ed88fdac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &276240260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537543369673402806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf657b53070bce843a851d2f69df721f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 10
+  fantasmaNormal: {fileID: 4647705640409927777, guid: acf14e08434d48f46b48b06ad9ce6c8f,
+    type: 3}

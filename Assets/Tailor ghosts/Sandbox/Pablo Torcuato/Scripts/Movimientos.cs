@@ -9,15 +9,14 @@ public class Movimientos : MonoBehaviour
     bool puedoMoverme = true;
     //Hacemos una variable estática de tipo vector2 para que sea compatible con el rigidbody.velocity del script "Coordinados"
     public static Vector2 direccion;
-    SpriteRenderer sr;
     //Variables Controles
     Vector3 pincho;
     Vector3 suelto;
-
+    public GameObject fantasmaNormal;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+      
     }
 
     // Update is called once per frame
@@ -94,10 +93,8 @@ public class Movimientos : MonoBehaviour
         {
             if (!col.transform.parent == transform)
             {
-                transform.SetParent(col.transform);
-                Destroy(GetComponent<Coordinados>());
-                Destroy(rb);
-                sr.sprite = col.gameObject.GetComponent<SpriteRenderer>().sprite;
+                Instantiate(fantasmaNormal, transform.position, transform.rotation);
+                Destroy(gameObject);
             }
 
 
