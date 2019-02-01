@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fuertote : MonoBehaviour
+public class Fantasma_Vikingo : MonoBehaviour
 {
     //Variables del personaje
     Rigidbody2D rb;
     public float velocidad = 10f;
     bool puedoMoverme = true;
-
+    public GameObject fantasmaNormal;
     //Variables de la acción
     float ejeX = 0f;
     float ejeY = 0f;
@@ -34,13 +34,27 @@ public class Fuertote : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
-        puedoMoverme = true;
         rb.velocity = Vector2.zero;
         if (col.gameObject.CompareTag("Bloque"))
         {
-            col.gameObject.transform.Translate(new Vector3(ejeX ,ejeY , 0f));
+            col.gameObject.transform.Translate(new Vector3(ejeX, ejeY, 0f));
             ejeX = 0f;
             ejeY = 0f;
+        }
+        if (col.gameObject.CompareTag("Player"))
+        {
+            if (!col.transform.parent == transform)
+            {
+                Instantiate(fantasmaNormal, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
+
+
+        }
+        else
+        {
+            puedoMoverme = true;
+
         }
     }
 
@@ -104,4 +118,5 @@ public class Fuertote : MonoBehaviour
         Mover();
 
     }
+   
 }

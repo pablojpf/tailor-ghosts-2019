@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6855671441752616839}
   - component: {fileID: 830150640118798139}
   - component: {fileID: 3514594413321152595}
+  - component: {fileID: 1503187690254527785}
   m_Layer: 0
   m_Name: fantasma_vikingo_01
   m_TagString: Untagged
@@ -128,3 +129,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.92746514, y: 1.2014263}
   m_EdgeRadius: 0
+--- !u!114 &1503187690254527785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096589063700734360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3503e2fb0fae9b24c93c731085f9e120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 10
+  fantasmaNormal: {fileID: 4647705640409927777, guid: acf14e08434d48f46b48b06ad9ce6c8f,
+    type: 3}
