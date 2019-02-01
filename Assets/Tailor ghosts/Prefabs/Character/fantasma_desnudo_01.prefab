@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa3dd2b95b40114fb535af1f2309f81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fantasmaNormal: {fileID: 6115159087392803820, guid: 78af3bc2e58a60f4a8d8f3490e4e89ed,
+  fantasmaNormal: {fileID: 4647705640409927777, guid: acf14e08434d48f46b48b06ad9ce6c8f,
     type: 3}
   velocidad: 10
   puedoMoverme: 1
