@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Fantasma_dormido : MonoBehaviour
 {
+    
+    Fantasma_dormido scriptFantasmaDormido;
    
     private void OnCollisionEnter2D(Collision2D col)
     {
@@ -12,6 +14,7 @@ public class Fantasma_dormido : MonoBehaviour
         {
             transform.SetParent(col.transform);
             
+            Destroy(scriptFantasmaDormido);
         }
     }
 

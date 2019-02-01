@@ -14,8 +14,8 @@ public class Fuertote : MonoBehaviour
     float ejeY = 0f;
 
     //Variables de los Controles
-    new Vector3 pincho;
-    new Vector3 suelto;
+    Vector3 pincho;
+    Vector3 suelto;
 
 
 

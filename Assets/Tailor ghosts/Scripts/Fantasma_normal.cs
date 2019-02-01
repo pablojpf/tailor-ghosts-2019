@@ -7,8 +7,8 @@ public class Fantasma_normal : MonoBehaviour
     //Creamos dos vectores, uno para detectar dónde pulso por primera vez
     //y dónde suelto para más tarde calcular la diferencia entre esas posiciones
 
-    new Vector3 pincho;
-    new Vector3 suelto;
+    Vector3 pincho;
+    Vector3 suelto;
 
     //Declaramos una velocidad 
     //Y un booleano para saber si podemos movernos o no para así impedir
@@ -121,5 +121,8 @@ public class Fantasma_normal : MonoBehaviour
 
     }
 
-
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        puedoMoverme = true;
+    }
 }
