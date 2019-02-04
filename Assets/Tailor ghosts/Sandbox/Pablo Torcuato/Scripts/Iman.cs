@@ -42,9 +42,12 @@ public class Iman : MonoBehaviour
         {
             if (!col.transform.parent == transform)
             {
-                Instantiate(fantasmaNormal, transform.position, transform.rotation);
-                fantasmaNormal.transform.SetParent(col.transform);
+                GameObject copiaNormal;
+                copiaNormal = Instantiate(fantasmaNormal, transform.position, transform.rotation);
+                copiaNormal.transform.SetParent(col.transform);
+                copiaNormal.GetComponent<Rigidbody2D>().simulated = false;
                 Destroy(gameObject);
+                //Si no desactivamos el rigidbody del fantasma al que nos unimos, solo se moverá 1
             }
         }
     }
