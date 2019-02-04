@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Levels/Nivel1_1.unity
+    guid: abac2daf8ecaa2d4eb4a1793549ef852
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Others/Menu_principal.unity
+    guid: 39e2d324ddd081a4a877a00575ca6490
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Others/Menu_seleccion_nivel.unity
+    guid: 5413f06b39625284c98232a26c80179a
   m_configObjects: {}
