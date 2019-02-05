@@ -17,15 +17,16 @@ public class Baba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(toca == true)
+        if(toca == true && BabaController.dentro == false)
         {
             posicionPlayer.position = Vector2.MoveTowards(posicionPlayer.position, posicionBaba, 0.01f);
             Invoke("Despega", 0.5f);
+            
         }
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-
+        
         if (col.gameObject.transform.CompareTag("Player"))
         {           
             posicionPlayer = col.gameObject.transform;
@@ -33,11 +34,16 @@ public class Baba : MonoBehaviour
             col.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
         }
+       
     }
        
     void Despega()
     {
         toca = false;
+    }
+    void Fuera()
+    {
+
     }
 
 }
