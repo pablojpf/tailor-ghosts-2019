@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 857227463441322022}
   - component: {fileID: 5844235145937250367}
   m_Layer: 0
-  m_Name: Dedal
+  m_Name: dedal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,5 +126,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8229571, y: 0.9847846}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
