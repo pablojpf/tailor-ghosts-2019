@@ -38,4 +38,9 @@ public class GameController_menuseleccion : MonoBehaviour
     }
 
 
+    public void MenuSeleccion()
+    {
+        SceneManager.LoadScene(sceneName: "Menu_seleccion_nivel");
+    }
+
 }
