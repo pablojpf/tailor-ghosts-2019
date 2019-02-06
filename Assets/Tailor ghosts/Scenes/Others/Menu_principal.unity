@@ -172,7 +172,7 @@ MonoBehaviour:
   anim_MenuLogros: {fileID: 1060821031}
   anim_MusicaOnOff: {fileID: 1033595484}
   anim_SonidoOnOff: {fileID: 2043110245}
-  botonPlay: {fileID: 2131919110}
+  botonPlay: {fileID: 2131919112}
   sonido_play: {fileID: 2131919115}
   sonido_ajustes: {fileID: 520225888}
   sonido_atras: {fileID: 613814150}

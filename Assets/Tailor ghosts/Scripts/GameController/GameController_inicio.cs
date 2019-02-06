@@ -11,7 +11,7 @@ public class GameController_inicio : MonoBehaviour
     public Animator anim_MenuLogros;
     public Animator anim_MusicaOnOff;
     public Animator anim_SonidoOnOff;
-    public GameObject botonPlay;
+    public Button botonPlay;
 
     private bool sonidoActivo = true;
     private bool musicaActiva = true;
@@ -42,6 +42,8 @@ public class GameController_inicio : MonoBehaviour
         
         anim_UIajustes.SetBool("activar", true);
         anim_MenuLogros.SetBool("activar", false);
+        botonPlay.interactable = false;
+
     }
 
     public void Menulogros()
@@ -49,7 +51,7 @@ public class GameController_inicio : MonoBehaviour
 
         anim_UIajustes.SetBool("activar", false);
         anim_MenuLogros.SetBool("activar", true);
-        
+        botonPlay.interactable = true;
     }
     public void SonidoAdelante()
     {
