@@ -22,8 +22,6 @@ public class GameController_inicio : MonoBehaviour
     public AudioSource sonido_atras;
 
 
-
-    // Start is called before the first frame update
     void Start()
     {
        
@@ -41,7 +39,7 @@ public class GameController_inicio : MonoBehaviour
     {
         sonido_ajustes.Play(0);
 
-        Debug.Log("ajustes");
+        
         anim_UIajustes.SetBool("activar", true);
         anim_MenuLogros.SetBool("activar", false);
     }
@@ -56,16 +54,13 @@ public class GameController_inicio : MonoBehaviour
     public void SonidoAdelante()
     {
         sonido_play.Play(0);
-        Debug.Log("suena");
+       
     }
     public void SonidoAtras()
     {
         sonido_atras.Play(0);
-        Debug.Log("suena");
+        
     }
-
-
-
 
     
     public void Sonidoonoff()
