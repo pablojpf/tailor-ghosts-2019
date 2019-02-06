@@ -13,13 +13,13 @@ public class GameController_inicio : MonoBehaviour
     public Animator anim_SonidoOnOff;
     public GameObject botonPlay;
 
+    private bool sonidoActivo = true;
+    private bool musicaActiva = true;
+
 
     public AudioSource sonido_play;
     public AudioSource sonido_ajustes;
     public AudioSource sonido_atras;
-
-    private bool sonidoActivo = true;
-    private bool musicaActiva = true;
 
 
 
@@ -81,6 +81,9 @@ public class GameController_inicio : MonoBehaviour
         anim_MusicaOnOff.SetBool("activar", musicaActiva);
      
     }
+
+
+    
 
 
 }

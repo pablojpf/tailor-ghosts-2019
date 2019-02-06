@@ -1004,11 +1004,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 67845790}
-<<<<<<< HEAD
         m_MethodName: SonidoAdelante
-=======
         m_MethodName: Musicaonoff
->>>>>>> b2bb466a05ca33fc18d8e2621386cc08f9d48b31
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1566,11 +1563,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 67845790}
-<<<<<<< HEAD
         m_MethodName: SonidoAdelante
-=======
         m_MethodName: Sonidoonoff
->>>>>>> b2bb466a05ca33fc18d8e2621386cc08f9d48b31
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
