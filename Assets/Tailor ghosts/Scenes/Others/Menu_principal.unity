@@ -1004,7 +1004,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 67845790}
-        m_MethodName: SonidoAdelante
         m_MethodName: Musicaonoff
         m_Mode: 1
         m_Arguments:
@@ -1563,7 +1562,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 67845790}
-        m_MethodName: SonidoAdelante
         m_MethodName: Sonidoonoff
         m_Mode: 1
         m_Arguments:
