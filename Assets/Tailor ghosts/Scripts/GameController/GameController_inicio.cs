@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameController_inicio : MonoBehaviour
 {
     public Animator anim_UIajustes;
+    public Animator anim_MenuLogros;
     public GameObject botonPlay;
 
 
@@ -25,8 +26,16 @@ public class GameController_inicio : MonoBehaviour
 
     public void Ajustes()
     {
-
         anim_UIajustes.SetBool("activar", true);
-        Time.timeScale = 0f;
+        anim_MenuLogros.SetBool("activar", false);
     }
+
+    public void Menulogros()
+    {
+
+        anim_UIajustes.SetBool("activar", false);
+        anim_MenuLogros.SetBool("activar", true);
+        
+    }
+
 }
