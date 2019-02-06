@@ -9,11 +9,12 @@ public class GameController_ingame : MonoBehaviour
 
     public Animator anim_UIingame;
     public Animator anim_pausa;
+    public Animator anim_victoria;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim_UIingame.SetBool("activar", false);
     }
 
     // Update is called once per frame
@@ -46,5 +47,13 @@ public class GameController_ingame : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName: "Menu_seleccion_nivel");
         Time.timeScale = 1f;
+    }
+    public void Nivel1_2()
+    {
+        SceneManager.LoadScene(sceneName: "Nivel1_2");
+    }
+    public void Nivel2_1()
+    {
+        SceneManager.LoadScene(sceneName: "Nivel2_1");
     }
 }
