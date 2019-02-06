@@ -16,11 +16,12 @@ public class Fantasma_Baboso: MonoBehaviour
     Vector3 suelto;
     public float velocidad = 10f;
     public bool puedoMoverme = true;
-    bool baja = false;
-    bool sube = false;
-    bool izda = false;
-    bool dcha = false;
+    public bool baja = false;
+    public bool sube = false;
+    public bool izda = false;
+    public bool dcha = false;
 
+    public bool encima = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,29 +33,44 @@ public class Fantasma_Baboso: MonoBehaviour
     void Update()
     {
         posicionActual = transform.position;
+        {
+            if (posicionActual.x >= posicionInicial.x + 1 && dcha)
+            {
 
-        if (posicionActual.x >= posicionInicial.x + 1&&dcha)
-        {
-            nuevaBaba = Instantiate(baba, transform.position, transform.rotation);
-            posicionInicial.x = posicionInicial.x + 1;
+                if (encima == false)
+                {
+                    nuevaBaba = Instantiate(baba, transform.position - new Vector3(0.2f, 0, 0), transform.rotation);
+                }
+                posicionInicial.x = posicionInicial.x + 1;
+            }
+
+            if (posicionActual.x <= posicionInicial.x - 1 && izda)
+            {
+                if (encima == false)
+                {                   
+                    nuevaBaba = Instantiate(baba, transform.position + new Vector3(0.2f, 0, 0), transform.rotation);
+                }
+                posicionInicial.x = posicionInicial.x - 1;
+            }
+            if (posicionActual.y >= posicionInicial.y + 1 && sube)
+            {
+                if (encima == false)
+                {
+                    nuevaBaba = Instantiate(baba, transform.position - new Vector3(0,0.2f,0), transform.rotation);
+                }
+                posicionInicial.y = posicionInicial.y + 1;
+            }
+
+            if (posicionActual.y <= posicionInicial.y - 1 && baja)
+            {
+                if (encima == false)
+                {
+                    nuevaBaba = Instantiate(baba, transform.position + new Vector3(0, 0.2f, 0), transform.rotation);
+                }
+                posicionInicial.y = posicionInicial.y - 1;
+            }
         }
 
-        if (posicionActual.x <= posicionInicial.x - 1 &&izda)
-        {
-            nuevaBaba = Instantiate(baba, transform.position, transform.rotation);
-            posicionInicial.x = posicionInicial.x - 1;
-        }
-        if (posicionActual.y >= posicionInicial.y + 1&&sube)
-        {
-            nuevaBaba = Instantiate(baba, transform.position, transform.rotation);
-            posicionInicial.y = posicionInicial.y + 1;
-        }
-
-        if (posicionActual.y <= posicionInicial.y - 1 &&baja)
-        {
-            nuevaBaba = Instantiate(baba, transform.position, transform.rotation);
-            posicionInicial.y = posicionInicial.y - 1;
-        }
 
     }
     void OnMouseDown()
@@ -124,11 +140,36 @@ public class Fantasma_Baboso: MonoBehaviour
             puedoMoverme = true;
 
         }
-        baja = false;
-        sube = false;
-        izda = false;
-        dcha = false;
+        if(rb.velocity == Vector2.zero)
+        {
+            baja = false;
+            sube = false;
+            izda = false;
+            dcha = false;
+        }
+
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Baba"))
+        {
+            encima = true;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Baba"))
+        {
+            encima = true;
+        }
 
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Baba"))
+        {
+            encima = false;
+        }
+    }
 }
