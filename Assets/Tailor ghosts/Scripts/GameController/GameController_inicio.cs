@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameController_inicio : MonoBehaviour
 {
     public Animator anim_UIajustes;
+    public GameObject botonPlay;
 
 
     // Start is called before the first frame update
