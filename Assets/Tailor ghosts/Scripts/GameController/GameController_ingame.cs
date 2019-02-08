@@ -19,6 +19,7 @@ public class GameController_ingame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         anim_UIingame.SetBool("activar", false);
         anim_victoria.SetBool("activar", false);
     }

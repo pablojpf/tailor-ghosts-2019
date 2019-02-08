@@ -9,7 +9,8 @@ public class DetectorEstrella : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameController_ingame.estrellas = 0;
+
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class DetectorEstrella : MonoBehaviour
         if (col.gameObject.CompareTag("Player") && !estrellaActiva)
         {
             GameController_ingame.estrellas++;
-            Debug.Log("unaestrella");
+          
             estrellaActiva = true;
         }
     }
@@ -30,13 +31,8 @@ public class DetectorEstrella : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-<<<<<<< HEAD:Assets/Tailor ghosts/Scripts/Estrellas/DetectorEstrella.cs
             estrellaActiva = false;
             GameController_ingame.estrellas--;
-=======
-            CuentaEstrellas.estrellas--;
-
->>>>>>> dcd064b538dd734818fe7c323ffa9e4dea463edb:Assets/Tailor ghosts/Sandbox/Pablo Torcuato/Scripts/DetectorEstrella.cs
         }
     }
 }
