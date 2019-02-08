@@ -4,72 +4,32 @@ using UnityEngine;
 
 public class Fantasma_Baboso: MonoBehaviour
 {
-    public GameObject baba;
+
     public GameObject fantasmaNormal;
-    Vector2 posicionActual;
-    Vector2 posicionInicial;
     Rigidbody2D rb;
-    GameObject nuevaBaba;
+
     
     //Variables de los Controles
     Vector3 pincho;
     Vector3 suelto;
     public float velocidad = 10f;
     public bool puedoMoverme = true;
-    public bool baja = false;
-    public bool sube = false;
-    public bool izda = false;
-    public bool dcha = false;
+    public static bool baja = false;
+    public static bool sube = false;
+    public static bool izda = false;
+    public static bool dcha = false;
 
-    public bool encima = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        posicionInicial = transform.position;
+        
         rb = GetComponent<Rigidbody2D>();
-        nuevaBaba = Instantiate(baba, transform.position, transform.rotation);
+        
     }
     // Update is called once per frame
     void Update()
     {
-        posicionActual = transform.position;
-        {
-            if (posicionActual.x >= posicionInicial.x + 1 && dcha)
-            {
-
-                if (encima == false)
-                {
-                    nuevaBaba = Instantiate(baba, transform.position - new Vector3(0.2f, 0, 0), transform.rotation);
-                }
-                posicionInicial.x = posicionInicial.x + 1;
-            }
-
-            if (posicionActual.x <= posicionInicial.x - 1 && izda)
-            {
-                if (encima == false)
-                {                   
-                    nuevaBaba = Instantiate(baba, transform.position + new Vector3(0.2f, 0, 0), transform.rotation);
-                }
-                posicionInicial.x = posicionInicial.x - 1;
-            }
-            if (posicionActual.y >= posicionInicial.y + 1 && sube)
-            {
-                if (encima == false)
-                {
-                    nuevaBaba = Instantiate(baba, transform.position - new Vector3(0,0.2f,0), transform.rotation);
-                }
-                posicionInicial.y = posicionInicial.y + 1;
-            }
-
-            if (posicionActual.y <= posicionInicial.y - 1 && baja)
-            {
-                if (encima == false)
-                {
-                    nuevaBaba = Instantiate(baba, transform.position + new Vector3(0, 0.2f, 0), transform.rotation);
-                }
-                posicionInicial.y = posicionInicial.y - 1;
-            }
-        }
 
 
     }
@@ -150,26 +110,5 @@ public class Fantasma_Baboso: MonoBehaviour
 
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Baba"))
-        {
-            encima = true;
-        }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Baba"))
-        {
-            encima = true;
-        }
 
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Baba"))
-        {
-            encima = false;
-        }
-    }
 }

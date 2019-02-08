@@ -28,6 +28,7 @@ public class DetectorEstrella : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             CuentaEstrellas.estrellas--;
+
         }
     }
 }
