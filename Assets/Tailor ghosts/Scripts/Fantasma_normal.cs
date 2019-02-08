@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Fantasma_normal : MonoBehaviour
 {
+    public GameObject gc;
+
     //Creamos dos vectores, uno para detectar dónde pulso por primera vez
     //y dónde suelto para más tarde calcular la diferencia entre esas posiciones
 
@@ -27,6 +29,7 @@ public class Fantasma_normal : MonoBehaviour
         //Obtenemos el rb de el fantasma
         rb = GetComponent<Rigidbody2D>();
         scriptFantasma = GetComponent<Fantasma_normal>();
+        
     }
 
     // Update is called once per frame
@@ -108,9 +111,10 @@ public class Fantasma_normal : MonoBehaviour
                 transform.SetParent(col.transform);
                 Destroy(scriptFantasma);
                 Destroy(rb);
+                gc.GetComponent<GameController_ingame>().RestarFantasmas();
             }
-            
 
+            rb.velocity = Vector2.zero;
         }
         else
         {
