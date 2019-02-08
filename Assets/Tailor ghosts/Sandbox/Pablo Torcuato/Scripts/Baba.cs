@@ -20,7 +20,7 @@ public class Baba : MonoBehaviour
         if(toca == true )
         {
       
-            posicionPlayer.position = Vector2.MoveTowards(posicionPlayer.position, posicionBaba, 0.01f);
+            posicionPlayer.position = Vector2.MoveTowards(posicionPlayer.position, posicionBaba, 0.05f);
             Invoke("Despega", 0.5f);
                 
         }
