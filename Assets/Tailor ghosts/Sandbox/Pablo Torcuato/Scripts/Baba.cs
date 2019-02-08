@@ -19,9 +19,10 @@ public class Baba : MonoBehaviour
     {
         if(toca == true )
         {
+      
             posicionPlayer.position = Vector2.MoveTowards(posicionPlayer.position, posicionBaba, 0.01f);
             Invoke("Despega", 0.5f);
-            
+                
         }
     }
     private void OnTriggerEnter2D(Collider2D col)
