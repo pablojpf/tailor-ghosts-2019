@@ -7,6 +7,11 @@ using UnityEngine.UI;
 public class GameController_ingame : MonoBehaviour
 {
 
+    public static int estrellas = 0;
+    public int totalFantasmasNivel = 0 ;
+    public int numerodeestrellas;
+
+
     public Animator anim_UIingame;
     public Animator anim_pausa;
     public Animator anim_victoria;
@@ -15,12 +20,18 @@ public class GameController_ingame : MonoBehaviour
     void Start()
     {
         anim_UIingame.SetBool("activar", false);
+        anim_victoria.SetBool("activar", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        numerodeestrellas = estrellas;
+         
+        if (totalFantasmasNivel <= 1)
+        {
+            FinalNivel();
+        }
     }
 
     public void Pausa()
@@ -55,5 +66,17 @@ public class GameController_ingame : MonoBehaviour
     public void Nivel2_1()
     {
         SceneManager.LoadScene(sceneName: "Nivel2_1");
+    }
+    
+    public void FinalNivel()
+    {
+        
+        anim_victoria.SetBool("activar",true);
+        anim_victoria.SetInteger("contar", estrellas);
+    }
+
+    public void RestarFantasmas()
+    {
+        totalFantasmasNivel--;
     }
 }

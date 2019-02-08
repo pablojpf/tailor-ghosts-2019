@@ -19,6 +19,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6896611857489964811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4002670124719369787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42918934b10bb0342bbc9e5291bb6dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5356664839206674334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,6 +117,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365279598233313800, guid: 6e51c424f1d594843b6867dad3c88bf6,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.098661244
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365279598233313800, guid: 6e51c424f1d594843b6867dad3c88bf6,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.05115056
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365279598233313800, guid: 6e51c424f1d594843b6867dad3c88bf6,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.22759545
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365279598233313800, guid: 6e51c424f1d594843b6867dad3c88bf6,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.21124887
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e51c424f1d594843b6867dad3c88bf6, type: 3}

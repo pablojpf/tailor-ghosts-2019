@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49b566ed7fc1ec4fb80ac9b969b01ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scriptGameC: {fileID: 0}
   velocidad: 10
   puedoMoverme: 1
 --- !u!95 &6920367961440777083
