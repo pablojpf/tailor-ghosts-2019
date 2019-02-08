@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class GameController_menuseleccion : MonoBehaviour
 {
+
+    public AudioSource sonido_play;
+    public AudioSource sonido_ajustes;
+    public AudioSource sonido_atras;
+
     // Start is called before the first frame update
     void Start()
     {
