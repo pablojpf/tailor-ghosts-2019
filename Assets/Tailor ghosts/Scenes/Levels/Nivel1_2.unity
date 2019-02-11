@@ -440,11 +440,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: fantasma_baboso_01
       objectReference: {fileID: 0}
-    - target: {fileID: 6474355570589597774, guid: b8d8575a71e297b4db7f8c2165c3ae96,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 1984756371978810078, guid: b8d8575a71e297b4db7f8c2165c3ae96,
         type: 3}
       propertyPath: m_LocalPosition.x
