@@ -21,20 +21,17 @@ public class InteracCaja : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnCollisionEnter2D(Collision2D col)
+  
+   
+    public void Autodestruccion()
     {
         GameObject copiaHumo;
         GameObject copiaParticulas;
         sr.enabled = false;
-        Invoke("Autodestruccion", 1f);
-        col.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+       
 
-        if(left == true)
+
+        if (left == true)
         {
             copiaHumo = Instantiate(humo, trRight.position, trRight.rotation);
             copiaParticulas = Instantiate(particulas, trRight.position, trRight.rotation);
@@ -62,9 +59,6 @@ public class InteracCaja : MonoBehaviour
             copiaHumo.transform.SetParent(transform);
             copiaParticulas.transform.SetParent(transform);
         }
-    }
-    public void Autodestruccion()
-    {
-        Destroy(gameObject);
+        Destroy(gameObject, 1f);
     }
 }

@@ -14,7 +14,7 @@ public class Coordinados : MonoBehaviour
     // Abajo, la dirección y velocidad del rb que lleve el script, será igual que la del primero de los gameObjects que sea movido
     void Update()
     {
-        rb.velocity = Movimientos.direccion;
+        //rb.velocity = Movimientos.direccion;
     }
 
 

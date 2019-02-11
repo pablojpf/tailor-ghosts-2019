@@ -22,7 +22,10 @@ public class Movimientos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(direccion != Vector2.zero)
+        {
+            rb.velocity = Movimientos.direccion;
+        }
     }
     void OnMouseDown()
     {
@@ -80,6 +83,8 @@ public class Movimientos : MonoBehaviour
 
         }
 
+      
+
 
 
 
@@ -91,7 +96,7 @@ public class Movimientos : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            if (!col.transform.parent == transform)
+           if (!col.transform.parent == transform)
             {
                 Instantiate(fantasmaNormal, transform.position, transform.rotation);
                 Destroy(gameObject);
@@ -102,14 +107,14 @@ public class Movimientos : MonoBehaviour
         else
         {
             puedoMoverme = true;
+            direccion = Vector2.zero;
 
         }
 
+        Debug.Log(col.transform.name,gameObject);
+
 
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        puedoMoverme = true;
-    }
+  
 }
