@@ -968,6 +968,7 @@ GameObject:
   - component: {fileID: 1729232747}
   - component: {fileID: 1729232745}
   - component: {fileID: 1729232748}
+  - component: {fileID: 1729232749}
   m_Layer: 0
   m_Name: GameController
   m_TagString: zonaMuerte
@@ -1044,6 +1045,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd08ae9215c4cb4a844164e4fdf7446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1729232749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729232744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2605e99568b8966408af047cf558f595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelGameOver: {fileID: 0}
 --- !u!1001 &611983342179309572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1193,6 +1207,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas_ingame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3591259286682201331, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 602135687, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3591259286682201343, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
         type: 3}
