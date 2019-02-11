@@ -24,7 +24,7 @@ public class GameController_inicio : MonoBehaviour
 
     void Start()
     {
-       
+        DontDestroyOnLoad(gameObject);
        
 
     }
