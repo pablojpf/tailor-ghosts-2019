@@ -142,6 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fdffd4f2d9e55641801adbf63ba3b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sonido_play: {fileID: 0}
+  sonido_atras: {fileID: 0}
 --- !u!4 &67845789
 Transform:
   m_ObjectHideFlags: 0
@@ -1014,8 +1016,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 67845790}
-        m_MethodName: SonidoAdelante
+      - m_Target: {fileID: 67845788}
+        m_MethodName: SonidoAtras
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1583,8 +1585,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 67845790}
-        m_MethodName: SonidoAdelante
+      - m_Target: {fileID: 67845788}
+        m_MethodName: SonidoAtras
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
