@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+
 
 
 [RequireComponent(typeof(SonidoFantasmas))]
@@ -14,12 +16,11 @@ public class Fantasma_normal : MonoBehaviour
     Vector3 pincho;
     Vector3 suelto;
 
-<<<<<<< HEAD
+
     public AudioController_InGame scriptACUnion;
-=======
+
     SonidoFantasmas sonido;
 
->>>>>>> 13e8613ac72958d25bee31365fa82a0e0fffbaa1
     //Declaramos una velocidad 
     //Y un booleano para saber si podemos movernos o no para así impedir
     //que el jugador pueda mover el fantasma mientras este realiza su trayectoria
