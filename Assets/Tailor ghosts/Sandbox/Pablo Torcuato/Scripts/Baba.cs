@@ -17,9 +17,9 @@ public class Baba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(toca == true )
+        if(toca == true && posicionPlayer.parent == null)
         {
-      
+            
             posicionPlayer.position = Vector2.MoveTowards(posicionPlayer.position, posicionBaba, 0.05f);
             Invoke("Despega", 0.5f);
                 
