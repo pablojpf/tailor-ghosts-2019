@@ -10,8 +10,8 @@ public class Fantasma_Baboso: MonoBehaviour
 
     public GameObject fantasmaNormal;
     Rigidbody2D rb;
+    public GameObject gc;
 
-    
     //Variables de los Controles
     Vector3 pincho;
     Vector3 suelto;
@@ -97,6 +97,7 @@ public class Fantasma_Baboso: MonoBehaviour
             {
                 //Debug.Log("hijobasoso");
                 Instantiate(fantasmaNormal, transform.position, transform.rotation);
+                gc.GetComponent<GameController_ingame>().RestarFantasmas();
                 Destroy(gameObject);
             }
 
