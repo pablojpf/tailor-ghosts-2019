@@ -75,6 +75,15 @@ public class GameController_inicio : MonoBehaviour
 
         sonidoActivo = !sonidoActivo;
         anim_SonidoOnOff.SetBool("activar", sonidoActivo);
+
+        if (sonidoActivo)
+        {
+            audioM.SetFloat("volumenFX", 0);
+        }
+        else
+        {
+            audioM.SetFloat("volumenFX", -80);
+        }
     }
 
     public void Musicaonoff()
@@ -84,9 +93,13 @@ public class GameController_inicio : MonoBehaviour
 
         if(musicaActiva)
         {
-            audioM.SetFloat("volumenFX", 0);
+            audioM.SetFloat("volumenMusica", 0);
         }
-
+        else
+        {
+            audioM.SetFloat("volumenMusica", -80);
+        }
+    }
 
 
     }
@@ -100,4 +113,4 @@ public class GameController_inicio : MonoBehaviour
     
 
 
-}
+
