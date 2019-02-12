@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(SonidoFantasmas))]
 public class Fantasma_normal : MonoBehaviour
 {
     public GameObject gc;
@@ -12,7 +14,12 @@ public class Fantasma_normal : MonoBehaviour
     Vector3 pincho;
     Vector3 suelto;
 
+<<<<<<< HEAD
     public AudioController_InGame scriptACUnion;
+=======
+    SonidoFantasmas sonido;
+
+>>>>>>> 13e8613ac72958d25bee31365fa82a0e0fffbaa1
     //Declaramos una velocidad 
     //Y un booleano para saber si podemos movernos o no para así impedir
     //que el jugador pueda mover el fantasma mientras este realiza su trayectoria
@@ -30,7 +37,7 @@ public class Fantasma_normal : MonoBehaviour
         //Obtenemos el rb de el fantasma
         rb = GetComponent<Rigidbody2D>();
         scriptFantasma = GetComponent<Fantasma_normal>();
-        
+        sonido = GetComponent<SonidoFantasmas>();
     }
 
     // Update is called once per frame
@@ -42,6 +49,7 @@ public class Fantasma_normal : MonoBehaviour
     //Funcion para poder moverme
      void Mover()
      {
+
         //Declaramos un vector que obtenga la diferencia 
         //Entre la posición donde pinchamos y dónde soltamos
         //para saber la dirección en la que irá nuestro personaje
@@ -85,6 +93,7 @@ public class Fantasma_normal : MonoBehaviour
          }
 
 
+        sonido.SonidoMover();
 
 
      }

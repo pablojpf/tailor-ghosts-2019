@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SonidoFantasmas))]
 public class Fantasma_Baboso: MonoBehaviour
 {
+
+    SonidoFantasmas sonido;
 
     public GameObject fantasmaNormal;
     Rigidbody2D rb;
@@ -25,7 +28,8 @@ public class Fantasma_Baboso: MonoBehaviour
     {
         
         rb = GetComponent<Rigidbody2D>();
-        
+        sonido = GetComponent<SonidoFantasmas>();
+
     }
     // Update is called once per frame
     void Update()
@@ -81,6 +85,8 @@ public class Fantasma_Baboso: MonoBehaviour
             }
 
         }
+
+        sonido.SonidoMover();
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
