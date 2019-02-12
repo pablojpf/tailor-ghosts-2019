@@ -12,6 +12,7 @@ public class Fantasma_normal : MonoBehaviour
     Vector3 pincho;
     Vector3 suelto;
 
+    public AudioController_InGame scriptACUnion;
     //Declaramos una velocidad 
     //Y un booleano para saber si podemos movernos o no para así impedir
     //que el jugador pueda mover el fantasma mientras este realiza su trayectoria
@@ -113,7 +114,7 @@ public class Fantasma_normal : MonoBehaviour
                 Destroy(rb);
                 gc.GetComponent<GameController_ingame>().RestarFantasmas();
             }
-
+            scriptACUnion.AudioUnion();
             rb.velocity = Vector2.zero;
         }
         else

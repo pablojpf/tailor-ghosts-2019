@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 0}
+  scriptACUnion: {fileID: 0}
   velocidad: 10
   puedoMoverme: 1
 --- !u!95 &6920367961440777083
