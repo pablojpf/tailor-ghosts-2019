@@ -27,7 +27,7 @@ public class CreaBabas : MonoBehaviour
 
             if (encima == false)
             {
-                nuevaBaba = Instantiate(baba, posicionInicial + new Vector3(1, 0, 0), transform.rotation);
+                nuevaBaba = Instantiate(baba, posicionInicial + new Vector3(1, 0, 1), transform.rotation);
 
                 Debug.Log("Creando Baba:" + posicionInicial.x + " " + posicionInicial.y);
             }
@@ -38,7 +38,7 @@ public class CreaBabas : MonoBehaviour
         {
             if (encima == false)
             {
-                nuevaBaba = Instantiate(baba, posicionInicial + new Vector3(-1, 0, 0), transform.rotation);
+                nuevaBaba = Instantiate(baba, posicionInicial + new Vector3(-1, 0, 1), transform.rotation);
                 Debug.Log("Creando Baba:" + posicionInicial.x + " " + posicionInicial.y);
             }
             posicionInicial.x = posicionInicial.x - 1;
@@ -47,7 +47,7 @@ public class CreaBabas : MonoBehaviour
         {
             if (encima == false)
             {
-                nuevaBaba = Instantiate(baba, posicionInicial + new Vector3(0, 1, 0), transform.rotation);
+                nuevaBaba = Instantiate(baba, posicionInicial + new Vector3(0, 1, 1), transform.rotation);
                 Debug.Log("Creando Baba:" + posicionInicial.x + " " + posicionInicial.y);
             }
             posicionInicial.y = posicionInicial.y + 1;
@@ -57,7 +57,7 @@ public class CreaBabas : MonoBehaviour
         {
             if (encima == false)
             {
-                nuevaBaba = Instantiate(baba, posicionInicial + new Vector3(0, -1, 0), transform.rotation);
+                nuevaBaba = Instantiate(baba, posicionInicial + new Vector3(0, -1, 1), transform.rotation);
                 Debug.Log("Creando Baba:" + posicionInicial.x + " " + posicionInicial.y);
             }
             posicionInicial.y = posicionInicial.y - 1;

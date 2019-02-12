@@ -95,6 +95,7 @@ public class Fantasma_Baboso: MonoBehaviour
         {
             if (!col.transform.parent == transform)
             {
+                //Debug.Log("hijobasoso");
                 Instantiate(fantasmaNormal, transform.position, transform.rotation);
                 Destroy(gameObject);
             }
