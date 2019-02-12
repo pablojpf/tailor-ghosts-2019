@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7486442694889715681}
   - component: {fileID: 125993663983368969}
   - component: {fileID: 5567129441757299528}
+  - component: {fileID: 1445994575875125394}
   m_Layer: 0
   m_Name: fantasma_baboso_01
   m_TagString: Player
@@ -257,6 +258,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonidoMovimiento: {fileID: 8300000, guid: e720b470724268242a9ddef2298dc003, type: 3}
+--- !u!95 &1445994575875125394
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6474355570589597774}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aff7a57dce7edd34e807cf88eec44c16, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1489442140987595150
 PrefabInstance:
   m_ObjectHideFlags: 0
