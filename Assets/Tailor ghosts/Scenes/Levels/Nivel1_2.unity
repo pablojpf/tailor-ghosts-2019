@@ -542,6 +542,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fantasma_baboso_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6474355570589597774, guid: b8d8575a71e297b4db7f8c2165c3ae96,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1984756371978810078, guid: b8d8575a71e297b4db7f8c2165c3ae96,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -597,6 +602,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1173037935768587570, guid: b8d8575a71e297b4db7f8c2165c3ae96,
+        type: 3}
+      propertyPath: gc
+      value: 
+      objectReference: {fileID: 1502468319}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8d8575a71e297b4db7f8c2165c3ae96, type: 3}
 --- !u!1 &437485525
@@ -989,6 +999,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1502468320}
+    - target: {fileID: 1080652033538993378, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 16.149902
+      objectReference: {fileID: 0}
     - target: {fileID: 3591259285897615100, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
         type: 3}
       propertyPath: m_Layer
@@ -1192,7 +1207,7 @@ PrefabInstance:
     - target: {fileID: 2579309433473856500, guid: 0ff2323765b2bdc4c88ba9ad2fa018ae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2579309433473856500, guid: 0ff2323765b2bdc4c88ba9ad2fa018ae,
         type: 3}
