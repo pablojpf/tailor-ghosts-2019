@@ -55,7 +55,7 @@ public class Fantasma_normal1 : MonoBehaviour
         if(right == true)
         {
             Debug.DrawRay(transform.position, transform.right * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position, transform.right, distancia, capas);
+            hit = Physics2D.Raycast(transform.position, transform.right, distancia);
             if (hit)
             {
                 Debug.Log(hit.transform.name);
@@ -66,7 +66,7 @@ public class Fantasma_normal1 : MonoBehaviour
         if (left == true)
         {
             Debug.DrawRay(transform.position, (transform.right * -1) * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position, transform.right * -1, distancia, capas);
+            hit = Physics2D.Raycast(transform.position, transform.right * -1, distancia);
             if (hit)
             {
                 Debug.Log(hit.transform.name);
@@ -77,7 +77,7 @@ public class Fantasma_normal1 : MonoBehaviour
         if (top == true)
         {
             Debug.DrawRay(transform.position, transform.up * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position, transform.up, distancia, capas);
+            hit = Physics2D.Raycast(transform.position, transform.up, distancia);
             if (hit)
             {
                 Debug.Log(hit.transform.name);
@@ -88,7 +88,7 @@ public class Fantasma_normal1 : MonoBehaviour
         if (bot == true)
         {
             Debug.DrawRay(transform.position, (transform.up * -1) * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position, transform.up * -1, distancia, capas);
+            hit = Physics2D.Raycast(transform.position, transform.up * -1, distancia);
             if (hit)
             {
                 Debug.Log(hit.transform.name);
