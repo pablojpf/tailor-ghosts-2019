@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class GameController_ingame : MonoBehaviour
 {
@@ -16,10 +17,15 @@ public class GameController_ingame : MonoBehaviour
     public Animator anim_pausa;
     public Animator anim_victoria;
 
+    public AudioSource musica;
+
     // Start is called before the first frame update
     void Start()
     {
         
+
+        musica.Play(0);
+
         anim_UIingame.SetBool("activar", false);
         anim_victoria.SetBool("activar", false);
     }

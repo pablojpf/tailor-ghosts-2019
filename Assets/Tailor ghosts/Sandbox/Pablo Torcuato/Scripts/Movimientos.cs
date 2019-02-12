@@ -111,7 +111,7 @@ public class Movimientos : MonoBehaviour
 
         }
 
-        Debug.Log(col.transform.name,gameObject);
+        
 
 
     }

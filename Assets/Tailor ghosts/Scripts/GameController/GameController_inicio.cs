@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 
 public class GameController_inicio : MonoBehaviour
@@ -15,8 +16,11 @@ public class GameController_inicio : MonoBehaviour
 
     private bool sonidoActivo = true;
     private bool musicaActiva = true;
+    private bool musica_menu = true;
 
-
+    public AudioMixer audioM;
+    public AudioMixerGroup Musica;
+    public AudioMixerGroup Fx;
     public AudioSource sonido_play;
     public AudioSource sonido_ajustes;
     public AudioSource sonido_atras;
@@ -25,21 +29,22 @@ public class GameController_inicio : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-       
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+   
 
     public void Ajustes()
     {
         sonido_ajustes.Play(0);
 
-        
+
         anim_UIajustes.SetBool("activar", true);
         anim_MenuLogros.SetBool("activar", false);
         botonPlay.interactable = false;
@@ -56,15 +61,15 @@ public class GameController_inicio : MonoBehaviour
     public void SonidoAdelante()
     {
         sonido_play.Play(0);
-       
+
     }
     public void SonidoAtras()
     {
         sonido_atras.Play(0);
-        
+
     }
 
-    
+
     public void Sonidoonoff()
     {
 
@@ -76,10 +81,22 @@ public class GameController_inicio : MonoBehaviour
     {
         musicaActiva = !musicaActiva;
         anim_MusicaOnOff.SetBool("activar", musicaActiva);
-     
+
+        if(musicaActiva)
+        {
+            audioM.SetFloat("volumenFX", 0);
+        }
+
+
+
     }
 
+    
+   
+    
+   
 
+    
     
 
 
