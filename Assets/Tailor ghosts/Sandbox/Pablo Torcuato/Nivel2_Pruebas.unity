@@ -1339,6 +1339,7 @@ MonoBehaviour:
   anim_UIingame: {fileID: 900051465}
   anim_pausa: {fileID: 900051464}
   anim_victoria: {fileID: 1262743444}
+  musica: {fileID: 0}
 --- !u!4 &1951330380
 Transform:
   m_ObjectHideFlags: 0
@@ -1510,7 +1511,7 @@ GameObject:
   - component: {fileID: 4647705640846339768}
   - component: {fileID: 6920367961608080813}
   - component: {fileID: 5970113459316436507}
-  m_Layer: 2
+  m_Layer: 4
   m_Name: fantasma_normal_01
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1534,7 +1535,7 @@ MonoBehaviour:
   puedoMoverme: 1
   capas:
     serializedVersion: 2
-    m_Bits: 19
+    m_Bits: 39
   distancia: 1
   velocidadRayo: 5
   top: 0
