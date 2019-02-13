@@ -22,7 +22,6 @@ public class GameController_ingame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
 
         musica.Play(0);
 
@@ -60,6 +59,8 @@ public class GameController_ingame : MonoBehaviour
         anim_pausa.SetBool("activar", false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
+
+        estrellas --;
     }
     public void VolverMenu()
     {
