@@ -13,6 +13,24 @@ public class Movimientos : MonoBehaviour
     Vector3 pincho;
     Vector3 suelto;
     public GameObject fantasmaNormal;
+
+    RaycastHit2D hit;
+    public LayerMask capas;
+    public float distancia = 1f;
+    public float velocidadRayo = 5f;
+    public float puntoSalida = 0.51f;
+    // Variables de dirección para el raycast
+    public bool top = false;
+    public bool bot = false;
+    public bool right = false;
+    public bool left = false;
+
+    public bool colisionTop = false;
+    public bool colisionBot = false;
+    public bool colisionRight = false;
+    public bool colisionLeft = false;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,6 +43,50 @@ public class Movimientos : MonoBehaviour
         if(direccion != Vector2.zero)
         {
             rb.velocity = Movimientos.direccion;
+        }
+        if (right == true)
+        {
+            Debug.DrawRay(transform.position + new Vector3(puntoSalida, 0, 0), transform.right * distancia, Color.red);
+            hit = Physics2D.Raycast(transform.position + new Vector3(puntoSalida, 0, 0), transform.right, distancia);
+            if (hit)
+            {
+                Debug.Log(hit.transform.name);
+                Debug.DrawRay(transform.position + new Vector3(puntoSalida, 0, 0), transform.right * distancia, Color.green);
+                colisionRight = true;
+            }
+        }
+        if (left == true)
+        {
+            Debug.DrawRay(transform.position + new Vector3(-puntoSalida, 0, 0), (transform.right * -1) * distancia, Color.red);
+            hit = Physics2D.Raycast(transform.position + new Vector3(-puntoSalida, 0, 0), transform.right * -1, distancia);
+            if (hit)
+            {
+                Debug.Log(hit.transform.name);
+                Debug.DrawRay(transform.position + new Vector3(-puntoSalida, 0, 0), (transform.right * -1) * distancia, Color.green);
+                colisionLeft = true;
+            }
+        }
+        if (top == true)
+        {
+            Debug.DrawRay(transform.position + new Vector3(0, puntoSalida, 0), transform.up * distancia, Color.red);
+            hit = Physics2D.Raycast(transform.position + new Vector3(0, puntoSalida, 0), transform.up, distancia);
+            if (hit)
+            {
+                Debug.Log(hit.transform.name);
+                Debug.DrawRay(transform.position + new Vector3(0, puntoSalida, 0), transform.up * distancia, Color.green);
+                colisionTop = true;
+            }
+        }
+        if (bot == true)
+        {
+            Debug.DrawRay(transform.position + new Vector3(0, -puntoSalida, 0), (transform.up * -1) * distancia, Color.red);
+            hit = Physics2D.Raycast(transform.position + new Vector3(0, -puntoSalida, 0), transform.up * -1, distancia);
+            if (hit)
+            {
+                Debug.Log(hit.transform.name);
+                Debug.DrawRay(transform.position + new Vector3(0, -puntoSalida, 0), (transform.up * -1) * distancia, Color.green);
+                colisionTop = true;
+            }
         }
     }
     void OnMouseDown()
@@ -52,12 +114,14 @@ public class Movimientos : MonoBehaviour
                     rb.velocity = new Vector2(1, 0) * velocidad;
                     direccion = Vector2.zero;
                     direccion = rb.velocity;
+                    right = true;
                 }
                 else
                 {
                     rb.velocity = new Vector2(-1, 0) * velocidad;
                     direccion = Vector2.zero;
                     direccion = rb.velocity;
+                    left = true;
                 }
 
                 puedoMoverme = false;
@@ -70,12 +134,14 @@ public class Movimientos : MonoBehaviour
                     rb.velocity = new Vector2(0, 1) * velocidad;
                     direccion = Vector2.zero;
                     direccion = rb.velocity;
+                    top = true;
                 }
                 else
                 {
                     rb.velocity = new Vector2(0, -1) * velocidad;
                     direccion = Vector2.zero;
                     direccion = rb.velocity;
+                    bot = true;
                 }
 
                 puedoMoverme = false;
@@ -94,27 +160,22 @@ public class Movimientos : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+
+        puedoMoverme = true;
+        direccion = Vector2.zero;
+        rb.velocity = Vector2.zero;
+        if (col.gameObject.CompareTag("Player")&&hit)
         {
-           if (!col.transform.parent == transform)
-            {
-                Instantiate(fantasmaNormal, transform.position, transform.rotation);
-                Destroy(gameObject);
-            }
-
-
+            Instantiate(fantasmaNormal, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
         else
         {
-            puedoMoverme = true;
-            direccion = Vector2.zero;
-
+            right = false;
+            left = false;
+            top = false;
+            bot = false;
         }
-
-        
-
-
     }
-
   
 }

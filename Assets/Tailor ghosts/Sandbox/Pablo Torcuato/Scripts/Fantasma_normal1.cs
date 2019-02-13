@@ -28,7 +28,7 @@ public class Fantasma_normal1 : MonoBehaviour
     public LayerMask capas;
     public float distancia = 1f;
     public float velocidadRayo = 5f;
-
+    public float puntoSalida = 0.51f;
     // Variables de dirección para el raycast
     public bool top = false;
     public bool bot = false;
@@ -54,45 +54,45 @@ public class Fantasma_normal1 : MonoBehaviour
     {
         if(right == true)
         {
-            Debug.DrawRay(transform.position, transform.right * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position, transform.right, distancia);
+            Debug.DrawRay(transform.position + new Vector3(puntoSalida, 0, 0), transform.right * distancia, Color.red);
+            hit = Physics2D.Raycast(transform.position + new Vector3(puntoSalida,0,0), transform.right, distancia);
             if (hit)
             {
                 Debug.Log(hit.transform.name);
-                Debug.DrawRay(transform.position, transform.right * distancia, Color.green);
+                Debug.DrawRay(transform.position + new Vector3(puntoSalida, 0, 0), transform.right * distancia, Color.green);
                 colisionRight = true;
             }
         }
         if (left == true)
         {
-            Debug.DrawRay(transform.position, (transform.right * -1) * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position, transform.right * -1, distancia);
+            Debug.DrawRay(transform.position + new Vector3(-puntoSalida, 0, 0), (transform.right * -1) * distancia, Color.red);
+            hit = Physics2D.Raycast(transform.position + new Vector3(-puntoSalida, 0, 0), transform.right * -1, distancia);
             if (hit)
             {
                 Debug.Log(hit.transform.name);
-                Debug.DrawRay(transform.position, (transform.right * -1) * distancia, Color.green);
+                Debug.DrawRay(transform.position + new Vector3(-puntoSalida, 0, 0), (transform.right * -1) * distancia, Color.green);
                 colisionLeft = true;
             }
         }
         if (top == true)
         {
-            Debug.DrawRay(transform.position, transform.up * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position, transform.up, distancia);
+            Debug.DrawRay(transform.position + new Vector3(0, puntoSalida, 0), transform.up * distancia, Color.red);
+            hit = Physics2D.Raycast(transform.position + new Vector3(0, puntoSalida, 0), transform.up, distancia);
             if (hit)
             {
                 Debug.Log(hit.transform.name);
-                Debug.DrawRay(transform.position, transform.up * distancia, Color.green);
+                Debug.DrawRay(transform.position + new Vector3(0, puntoSalida, 0), transform.up * distancia, Color.green);
                 colisionTop = true;
             }
         }
         if (bot == true)
         {
-            Debug.DrawRay(transform.position, (transform.up * -1) * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position, transform.up * -1, distancia);
+            Debug.DrawRay(transform.position + new Vector3(0, -puntoSalida, 0), (transform.up * -1) * distancia, Color.red);
+            hit = Physics2D.Raycast(transform.position + new Vector3(0, -puntoSalida, 0), transform.up * -1, distancia);
             if (hit)
             {
                 Debug.Log(hit.transform.name);
-                Debug.DrawRay(transform.position, (transform.up * -1) * distancia, Color.green);
+                Debug.DrawRay(transform.position + new Vector3(0, -puntoSalida, 0), (transform.up * -1) * distancia, Color.green);
                 colisionTop = true;
             }
         }
@@ -170,14 +170,17 @@ public class Fantasma_normal1 : MonoBehaviour
     //Cuando choco con un colider puedo volver a moverme
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player")&&hit)
         {
-            if (!col.transform.parent==transform)
+
+            if (col.transform.parent!= transform)
             {
-                transform.SetParent(col.transform);
+                Debug.Log("Ey");
+                col.transform.SetParent(transform);
                 Destroy(scriptFantasma);
                 Destroy(rb);
-                gc.GetComponent<GameController_ingame>().RestarFantasmas();
+
+                //   gc.GetComponent<GameController_ingame>().RestarFantasmas();
             }
 
             rb.velocity = Vector2.zero;
@@ -189,6 +192,7 @@ public class Fantasma_normal1 : MonoBehaviour
             left = false;
             top = false;
             bot = false;
+            rb.velocity = Vector2.zero;
         }
 
 
