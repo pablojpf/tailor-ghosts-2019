@@ -18,6 +18,7 @@ public class Fantasma_Vikingo : MonoBehaviour
     Vector3 suelto;
 
 
+    public AudioController_InGame scriptACUnion;
 
 
 
@@ -45,6 +46,7 @@ public class Fantasma_Vikingo : MonoBehaviour
         {
             if (!col.transform.parent == transform)
             {
+                scriptACUnion.AudioUnion();
                 Instantiate(fantasmaNormal, transform.position, transform.rotation);
                 Destroy(gameObject);
             }
