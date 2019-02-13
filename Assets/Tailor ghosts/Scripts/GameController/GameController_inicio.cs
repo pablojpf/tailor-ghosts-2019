@@ -62,13 +62,10 @@ public class GameController_inicio : MonoBehaviour
     {
         sonido_play.Play(0);
 
-        //Invoke("Destruirme", sonido_play.clip.length);
 
     }
 
-    private void Destruirme() {
-        Destroy(gameObject);
-    }
+    
 
     public void SonidoAtras()
     {
