@@ -25,7 +25,7 @@ public class DetectorEstrella : MonoBehaviour
         if (col.gameObject.CompareTag("Player") && !estrellaActiva)
         {
             GameController_ingame.estrellas++;
-            Debug.Log("he entrado");
+            
             
             anim_estrellas.SetBool("activar", true);
         }
@@ -36,7 +36,6 @@ public class DetectorEstrella : MonoBehaviour
         {
             estrellaActiva = false;
             GameController_ingame.estrellas--;
-
             anim_estrellas.SetBool("activar", false);
         }
     }

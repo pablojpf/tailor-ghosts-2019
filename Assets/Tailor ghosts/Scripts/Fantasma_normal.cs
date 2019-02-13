@@ -124,13 +124,13 @@ public class Fantasma_normal : MonoBehaviour
                 Destroy(rb);
                 gc.GetComponent<GameController_ingame>().RestarFantasmas();
             }
-            scriptACUnion.AudioUnion();
+            //scriptACUnion.AudioUnion();
             rb.velocity = Vector2.zero;
         }
         else
         {
             puedoMoverme = true;
-
+            rb.velocity = Vector2.zero;
         }
 
 

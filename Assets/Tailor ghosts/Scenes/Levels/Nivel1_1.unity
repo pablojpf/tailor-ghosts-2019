@@ -379,7 +379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2605e99568b8966408af047cf558f595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelGameOver: {fileID: 0}
 --- !u!4 &180368510
 Transform:
   m_ObjectHideFlags: 0
@@ -1163,7 +1162,7 @@ MonoBehaviour:
   anim_UIingame: {fileID: 1121019208}
   anim_pausa: {fileID: 109293883}
   anim_victoria: {fileID: 922608683}
-  musica: {fileID: 0}
+  musica: {fileID: 387383401}
 --- !u!4 &1729232746
 Transform:
   m_ObjectHideFlags: 0
@@ -1202,7 +1201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2605e99568b8966408af047cf558f595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelGameOver: {fileID: 0}
 --- !u!114 &1729232750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1381,11 +1379,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 981890615829880162, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 759276a4988992c4d8e731fe1d096f0e, type: 3}
     - target: {fileID: 602135687, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1724,5 +1717,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 16.149902
       objectReference: {fileID: 0}
+    - target: {fileID: 981890615829880162, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 759276a4988992c4d8e731fe1d096f0e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2, type: 3}

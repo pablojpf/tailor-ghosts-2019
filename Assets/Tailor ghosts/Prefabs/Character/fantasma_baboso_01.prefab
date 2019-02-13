@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1445994575875125394}
   m_Layer: 0
   m_Name: fantasma_baboso_01
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fantasmaNormal: {fileID: 4647705640409927777, guid: acf14e08434d48f46b48b06ad9ce6c8f,
     type: 3}
+  gc: {fileID: 0}
   velocidad: 10
   puedoMoverme: 1
 --- !u!61 &7486442694889715681

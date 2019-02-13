@@ -93,6 +93,8 @@ public class Fantasma_Baboso: MonoBehaviour
         
         if (col.gameObject.CompareTag("Player"))
         {
+            rb.velocity = Vector2.zero;
+
             if (!col.transform.parent == transform)
             {
                 //Debug.Log("hijobasoso");
@@ -101,7 +103,7 @@ public class Fantasma_Baboso: MonoBehaviour
                 Destroy(gameObject);
             }
 
-
+           
         }
         else
         {
