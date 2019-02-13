@@ -22,6 +22,7 @@ public class Fantasma_Baboso: MonoBehaviour
     public static bool izda = false;
     public static bool dcha = false;
 
+    public AudioController_InGame scriptACUnion;
 
     // Start is called before the first frame update
     void Start()
@@ -101,6 +102,7 @@ public class Fantasma_Baboso: MonoBehaviour
                 Destroy(gameObject);
             }
 
+            scriptACUnion.AudioUnion();
 
         }
         else

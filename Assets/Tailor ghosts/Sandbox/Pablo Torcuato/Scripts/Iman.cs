@@ -11,6 +11,7 @@ public class Iman : MonoBehaviour
     public float velocidad = 5f;
     public float altura;
     public GameObject fantasmaNormal;
+    public AudioController_InGame scriptACUnion;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,8 @@ public class Iman : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
-        {
+        {                 
+            scriptACUnion.AudioUnion();
             if (!col.transform.parent == transform)
             {
                 GameObject copiaNormal;
