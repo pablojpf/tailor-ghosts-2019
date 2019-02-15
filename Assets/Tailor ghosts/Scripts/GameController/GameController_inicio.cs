@@ -35,7 +35,7 @@ public class GameController_inicio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
    
