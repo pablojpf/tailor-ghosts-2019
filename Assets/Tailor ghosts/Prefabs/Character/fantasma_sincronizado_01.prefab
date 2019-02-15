@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 276240260}
   m_Layer: 0
   m_Name: fantasma_sincronizado_01
-  m_TagString: Player
+  m_TagString: Sincronizado
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.35056046, y: 0.4418846}
+    pivot: {x: 0.35, y: 0.41}
     oldSize: {x: 1.3333334, y: 1.3333334}
     newSize: {x: 1.3333334, y: 1.3333334}
     adaptiveTilingThreshold: 0.5
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!95 &996669352
 Animator:
@@ -175,5 +175,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 10
-  fantasmaNormal: {fileID: 4647705640409927777, guid: acf14e08434d48f46b48b06ad9ce6c8f,
+  fantasmaNormal: {fileID: 1766559618878784481, guid: 68396a8bb125ce94789788e88f581c53,
     type: 3}
+  capas:
+    serializedVersion: 2
+    m_Bits: 0
+  distancia: 1
+  velocidadRayo: 5
+  puntoSalida: 0.51
+  top: 0
+  bot: 0
+  right: 0
+  left: 0
+  colisionTop: 0
+  colisionBot: 0
+  colisionRight: 0
+  colisionLeft: 0

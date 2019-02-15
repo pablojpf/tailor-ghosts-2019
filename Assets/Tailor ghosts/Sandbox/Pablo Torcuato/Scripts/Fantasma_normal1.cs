@@ -45,13 +45,14 @@ public class Fantasma_normal1 : MonoBehaviour
         //Obtenemos el rb de el fantasma
         rb = GetComponent<Rigidbody2D>();
         scriptFantasma = GetComponent<Fantasma_normal>();
-
+        Reposiciona();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         if(right == true)
         {
             Debug.DrawRay(transform.position + new Vector3(puntoSalida, 0, 0), transform.right * distancia, Color.red);
@@ -95,7 +96,7 @@ public class Fantasma_normal1 : MonoBehaviour
                 Debug.DrawRay(transform.position + new Vector3(0, -puntoSalida, 0), (transform.up * -1) * distancia, Color.green);
                 colisionTop = true;
             }
-        }
+        }*/
 
     }
 
@@ -170,36 +171,56 @@ public class Fantasma_normal1 : MonoBehaviour
     //Cuando choco con un colider puedo volver a moverme
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Player")&&hit)
+        Reposiciona();
+        puedoMoverme = true;
+        if (col.gameObject.CompareTag("Player"))
         {
-
-            if (col.transform.parent!= transform)
+            if(rb != null)
             {
-                Debug.Log("Ey");
-                col.transform.SetParent(transform);
+                rb.velocity = Vector2.zero;
+            }
+            
+            
+            if (! col.transform.parent == transform)
+            {
+                transform.SetParent(col.transform);
+                if(transform.parent != null)
+                {
+                    Destroy(rb);
+                }
+                Reposiciona();
                 Destroy(scriptFantasma);
                 Destroy(rb);
-
-                //   gc.GetComponent<GameController_ingame>().RestarFantasmas();
+                gc.GetComponent<GameController_ingame>().RestarFantasmas();
+                Debug.Log("Me hago hijo de " + col.transform.name);
+               
+                
             }
 
-            rb.velocity = Vector2.zero;
-        }
-        else
-        {
-            puedoMoverme = true;
-            right = false;
-            left = false;
-            top = false;
-            bot = false;
-            rb.velocity = Vector2.zero;
+           
+        
         }
 
 
+       
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         puedoMoverme = true;
+    }
+
+    public void Reposiciona()
+    {
+        if(transform.parent != null)
+        {
+            
+            transform.localPosition = new Vector3(Mathf.Round(transform.localPosition.x), Mathf.Round(transform.localPosition.y), Mathf.Round(transform.localPosition.z));
+        }
+        else
+        {
+            transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
+        }
+        
     }
 }

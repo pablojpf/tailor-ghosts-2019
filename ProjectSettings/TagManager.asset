@@ -11,6 +11,7 @@ TagManager:
   - Imantado
   - Estrella
   - zonaMuerte
+  - Sincronizado
   layers:
   - Default
   - TransparentFX

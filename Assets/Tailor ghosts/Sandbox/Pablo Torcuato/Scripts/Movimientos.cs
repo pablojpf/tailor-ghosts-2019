@@ -13,6 +13,7 @@ public class Movimientos : MonoBehaviour
     Vector3 pincho;
     Vector3 suelto;
     public GameObject fantasmaNormal;
+    bool creado = false;
 
     RaycastHit2D hit;
     public LayerMask capas;
@@ -34,16 +35,19 @@ public class Movimientos : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-      
+        Reposiciona();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if(direccion != Vector2.zero)
         {
             rb.velocity = Movimientos.direccion;
         }
+        /*
         if (right == true)
         {
             Debug.DrawRay(transform.position + new Vector3(puntoSalida, 0, 0), transform.right * distancia, Color.red);
@@ -87,7 +91,7 @@ public class Movimientos : MonoBehaviour
                 Debug.DrawRay(transform.position + new Vector3(0, -puntoSalida, 0), (transform.up * -1) * distancia, Color.green);
                 colisionTop = true;
             }
-        }
+        }*/
     }
     void OnMouseDown()
     {
@@ -164,10 +168,41 @@ public class Movimientos : MonoBehaviour
         puedoMoverme = true;
         direccion = Vector2.zero;
         rb.velocity = Vector2.zero;
-        if (col.gameObject.CompareTag("Player")&&hit)
+        Reposiciona();
+        if (col.gameObject.CompareTag("Player"))//&&hit)
         {
-            Instantiate(fantasmaNormal, transform.position, transform.rotation);
-            Destroy(gameObject);
+            col.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            if (!col.transform.parent == transform)
+            {
+                rb.velocity = Vector2.zero;
+                //Debug.Log("hijobasoso");
+                Debug.Log("CreandoFantasma " + transform.name);
+                Reposiciona();
+                if(creado == false)
+                {
+                    GameObject nuevoFantasma;
+                    nuevoFantasma = Instantiate(fantasmaNormal, transform.position, transform.rotation);
+                    nuevoFantasma.transform.SetParent(col.transform);
+                    Destroy(nuevoFantasma.GetComponent<Rigidbody2D>());
+                    creado = true;
+                }
+                
+            //  gc.GetComponent<GameController_ingame>().RestarFantasmas();
+                Destroy(gameObject);
+            }
+            /*   Debug.Log("Ey");
+               Fantasma_normal scriptFantasma;
+               scriptFantasma = nuevoFantasma.GetComponent<Fantasma_normal>();
+               nuevoFantasma.transform.SetParent(col.transform);
+               rb = nuevoFantasma.GetComponent<Rigidbody2D>();
+
+               Destroy(scriptFantasma);
+               Destroy(rb);*/
+            //   gc.GetComponent<GameController_ingame>().RestarFantasmas();
+
+
+          
+           
         }
         else
         {
@@ -177,5 +212,10 @@ public class Movimientos : MonoBehaviour
             bot = false;
         }
     }
-  
+
+    public void Reposiciona()
+    {
+        transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
+    }
+
 }
