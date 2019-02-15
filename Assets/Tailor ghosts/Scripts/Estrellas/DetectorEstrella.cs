@@ -20,14 +20,20 @@ public class DetectorEstrella : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Player") && !estrellaActiva)
         {
-            GameController_ingame.estrellas++;
+            if(estrellaActiva == false)
+            {
+                anim_estrellas.SetBool("activar", true);
+                GameController_ingame.estrellas++;
+            }
+            estrellaActiva = true;
             
             
-            anim_estrellas.SetBool("activar", true);
+            
+            
         }
     }
     private void OnTriggerExit2D(Collider2D col)
