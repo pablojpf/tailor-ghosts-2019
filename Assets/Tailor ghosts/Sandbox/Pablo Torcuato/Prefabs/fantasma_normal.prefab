@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4103332057458712827}
   - component: {fileID: 730139173242913613}
   m_Layer: 4
-  m_Name: fantasma_normal_01
+  m_Name: fantasma_normal
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

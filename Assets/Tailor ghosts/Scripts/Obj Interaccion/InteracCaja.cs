@@ -30,7 +30,7 @@ public class InteracCaja : MonoBehaviour
         sr.enabled = false;
        
 
-
+/*
         if (left == true)
         {
             copiaHumo = Instantiate(humo, trRight.position, trRight.rotation);
@@ -59,6 +59,11 @@ public class InteracCaja : MonoBehaviour
             copiaHumo.transform.SetParent(transform);
             copiaParticulas.transform.SetParent(transform);
         }
+        */
         Destroy(gameObject, 1f);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Autodestruccion();
     }
 }
