@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SonidoFantasmas))]
 public class Fantasma_normal1 : MonoBehaviour
 {
     public GameObject gc;
@@ -23,22 +24,7 @@ public class Fantasma_normal1 : MonoBehaviour
     //Declaramos el rb del fantasma
     Rigidbody2D rb;
 
-
-    RaycastHit2D hit;
-    public LayerMask capas;
-    public float distancia = 1f;
-    public float velocidadRayo = 5f;
-    public float puntoSalida = 0.51f;
-    // Variables de dirección para el raycast
-    public bool top = false;
-    public bool bot = false;
-    public bool right = false;
-    public bool left = false;
-
-    public bool colisionTop = false;
-    public bool colisionBot = false;
-    public bool colisionRight = false;
-    public bool colisionLeft = false;
+    SonidoFantasmas sonido;
 
     void Start()
     {
@@ -46,7 +32,7 @@ public class Fantasma_normal1 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         scriptFantasma = GetComponent<Fantasma_normal>();
         Reposiciona();
-
+        sonido = GetComponent<SonidoFantasmas>();
     }
 
     // Update is called once per frame
@@ -120,12 +106,12 @@ public class Fantasma_normal1 : MonoBehaviour
                  if(dif.x>0)
                  {
                     rb.velocity = new Vector2(1, 0) * velocidad;
-                    right = true;
+
                  }
                  else
                  {
                     rb.velocity = new Vector2(-1, 0) * velocidad;
-                    left = true;
+
                  }
 
                  puedoMoverme = false;
@@ -137,18 +123,19 @@ public class Fantasma_normal1 : MonoBehaviour
                  if (dif.y>0)
                  {
                     rb.velocity = new Vector2(0, 1) * velocidad;
-                    top = true;
+
                  }
                  else
                  {
                     rb.velocity = new Vector2(0, -1) * velocidad;
-                    bot = true;
+
                  }
 
                  puedoMoverme = false;
              }
 
-         }
+            sonido.SonidoMover();
+        }
 
 
 
