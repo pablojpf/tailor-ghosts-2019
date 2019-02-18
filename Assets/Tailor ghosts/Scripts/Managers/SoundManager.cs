@@ -19,10 +19,27 @@ public class SoundManager : MonoBehaviour
     public AudioClip sonido_atras;
     AudioSource ManagerSonido;
 
+    public static SoundManager instance = null;
+
     // Start is called before the first frame update
     void Start()
     {
        ManagerSonido = gameObject.GetComponent<AudioSource>();
+       
+    }
+
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -65,19 +82,6 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void Musicaonoff()
-    {
-        musicaActiva = !musicaActiva;
-        
-
-        if (musicaActiva)
-        {
-            audioM.SetFloat("volumenMusica", 0);
-        }
-        else
-        {
-            audioM.SetFloat("volumenMusica", -80);
-        }
-    }
+   
 
 }
