@@ -123,7 +123,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4b3c93a796ce0e94986db1723729f146, type: 3}
   - {fileID: 21300000, guid: 6f8f071ff6a08a1468580e7bc739589f, type: 3}
   - {fileID: 21300000, guid: fc58d76cfc589cd47bad9f279725d65c, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 6390de6f629e79f44b84e0845010e16a, type: 3}
   - {fileID: 0}
   right: 0
   left: 0
