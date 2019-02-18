@@ -1325,10 +1325,25 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.newSize.y
       value: 3.2811244
       objectReference: {fileID: 0}
+    - target: {fileID: 6801897613420868003, guid: ae1574c4f26fa924d884970a8805622b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6801897613420868003, guid: ae1574c4f26fa924d884970a8805622b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2088230883488818982, guid: ae1574c4f26fa924d884970a8805622b,
         type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
       value: 3.2811244
+      objectReference: {fileID: 0}
+    - target: {fileID: 2088230883488818982, guid: ae1574c4f26fa924d884970a8805622b,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7737730649575178873, guid: ae1574c4f26fa924d884970a8805622b,
         type: 3}
