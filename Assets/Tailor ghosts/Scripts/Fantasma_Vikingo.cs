@@ -25,6 +25,7 @@ public class Fantasma_Vikingo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Reposiciona();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -35,6 +36,7 @@ public class Fantasma_Vikingo : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
+        Reposiciona();
         rb.velocity = Vector2.zero;
         if (col.gameObject.CompareTag("Bloque"))
         {
@@ -120,5 +122,18 @@ public class Fantasma_Vikingo : MonoBehaviour
         Mover();
 
     }
-   
+
+    public void Reposiciona()
+    {
+        if (transform.parent != null)
+        {
+
+            transform.localPosition = new Vector3(Mathf.Round(transform.localPosition.x), Mathf.Round(transform.localPosition.y), Mathf.Round(transform.localPosition.z));
+        }
+        else
+        {
+            transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
+        }
+
+    }
 }
