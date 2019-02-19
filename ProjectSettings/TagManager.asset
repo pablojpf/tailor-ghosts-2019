@@ -12,6 +12,7 @@ TagManager:
   - Estrella
   - zonaMuerte
   - Sincronizado
+  - Dormido
   layers:
   - Default
   - TransparentFX

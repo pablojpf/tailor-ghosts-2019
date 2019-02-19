@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1694644173}
   m_Layer: 0
   m_Name: fantasma_dormilon_01
-  m_TagString: Player
+  m_TagString: Dormido
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6a76e50b55c3266448bd51ef9efea509, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,7 +98,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.38, y: 0.39}
+    pivot: {x: 0.37, y: 0.38}
     oldSize: {x: 1.3333334, y: 1.3333334}
     newSize: {x: 1.3333334, y: 1.3333334}
     adaptiveTilingThreshold: 0.5
@@ -120,7 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8b32a03d3b95b45a43566b70e0bd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptACUnion: {fileID: 0}
+  fantasmaNormal: {fileID: 4647705640409927777, guid: acf14e08434d48f46b48b06ad9ce6c8f,
+    type: 3}
+  gc: {fileID: 0}
 --- !u!95 &1694644173
 Animator:
   serializedVersion: 3
