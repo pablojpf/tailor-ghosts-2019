@@ -127,7 +127,12 @@ public class Baba : MonoBehaviour
 
     public void CambiaBabas()
     {
-        if(left == true)
+        //Lados
+        if (left == true && right == true)
+        {
+            sr.sprite = spritesBabas[0];
+        }
+        if (left == true)
         {
             sr.sprite = spritesBabas[1];
         }
@@ -135,13 +140,36 @@ public class Baba : MonoBehaviour
         {
             sr.sprite = spritesBabas[2];
         }
-        if (left == true && right == true)
-        {
-            sr.sprite = spritesBabas[0];
-        }
+
+        //Arriba y abajo
         if(top == true)
         {
             sr.sprite = spritesBabas[3];
+        }
+        if (bot == true)
+        {
+            sr.sprite = spritesBabas[4];
+        }
+        if (top == true && bot == true)
+        {
+            sr.sprite = spritesBabas[5];
+        }
+        //Esquinas
+        if (right == true && bot == true)
+        {
+            sr.sprite = spritesBabas[6];
+        }
+        if (left == true && bot == true)
+        {
+            sr.sprite = spritesBabas[7];
+        }
+        if (right == true && top == true)
+        {
+            sr.sprite = spritesBabas[8];
+        }
+        if (left == true && top == true)
+        {
+            sr.sprite = spritesBabas[9];
         }
     }
 }
