@@ -17,6 +17,11 @@ public class Baba : MonoBehaviour
     public bool top = false;
     public bool bot = false;
     SpriteRenderer sr;
+    public int colisiones = 0;
+    bool colRight = false;
+    bool colLeft = false;
+    bool colTop = false;
+    bool colBot = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,28 +37,28 @@ public class Baba : MonoBehaviour
         {
             posicionPlayer.position = Vector2.MoveTowards(posicionPlayer.position, posicionBaba, 0.05f);
             Invoke("Despega", 0.5f);
-                
+
         }
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        
-        if (col.gameObject.transform.CompareTag("Player")&&BabaController.dentro==false)
-        {           
+
+        if (col.gameObject.transform.CompareTag("Player") && BabaController.dentro == false)
+        {
             posicionPlayer = col.gameObject.transform;
             toca = true;
             col.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             BabaController.dentro = true;
 
         }
-       
+
     }
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Player"))
-            {
+        {
             Invoke("Fuera", 1f);
-            }
+        }
     }
 
     void Despega()
@@ -69,7 +74,7 @@ public class Baba : MonoBehaviour
     public void Comprobador()
     {
         //RayCast Derecho
-        Debug.DrawRay(transform.position + new Vector3(0.6f,0,0), transform.right * 0.5f, Color.red);
+        Debug.DrawRay(transform.position + new Vector3(0.6f, 0, 0), transform.right * 0.5f, Color.red);
         hitRight = Physics2D.Raycast(transform.position + new Vector3(0.6f, 0, 0), transform.right, 0.6f);
         if (hitRight)
         {
@@ -78,6 +83,11 @@ public class Baba : MonoBehaviour
             {
                 Debug.DrawRay(transform.position, transform.right * 0.6f, Color.green);
                 right = true;
+                if (colRight == false)
+                {
+                    colisiones++;
+                    colRight = true;
+                }
             }
 
         }
@@ -91,6 +101,11 @@ public class Baba : MonoBehaviour
             {
                 Debug.DrawRay(transform.position, transform.right * -0.6f, Color.green);
                 left = true;
+                if (colLeft == false)
+                {
+                    colisiones++;
+                    colLeft = true;
+                }
             }
 
         }
@@ -104,6 +119,11 @@ public class Baba : MonoBehaviour
             {
                 Debug.DrawRay(transform.position, transform.up * 0.6f, Color.green);
                 top = true;
+                if (colTop == false)
+                {
+                    colisiones++;
+                    colTop = true;
+                }
             }
 
         }
@@ -117,6 +137,11 @@ public class Baba : MonoBehaviour
             {
                 Debug.DrawRay(transform.position, transform.up * -0.6f, Color.green);
                 bot = true;
+                if (colBot == false)
+                {
+                    colisiones++;
+                    colBot = true;
+                }
             }
 
         }
@@ -127,49 +152,73 @@ public class Baba : MonoBehaviour
 
     public void CambiaBabas()
     {
-        //Lados
-        if (left == true && right == true)
+        //1 colision
+        if (colisiones == 1)
         {
-            sr.sprite = spritesBabas[0];
-        }
-        if (left == true)
-        {
-            sr.sprite = spritesBabas[1];
-        }
-        if (right == true)
-        {
-            sr.sprite = spritesBabas[2];
+            if (left == true)
+            {
+                sr.sprite = spritesBabas[1];
+            }
+            if (right == true)
+            {
+                sr.sprite = spritesBabas[2];
+            }
+            if (top == true)
+            {
+                sr.sprite = spritesBabas[3];
+            }
+            if (bot == true)
+            {
+                sr.sprite = spritesBabas[4];
+            }
         }
 
-        //Arriba y abajo
-        if(top == true)
+        //2 colisiones
+
+        if (colisiones == 2)
         {
-            sr.sprite = spritesBabas[3];
+            //Intermedias
+            if (left == true && right == true)
+            {
+                sr.sprite = spritesBabas[0];
+            }
+            if (top == true && bot == true)
+            {
+                sr.sprite = spritesBabas[5];
+            }
+
+            //Esquinas
+            if (right == true && bot == true)
+            {
+                sr.sprite = spritesBabas[6];
+            }
+            if (left == true && bot == true)
+            {
+                sr.sprite = spritesBabas[7];
+            }
+            if (right == true && top == true)
+            {
+                sr.sprite = spritesBabas[8];
+            }
+            if (left == true && top == true)
+            {
+                sr.sprite = spritesBabas[9];
+            }
         }
-        if (bot == true)
+
+        //3 colisiones
+
+        if (colisiones == 3)
         {
-            sr.sprite = spritesBabas[4];
+            sr.sprite = spritesBabas[11];
+
+
+            //4 colisiones
+            if (right == true && left == true && bot == true && top == true)
+            {
+                sr.sprite = spritesBabas[10];
+            }
         }
-        if (top == true && bot == true)
-        {
-            sr.sprite = spritesBabas[5];
-        }
-        //Esquinas
-        if (right == true && bot == true)
-        {
-            sr.sprite = spritesBabas[6];
-        }
-        if (left == true && bot == true)
-        {
-            sr.sprite = spritesBabas[7];
-        }
-        if (right == true && top == true)
-        {
-            sr.sprite = spritesBabas[8];
-        }
-        if (left == true && top == true)
-        {
-            sr.sprite = spritesBabas[9];
-        }
+
     }
 }
