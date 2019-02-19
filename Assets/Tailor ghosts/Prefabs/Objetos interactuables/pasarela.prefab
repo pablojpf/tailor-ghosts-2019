@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5106843220834837030}
   - component: {fileID: 4736326781443082745}
   - component: {fileID: 3153527268849494747}
-  - component: {fileID: 6801897613420868003}
+  - component: {fileID: 2088230883488818982}
+  - component: {fileID: 7737730649575178873}
   m_Layer: 0
   m_Name: pasarela
   m_TagString: Untagged
@@ -102,7 +103,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6801897613420868003
+--- !u!61 &2088230883488818982
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,16 +116,42 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.42039752, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.14, y: 0.18666667, z: 0.40333334, w: 0.37333333}
-    pivot: {x: 0.5, y: 0.5}
+    border: {x: 0, y: 0.29333335, z: 0, w: 0.51}
+    pivot: {x: 0.39109856, y: 0.41635102}
     oldSize: {x: 1.3333334, y: 1.3333334}
     newSize: {x: 1.3333334, y: 1.3333334}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.040777057, y: 0.1}
+  m_EdgeRadius: 0
+--- !u!61 &7737730649575178873
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8476390796430769128}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.41277674, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0.29333335, z: 0, w: 0.51}
+    pivot: {x: 0.39109856, y: 0.41635102}
+    oldSize: {x: 1.3333334, y: 1.3333334}
+    newSize: {x: 1.3333334, y: 1.3333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02426821, y: 0.1}
   m_EdgeRadius: 0

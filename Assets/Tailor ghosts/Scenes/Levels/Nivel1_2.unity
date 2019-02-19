@@ -547,11 +547,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: fantasma_baboso_01
       objectReference: {fileID: 0}
-    - target: {fileID: 6474355570589597774, guid: b8d8575a71e297b4db7f8c2165c3ae96,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 1984756371978810078, guid: b8d8575a71e297b4db7f8c2165c3ae96,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -612,11 +607,6 @@ PrefabInstance:
       propertyPath: gc
       value: 
       objectReference: {fileID: 1502468319}
-    - target: {fileID: 1173037935768587570, guid: b8d8575a71e297b4db7f8c2165c3ae96,
-        type: 3}
-      propertyPath: scriptACUnion
-      value: 
-      objectReference: {fileID: 1502468321}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8d8575a71e297b4db7f8c2165c3ae96, type: 3}
 --- !u!1 &437485525

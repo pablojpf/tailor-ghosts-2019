@@ -6,10 +6,7 @@ using UnityEngine.UI;
 
 public class GameController_menuseleccion : MonoBehaviour
 {
-
-    public AudioSource sonido_play;
-  
-    public AudioSource sonido_atras;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -48,16 +45,6 @@ public class GameController_menuseleccion : MonoBehaviour
         SceneManager.LoadScene(sceneName: "Menu_seleccion_nivel");
     }
 
-    public void SonidoAdelante()
-    {
-        sonido_play.Play(0);
-        Debug.Log("uwu");
-
-    }
-    public void SonidoAtras()
-    {
-        sonido_atras.Play(0);
-
-    }
+  
 
 }

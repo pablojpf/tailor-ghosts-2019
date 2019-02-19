@@ -22,15 +22,19 @@ public class GameController_inicio : MonoBehaviour
     public AudioMixerGroup Musica;
     public AudioMixerGroup Fx;
     public AudioSource sonido_play;
-    public AudioSource sonido_ajustes;
+   
     public AudioSource sonido_atras;
 
+    public static GameController_inicio instance = null;
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        
 
     }
+
+    
+
 
     // Update is called once per frame
     void Update()
@@ -42,7 +46,7 @@ public class GameController_inicio : MonoBehaviour
 
     public void Ajustes()
     {
-        sonido_ajustes.Play(0);
+       
 
 
         anim_UIajustes.SetBool("activar", true);

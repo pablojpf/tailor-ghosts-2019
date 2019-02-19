@@ -26,7 +26,7 @@ public class Fantasma_Baboso: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Reposiciona();  
         rb = GetComponent<Rigidbody2D>();
         sonido = GetComponent<SonidoFantasmas>();
 
@@ -90,7 +90,7 @@ public class Fantasma_Baboso: MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
-        
+        Reposiciona();
         if (col.gameObject.CompareTag("Player"))
         {
             rb.velocity = Vector2.zero;
@@ -120,5 +120,17 @@ public class Fantasma_Baboso: MonoBehaviour
 
 
     }
+    public void Reposiciona()
+    {
+        if (transform.parent != null)
+        {
 
+            transform.localPosition = new Vector3(Mathf.Round(transform.localPosition.x), Mathf.Round(transform.localPosition.y), Mathf.Round(transform.localPosition.z));
+        }
+        else
+        {
+            transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
+        }
+
+    }
 }

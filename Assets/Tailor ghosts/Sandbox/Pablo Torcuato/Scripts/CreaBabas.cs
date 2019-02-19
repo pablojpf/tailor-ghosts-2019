@@ -13,8 +13,7 @@ public class CreaBabas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        posicionInicial = transform.position;
-        nuevaBaba = Instantiate(baba, transform.position + new Vector3(0, 0, 1), transform.rotation);
+        Invoke("Retarda", 0.1f);        
     }
 
     // Update is called once per frame
@@ -85,5 +84,10 @@ public class CreaBabas : MonoBehaviour
         {
             encima = false;
         }
+    }
+    public void Retarda()
+    {
+        posicionInicial = transform.position;
+        nuevaBaba = Instantiate(baba, transform.position + new Vector3(0, 0, 1), transform.rotation);
     }
 }
