@@ -22,6 +22,7 @@ public class Baba : MonoBehaviour
     bool colLeft = false;
     bool colTop = false;
     bool colBot = false;
+    public static bool comprueba = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,12 +33,16 @@ public class Baba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Comprobador();
         if (toca == true && posicionPlayer.parent == null)
         {
             posicionPlayer.position = Vector2.MoveTowards(posicionPlayer.position, posicionBaba, 0.05f);
             Invoke("Despega", 0.5f);
 
+        }
+        if(comprueba == true)
+        {
+            Comprobador();
+            Invoke("Desactiva", 0.4f);
         }
     }
     private void OnTriggerEnter2D(Collider2D col)
@@ -220,5 +225,9 @@ public class Baba : MonoBehaviour
             }
         }
 
+    }
+    public void Desactiva()
+    {
+        comprueba = false;
     }
 }
