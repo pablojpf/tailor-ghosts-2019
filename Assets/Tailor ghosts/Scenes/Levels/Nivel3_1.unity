@@ -636,7 +636,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bfa0e04424f2e2345bb3f47992f5784b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07b965dcce8bbee43aee4f2585b41225, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -655,7 +655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974898299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.012, y: 0.01, z: 0}
+  m_LocalPosition: {x: 1.01, y: -1.797, z: 0}
   m_LocalScale: {x: 0.783, y: 0.783, z: 0.783}
   m_Children: []
   m_Father: {fileID: 0}
@@ -742,6 +742,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 8010382614729161021, guid: 4d458200ad9e1384d9663bc28a67105e,
+        type: 3}
+      propertyPath: anim_UIingame
+      value: 
+      objectReference: {fileID: 530951043}
+    - target: {fileID: 8010382614729161021, guid: 4d458200ad9e1384d9663bc28a67105e,
+        type: 3}
+      propertyPath: anim_pausa
+      value: 
+      objectReference: {fileID: 1134762720}
+    - target: {fileID: 8010382614729161021, guid: 4d458200ad9e1384d9663bc28a67105e,
+        type: 3}
+      propertyPath: anim_victoria
+      value: 
+      objectReference: {fileID: 2003922485}
+    - target: {fileID: 8010382614729161021, guid: 4d458200ad9e1384d9663bc28a67105e,
+        type: 3}
+      propertyPath: musica
+      value: 
+      objectReference: {fileID: 1768283548}
     - target: {fileID: 8010382614729161018, guid: 4d458200ad9e1384d9663bc28a67105e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -797,26 +817,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8010382614729161021, guid: 4d458200ad9e1384d9663bc28a67105e,
-        type: 3}
-      propertyPath: anim_UIingame
-      value: 
-      objectReference: {fileID: 530951043}
-    - target: {fileID: 8010382614729161021, guid: 4d458200ad9e1384d9663bc28a67105e,
-        type: 3}
-      propertyPath: anim_pausa
-      value: 
-      objectReference: {fileID: 1134762720}
-    - target: {fileID: 8010382614729161021, guid: 4d458200ad9e1384d9663bc28a67105e,
-        type: 3}
-      propertyPath: anim_victoria
-      value: 
-      objectReference: {fileID: 2003922485}
-    - target: {fileID: 8010382614729161021, guid: 4d458200ad9e1384d9663bc28a67105e,
-        type: 3}
-      propertyPath: musica
-      value: 
-      objectReference: {fileID: 1768283548}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d458200ad9e1384d9663bc28a67105e, type: 3}
 --- !u!1001 &1072243645
@@ -1175,7 +1175,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.7744513
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1199,7 +1199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852870191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 1.01, y: -1.81, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
