@@ -25,6 +25,10 @@ public class Baba : MonoBehaviour
     bool colBot = false;
     public static bool comprueba = false;
 
+<<<<<<< HEAD
+=======
+    // Start is called before the first frame update
+>>>>>>> 33cb0cc83bf9a8984d864754279aede83752670f
     void Start()
     {
         posicionBaba = transform.position;
