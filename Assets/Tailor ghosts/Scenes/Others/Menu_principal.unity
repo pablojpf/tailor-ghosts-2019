@@ -176,6 +176,8 @@ MonoBehaviour:
   audioM: {fileID: 24100000, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   Musica: {fileID: 243830442549381834, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   Fx: {fileID: 243965227530828546, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
+  sonido_play: {fileID: 0}
+  sonido_atras: {fileID: 0}
 --- !u!1 &485850538
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +190,6 @@ GameObject:
   - component: {fileID: 485850542}
   - component: {fileID: 485850541}
   - component: {fileID: 485850540}
-  - component: {fileID: 485850543}
   m_Layer: 5
   m_Name: Boton_logros
   m_TagString: Untagged
@@ -254,18 +255,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 485850541}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 485850543}
-        m_MethodName: SonidoDeAdelante
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &485850541
@@ -305,18 +295,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485850538}
   m_CullTransparentMesh: 0
---- !u!114 &485850543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485850538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &520225883
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +307,6 @@ GameObject:
   - component: {fileID: 520225887}
   - component: {fileID: 520225886}
   - component: {fileID: 520225885}
-  - component: {fileID: 520225888}
   m_Layer: 5
   m_Name: Boton_ajustes
   m_TagString: Untagged
@@ -407,8 +384,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 520225888}
-        m_MethodName: SonidoDeAtras
+      - m_Target: {fileID: 1052441940}
+        m_MethodName: SonidoAtras
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -457,18 +434,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520225883}
   m_CullTransparentMesh: 0
---- !u!114 &520225888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520225883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &613814145
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +446,6 @@ GameObject:
   - component: {fileID: 613814149}
   - component: {fileID: 613814148}
   - component: {fileID: 613814147}
-  - component: {fileID: 613814150}
   m_Layer: 5
   m_Name: Boton_salir
   m_TagString: Untagged
@@ -559,8 +523,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 613814150}
-        m_MethodName: SonidoDeAtras
+      - m_Target: {fileID: 1052441940}
+        m_MethodName: SonidoAtras
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -609,18 +573,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613814145}
   m_CullTransparentMesh: 0
---- !u!114 &613814150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613814145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &731387222
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,7 +756,6 @@ GameObject:
   - component: {fileID: 1033595482}
   - component: {fileID: 1033595481}
   - component: {fileID: 1033595484}
-  - component: {fileID: 1033595485}
   m_Layer: 5
   m_Name: Boton_musica
   m_TagString: Untagged
@@ -882,8 +833,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1033595485}
-        m_MethodName: SonidoDeAtras
+      - m_Target: {fileID: 1052441940}
+        m_MethodName: SonidoAtras
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -951,18 +902,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1033595485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033595479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1052441938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,7 +1472,6 @@ GameObject:
   - component: {fileID: 2043110243}
   - component: {fileID: 2043110242}
   - component: {fileID: 2043110245}
-  - component: {fileID: 2043110246}
   m_Layer: 5
   m_Name: Boton_sonido
   m_TagString: Untagged
@@ -1611,8 +1549,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2043110246}
-        m_MethodName: SonidoDeAtras
+      - m_Target: {fileID: 1052441940}
+        m_MethodName: SonidoAtras
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1680,18 +1618,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2043110246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043110240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2059797692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,6 +1785,11 @@ MonoBehaviour:
   audioM: {fileID: 24100000, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   Musica: {fileID: 243830442549381834, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   musica_menus: {fileID: 8300000, guid: c151a3296cc4f274a88296f0af433b28, type: 3}
+  musica_mundo1: {fileID: 8300000, guid: 55de178b10c094748b532a4de0490240, type: 3}
+  musica_mundo2: {fileID: 8300000, guid: 9179569782c4c5d4fa37c791d4c6745f, type: 3}
+  musica_mundo3: {fileID: 8300000, guid: 0d6570363aa89964f8ba503568b41cef, type: 3}
+  musica_mundo4: {fileID: 8300000, guid: 9694d70f3d8f641488c12c932e3775c0, type: 3}
+  musica_mundo5: {fileID: 8300000, guid: 101b905cbcb4eb74eae3c7d68bbfd74c, type: 3}
 --- !u!82 &2112095083
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1968,7 +1899,6 @@ GameObject:
   - component: {fileID: 2131919114}
   - component: {fileID: 2131919113}
   - component: {fileID: 2131919112}
-  - component: {fileID: 2131919115}
   m_Layer: 5
   m_Name: Boton_play
   m_TagString: Untagged
@@ -2046,8 +1976,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2131919115}
-        m_MethodName: SonidoDeAdelante
+      - m_Target: {fileID: 1052441940}
+        m_MethodName: SonidoAdelante
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2096,15 +2026,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131919110}
   m_CullTransparentMesh: 0
---- !u!114 &2131919115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131919110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

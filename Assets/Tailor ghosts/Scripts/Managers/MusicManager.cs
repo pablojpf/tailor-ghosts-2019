@@ -13,6 +13,11 @@ public class MusicManager : MonoBehaviour
     public AudioMixer audioM;
     public AudioMixerGroup Musica;
     public AudioClip musica_menus;
+    public AudioClip musica_mundo1;
+    public AudioClip musica_mundo2;
+    public AudioClip musica_mundo3;
+    public AudioClip musica_mundo4;
+    public AudioClip musica_mundo5;
 
     AudioSource ManagerMusica;
 
@@ -48,6 +53,26 @@ public class MusicManager : MonoBehaviour
     {
         
     }
+
+
+
+
+    public void MusicaM1()
+    {
+        ManagerMusica.clip = musica_mundo1;
+        ManagerMusica.Play();
+
+
+    }
+
+
+
+
+
+
+
+
+
 
     public void Musicaonoff()
     {

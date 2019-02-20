@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class botonUI : MonoBehaviour
+public class mundosMusica : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,19 +15,4 @@ public class botonUI : MonoBehaviour
     {
         
     }
-
-    public void SonidoDeAtras()
-    {
-        SoundManager.instance.SonidoAtras();
-    }
-
-
-    public void SonidoDeAdelante()
-    {
-        SoundManager.instance.SonidoAdelante();
-    }
-
-
-    
-
 }
