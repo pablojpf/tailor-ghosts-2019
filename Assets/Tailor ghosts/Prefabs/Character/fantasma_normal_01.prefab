@@ -273,9 +273,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef60f619614e74442bf2d914d086381b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 0}
+  gc: {fileID: 5046212273423999328, guid: 6b9e20bbf1437f443bda5f8d05198055, type: 3}
   velocidad: 10
   puedoMoverme: 1
+<<<<<<< HEAD
 --- !u!114 &8101303182226972102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,3 +294,5 @@ MonoBehaviour:
   left: 0
   top: 0
   bot: 0
+=======
+>>>>>>> 4c7879bba90826793a59efda99e56b9a45cf97cf

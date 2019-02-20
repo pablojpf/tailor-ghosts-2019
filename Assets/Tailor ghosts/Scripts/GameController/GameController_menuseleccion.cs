@@ -55,42 +55,51 @@ public class GameController_menuseleccion : MonoBehaviour
 
     public void Nivel1_2()
     {
+        MusicManager.instance.MusicaM1();
         SceneManager.LoadScene(sceneName: "Nivel1_2");
     }
     public void Nivel2_1()
     {
+        MusicManager.instance.MusicaM2();
         SceneManager.LoadScene(sceneName: "Nivel2_1");
     }
 
     public void Nivel2_2()
     {
+        MusicManager.instance.MusicaM2();
         SceneManager.LoadScene(sceneName: "Nivel2_2");
     }
     public void Nivel3_1()
     {
+        MusicManager.instance.MusicaM3();
         SceneManager.LoadScene(sceneName: "Nivel3_1");
     }
 
     public void Nivel3_2()
     {
+        MusicManager.instance.MusicaM3();
         SceneManager.LoadScene(sceneName: "Nivel3_2");
     }
     public void Nivel4_1()
     {
+        MusicManager.instance.MusicaM4();
         SceneManager.LoadScene(sceneName: "Nivel4_1");
     }
 
     public void Nivel4_2()
     {
+        MusicManager.instance.MusicaM4();
         SceneManager.LoadScene(sceneName: "Nivel4_2");
     }
     public void Nivel5_1()
     {
+        MusicManager.instance.MusicaM5();
         SceneManager.LoadScene(sceneName: "Nivel5_1");
     }
 
     public void Nivel5_2()
     {
+        MusicManager.instance.MusicaM5();
         SceneManager.LoadScene(sceneName: "Nivel5_2");
     }
 
@@ -105,6 +114,12 @@ public class GameController_menuseleccion : MonoBehaviour
         SceneManager.LoadScene(sceneName: "Menu_seleccion_mundo");
     }
 
-  
+
+
+    public void PLogros()
+    {
+        SceneManager.LoadScene(sceneName: "Menu_trofeos");
+    }
+
 
 }
