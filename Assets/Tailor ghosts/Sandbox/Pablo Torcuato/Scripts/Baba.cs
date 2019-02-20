@@ -17,16 +17,14 @@ public class Baba : MonoBehaviour
     public bool top = false;
     public bool bot = false;
     SpriteRenderer sr;
-<<<<<<< HEAD
+
     public int colisiones = 0;
     bool colRight = false;
     bool colLeft = false;
     bool colTop = false;
     bool colBot = false;
     public static bool comprueba = false;
-=======
->>>>>>> 2be342048bbfba1171c75ef35f910e43ed7a3bdf
-    // Start is called before the first frame update
+
     void Start()
     {
         posicionBaba = transform.position;
