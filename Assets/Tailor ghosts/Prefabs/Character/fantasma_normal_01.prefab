@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3376323397001255504}
   - component: {fileID: 5501019255805577164}
   - component: {fileID: 4813174771000502172}
+  - component: {fileID: 8101303182226972102}
   m_Layer: 0
   m_Name: fantasma_normal_01
   m_TagString: Player
@@ -275,17 +276,20 @@ MonoBehaviour:
   gc: {fileID: 0}
   velocidad: 10
   puedoMoverme: 1
-  capas:
-    serializedVersion: 2
-    m_Bits: 0
-  distancia: 1
-  velocidadRayo: 5
-  puntoSalida: 0.51
-  top: 0
-  bot: 0
+--- !u!114 &8101303182226972102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4647705640409927777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55761cd41d69c4eaa62089a9452d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesBabas: {fileID: 0}
   right: 0
   left: 0
-  colisionTop: 0
-  colisionBot: 0
-  colisionRight: 0
-  colisionLeft: 0
+  top: 0
+  bot: 0
