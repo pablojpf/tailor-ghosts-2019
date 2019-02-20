@@ -14,7 +14,7 @@ public class Fantasma_desnudo : MonoBehaviour
     new Vector3 pincho;
     new Vector3 suelto;
 
-    
+    public GameObject gc;
     //Acceder al fantasma normal desde unity
     public GameObject fantasmaNormal;
 
@@ -111,6 +111,7 @@ public class Fantasma_desnudo : MonoBehaviour
         if (col.gameObject.CompareTag("Tela"))
         {
             Instantiate(fantasmaNormal, transform.position, transform.rotation);
+            gc.GetComponent<GameController_ingame>().RestarFantasmas();
             Destroy(gameObject);
         }
     }

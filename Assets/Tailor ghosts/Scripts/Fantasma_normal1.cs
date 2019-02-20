@@ -19,7 +19,7 @@ public class Fantasma_normal1 : MonoBehaviour
 
     public float velocidad = 10f;
     public bool puedoMoverme = true;
-    Fantasma_normal scriptFantasma;
+    Fantasma_normal1 scriptFantasma;
 
     //Declaramos el rb del fantasma
     Rigidbody2D rb;
@@ -30,9 +30,10 @@ public class Fantasma_normal1 : MonoBehaviour
     {
         //Obtenemos el rb de el fantasma
         rb = GetComponent<Rigidbody2D>();
-        scriptFantasma = GetComponent<Fantasma_normal>();
+        scriptFantasma = GetComponent<Fantasma_normal1>();
         Reposiciona();
         sonido = GetComponent<SonidoFantasmas>();
+
     }
 
     // Update is called once per frame
@@ -176,16 +177,17 @@ public class Fantasma_normal1 : MonoBehaviour
                     Destroy(rb);
                 }
                 Reposiciona();
+                
                 Destroy(scriptFantasma);
                 Destroy(rb);
-                gc.GetComponent<GameController_ingame>().RestarFantasmas();
+               
                 Debug.Log("Me hago hijo de " + col.transform.name);
                
                 
             }
 
-           
-        
+            gc.GetComponent<GameController_ingame>().RestarFantasmas();
+
         }
 
 

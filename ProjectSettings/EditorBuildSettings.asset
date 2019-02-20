@@ -38,4 +38,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tailor ghosts/Scenes/Worlds/Mundo5.unity
     guid: ec24be437249c5743a2ed14f5dc5a316
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Levels/Nivel2_2.unity
+    guid: 326b5453be76b2d46b7449a73cfb13ca
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Levels/Nivel3_1.unity
+    guid: bd20191a514b9104191547f91058f4c2
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Levels/Nivel3_2.unity
+    guid: d38e635f9b261a14497e245b31e99d1f
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Levels/Nivel4_1.unity
+    guid: a76db6390b14f1145af888292190153c
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Levels/Nivel4_2.unity
+    guid: a574ef36447774d468181587218bff7e
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Levels/Nivel5_1.unity
+    guid: c4adfe580589bb54b8ddc74550ef1393
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Levels/Nivel5_2.unity
+    guid: 4144c5e71c7d8284ebf29e23906bda10
   m_configObjects: {}

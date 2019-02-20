@@ -122,6 +122,7 @@ public class Fantasma_normal : MonoBehaviour
                 transform.SetParent(col.transform);
                 Destroy(scriptFantasma);
                 Destroy(rb);
+                Debug.Log("me resto");
                 gc.GetComponent<GameController_ingame>().RestarFantasmas();
             }
             //scriptACUnion.AudioUnion();
