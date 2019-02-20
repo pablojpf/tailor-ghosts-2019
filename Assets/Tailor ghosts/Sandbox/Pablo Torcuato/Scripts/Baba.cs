@@ -23,6 +23,7 @@ public class Baba : MonoBehaviour
     bool colTop = false;
     bool colBot = false;
     public static bool comprueba = false;
+
     // Start is called before the first frame update
     void Start()
     {
