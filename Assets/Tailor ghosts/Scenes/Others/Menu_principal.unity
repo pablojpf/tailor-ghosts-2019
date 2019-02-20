@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 485850542}
   - component: {fileID: 485850541}
   - component: {fileID: 485850540}
+  - component: {fileID: 485850543}
   m_Layer: 5
   m_Name: Boton_logros
   m_TagString: Untagged
@@ -255,7 +256,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 485850541}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 485850543}
+        m_MethodName: SonidoDeAtras
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &485850541
@@ -295,6 +307,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485850538}
   m_CullTransparentMesh: 0
+--- !u!114 &485850543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485850538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &520225883
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +331,7 @@ GameObject:
   - component: {fileID: 520225887}
   - component: {fileID: 520225886}
   - component: {fileID: 520225885}
+  - component: {fileID: 520225888}
   m_Layer: 5
   m_Name: Boton_ajustes
   m_TagString: Untagged
@@ -384,8 +409,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1052441940}
-        m_MethodName: SonidoAtras
+      - m_Target: {fileID: 520225888}
+        m_MethodName: SonidoDeAtras
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -434,6 +459,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520225883}
   m_CullTransparentMesh: 0
+--- !u!114 &520225888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520225883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &613814145
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +483,7 @@ GameObject:
   - component: {fileID: 613814149}
   - component: {fileID: 613814148}
   - component: {fileID: 613814147}
+  - component: {fileID: 613814150}
   m_Layer: 5
   m_Name: Boton_salir
   m_TagString: Untagged
@@ -523,8 +561,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1052441940}
-        m_MethodName: SonidoAtras
+      - m_Target: {fileID: 613814150}
+        m_MethodName: SonidoDeAtras
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -573,6 +611,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613814145}
   m_CullTransparentMesh: 0
+--- !u!114 &613814150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613814145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &731387222
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +805,7 @@ GameObject:
   - component: {fileID: 1033595483}
   - component: {fileID: 1033595482}
   - component: {fileID: 1033595481}
+  - component: {fileID: 1033595485}
   - component: {fileID: 1033595484}
   m_Layer: 5
   m_Name: Boton_musica
@@ -833,8 +884,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1052441940}
-        m_MethodName: SonidoAtras
+      - m_Target: {fileID: 1033595485}
+        m_MethodName: SonidoDeAtras
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -902,6 +953,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1033595485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033595479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1052441938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,6 +1534,7 @@ GameObject:
   - component: {fileID: 2043110244}
   - component: {fileID: 2043110243}
   - component: {fileID: 2043110242}
+  - component: {fileID: 2043110246}
   - component: {fileID: 2043110245}
   m_Layer: 5
   m_Name: Boton_sonido
@@ -1549,8 +1613,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1052441940}
-        m_MethodName: SonidoAtras
+      - m_Target: {fileID: 2043110246}
+        m_MethodName: SonidoDeAtras
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1618,6 +1682,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2043110246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043110240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2059797692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,6 +1975,7 @@ GameObject:
   - component: {fileID: 2131919114}
   - component: {fileID: 2131919113}
   - component: {fileID: 2131919112}
+  - component: {fileID: 2131919115}
   m_Layer: 5
   m_Name: Boton_play
   m_TagString: Untagged
@@ -1976,8 +2053,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1052441940}
-        m_MethodName: SonidoAdelante
+      - m_Target: {fileID: 2131919115}
+        m_MethodName: SonidoDeAdelante
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2026,3 +2103,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131919110}
   m_CullTransparentMesh: 0
+--- !u!114 &2131919115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131919110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7548bb340a2477b4fb501ad1500d5cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
