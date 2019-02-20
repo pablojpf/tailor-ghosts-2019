@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 379339873803493720}
   - component: {fileID: 1840277671442822081}
   - component: {fileID: 996669352}
-  - component: {fileID: 276240259}
-  - component: {fileID: 276240260}
+  - component: {fileID: 6110470601759677579}
+  - component: {fileID: 3292825328995163716}
   m_Layer: 0
   m_Name: fantasma_sincronizado_01
   m_TagString: Sincronizado
@@ -150,7 +150,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &276240259
+--- !u!114 &6110470601759677579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8166ffdf0008ac49bd50749ed88fdac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &276240260
+--- !u!114 &3292825328995163716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 10
-  fantasmaNormal: {fileID: 1766559618878784481, guid: 68396a8bb125ce94789788e88f581c53,
+  fantasmaNormal: {fileID: 4647705640409927777, guid: acf14e08434d48f46b48b06ad9ce6c8f,
     type: 3}
   capas:
     serializedVersion: 2
