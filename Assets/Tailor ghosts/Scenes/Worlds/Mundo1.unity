@@ -612,6 +612,11 @@ MonoBehaviour:
   audioM: {fileID: 24100000, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   Musica: {fileID: 243830442549381834, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   musica_menus: {fileID: 8300000, guid: c151a3296cc4f274a88296f0af433b28, type: 3}
+  musica_mundo1: {fileID: 8300000, guid: 55de178b10c094748b532a4de0490240, type: 3}
+  musica_mundo2: {fileID: 0}
+  musica_mundo3: {fileID: 0}
+  musica_mundo4: {fileID: 0}
+  musica_mundo5: {fileID: 0}
 --- !u!4 &926141625
 Transform:
   m_ObjectHideFlags: 0

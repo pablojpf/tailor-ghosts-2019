@@ -22,6 +22,7 @@ public class GameController_menuseleccion : MonoBehaviour
 
     public void Nivel1_1()
     {
+        MusicManager.instance.MusicaM1();
         SceneManager.LoadScene(sceneName: "Nivel1_1");
     }
 
