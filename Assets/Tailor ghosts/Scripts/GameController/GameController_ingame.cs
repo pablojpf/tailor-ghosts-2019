@@ -19,6 +19,14 @@ public class GameController_ingame : MonoBehaviour
 
     public AudioSource musica;
 
+
+    void Awake()
+    {
+        musica.Play(0);
+    }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
