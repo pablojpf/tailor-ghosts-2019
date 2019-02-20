@@ -61,16 +61,41 @@ public class MusicManager : MonoBehaviour
     {
         ManagerMusica.clip = musica_mundo1;
         ManagerMusica.Play();
-
-
     }
 
 
+    public void MusicaM2()
+    {
+        ManagerMusica.clip = musica_mundo2;
+        ManagerMusica.Play();
+    }
 
 
+    public void MusicaM3()
+    {
+        ManagerMusica.clip = musica_mundo3;
+        ManagerMusica.Play();
+    }
 
 
+    public void MusicaM4()
+    {
+        ManagerMusica.clip = musica_mundo4;
+        ManagerMusica.Play();
+    }
 
+
+    public void MusicaM5()
+    {
+        ManagerMusica.clip = musica_mundo5;
+        ManagerMusica.Play();
+    }
+
+    public void MusicaMenu()
+    {
+        ManagerMusica.clip = musica_menus;
+        ManagerMusica.Play();
+    }
 
 
 

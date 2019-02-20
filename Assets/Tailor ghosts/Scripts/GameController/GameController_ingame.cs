@@ -64,7 +64,8 @@ public class GameController_ingame : MonoBehaviour
     }
     public void VolverMenu()
     {
-        SceneManager.LoadScene(sceneName: "Menu_seleccion_nivel");
+        MusicManager.instance.MusicaMenu();
+        SceneManager.LoadScene(sceneName: "Menu_seleccion_mundo");
         Time.timeScale = 1f;
     }
     public void Nivel1_2()
