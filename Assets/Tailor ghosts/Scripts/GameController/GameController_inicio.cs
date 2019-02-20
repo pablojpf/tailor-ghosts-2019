@@ -21,7 +21,9 @@ public class GameController_inicio : MonoBehaviour
     public AudioMixer audioM;
     public AudioMixerGroup Musica;
     public AudioMixerGroup Fx;
-
+    public AudioSource sonido_play;
+   
+    public AudioSource sonido_atras;
 
     public static GameController_inicio instance = null;
 
@@ -60,11 +62,21 @@ public class GameController_inicio : MonoBehaviour
         anim_MenuLogros.SetBool("activar", true);
         botonPlay.interactable = true;
     }
-   
+    public void SonidoAdelante()
+    {
+        sonido_play.Play(0);
+
+
+    }
 
     
 
-  
+    public void SonidoAtras()
+    {
+        sonido_atras.Play(0);
+
+    }
+
 
     public void Sonidoonoff()
     {

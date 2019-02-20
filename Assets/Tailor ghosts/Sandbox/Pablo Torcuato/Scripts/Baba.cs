@@ -17,6 +17,15 @@ public class Baba : MonoBehaviour
     public bool top = false;
     public bool bot = false;
     SpriteRenderer sr;
+<<<<<<< HEAD
+    public int colisiones = 0;
+    bool colRight = false;
+    bool colLeft = false;
+    bool colTop = false;
+    bool colBot = false;
+    public static bool comprueba = false;
+=======
+>>>>>>> 2be342048bbfba1171c75ef35f910e43ed7a3bdf
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +36,16 @@ public class Baba : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Comprobador();
         if (toca == true && posicionPlayer.parent == null)
         {
             posicionPlayer.position = Vector2.MoveTowards(posicionPlayer.position, posicionBaba, 0.05f);
             Invoke("Despega", 0.5f);
                 
+        }
+        if(comprueba == true)
+        {
+            Comprobador();
+            Invoke("Desactiva", 0.4f);
         }
     }
     private void OnTriggerEnter2D(Collider2D col)
@@ -171,5 +184,9 @@ public class Baba : MonoBehaviour
         {
             sr.sprite = spritesBabas[9];
         }
+    }
+    public void Desactiva()
+    {
+        comprueba = false;
     }
 }
