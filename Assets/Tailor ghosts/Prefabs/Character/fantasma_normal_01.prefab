@@ -272,20 +272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef60f619614e74442bf2d914d086381b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 0}
+  gc: {fileID: 5046212273423999328, guid: 6b9e20bbf1437f443bda5f8d05198055, type: 3}
   velocidad: 10
   puedoMoverme: 1
-  capas:
-    serializedVersion: 2
-    m_Bits: 0
-  distancia: 1
-  velocidadRayo: 5
-  puntoSalida: 0.51
-  top: 0
-  bot: 0
-  right: 0
-  left: 0
-  colisionTop: 0
-  colisionBot: 0
-  colisionRight: 0
-  colisionLeft: 0
