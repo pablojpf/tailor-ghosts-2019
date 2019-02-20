@@ -105,6 +105,12 @@ public class GameController_menuseleccion : MonoBehaviour
         SceneManager.LoadScene(sceneName: "Menu_seleccion_mundo");
     }
 
-  
+
+
+    public void PLogros()
+    {
+        SceneManager.LoadScene(sceneName: "Menu_trofeos");
+    }
+
 
 }
