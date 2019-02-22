@@ -4,32 +4,36 @@ using UnityEngine;
 
 public class Fantasma_desnudo : MonoBehaviour
 {
-    /*La diferencia entre este script y el normal son las que 
-     * comentaré a continuacion
-     */
-
-
+    public GameObject gc;
+    public GameObject fantasmaNormal;
     //Creamos dos vectores, uno para detectar dónde pulso por primera vez
     //y dónde suelto para más tarde calcular la diferencia entre esas posiciones
-    new Vector3 pincho;
-    new Vector3 suelto;
 
-    public GameObject gc;
-    //Acceder al fantasma normal desde unity
-    public GameObject fantasmaNormal;
-
+    Vector3 pincho;
+    Vector3 suelto;
 
     //Declaramos una velocidad 
     //Y un booleano para saber si podemos movernos o no para así impedir
     //que el jugador pueda mover el fantasma mientras este realiza su trayectoria
+
     public float velocidad = 10f;
     public bool puedoMoverme = true;
+    Fantasma_normal1 scriptFantasma;
+
+    //Declaramos el rb del fantasma
     Rigidbody2D rb;
+
+    SonidoFantasmas sonido;
 
 
     void Start()
     {
+        
+        //Obtenemos el rb de el fantasma
         rb = GetComponent<Rigidbody2D>();
+        scriptFantasma = GetComponent<Fantasma_normal1>();
+        Reposiciona();
+        sonido = GetComponent<SonidoFantasmas>();
     }
 
   
@@ -37,6 +41,8 @@ public class Fantasma_desnudo : MonoBehaviour
     {
       
     }
+
+    //Funcion para poder moverme
     void Mover()
     {
         //Declaramos un vector que obtenga la diferencia 
@@ -56,10 +62,12 @@ public class Fantasma_desnudo : MonoBehaviour
                 if (dif.x > 0)
                 {
                     rb.velocity = new Vector2(1, 0) * velocidad;
+
                 }
                 else
                 {
                     rb.velocity = new Vector2(-1, 0) * velocidad;
+
                 }
 
                 puedoMoverme = false;
@@ -71,15 +79,18 @@ public class Fantasma_desnudo : MonoBehaviour
                 if (dif.y > 0)
                 {
                     rb.velocity = new Vector2(0, 1) * velocidad;
+
                 }
                 else
                 {
                     rb.velocity = new Vector2(0, -1) * velocidad;
+
                 }
 
                 puedoMoverme = false;
             }
 
+            sonido.SonidoMover();
         }
 
 
@@ -100,9 +111,10 @@ public class Fantasma_desnudo : MonoBehaviour
 
     }
 
+
     //Cuando choco con un colider puedo volver a moverme
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         puedoMoverme = true;
 
@@ -114,5 +126,27 @@ public class Fantasma_desnudo : MonoBehaviour
             gc.GetComponent<GameController_ingame>().RestarFantasmas();
             Destroy(gameObject);
         }
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        rb.velocity = Vector2.zero;
+        Reposiciona();
+        puedoMoverme = true;
+    }
+
+    public void Reposiciona()
+    {
+        if (transform.parent != null)
+        {
+
+            transform.localPosition = new Vector3(Mathf.Round(transform.localPosition.x), Mathf.Round(transform.localPosition.y), Mathf.Round(transform.localPosition.z));
+        }
+        else
+        {
+            transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
+        }
+
     }
 }
