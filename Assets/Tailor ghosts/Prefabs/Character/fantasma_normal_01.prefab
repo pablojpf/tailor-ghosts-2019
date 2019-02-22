@@ -288,10 +288,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb55761cd41d69c4eaa62089a9452d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cremallera: {fileID: 6573248057736416967, guid: a1ac1f4f1e93c4641b3e23fbbb2a3933,
+  cremallera: {fileID: 948072807420918475, guid: a1ac1f4f1e93c4641b3e23fbbb2a3933,
     type: 3}
-  cremalleraVertical: {fileID: 6456760592183772538, guid: aefe2e9e202cc5349951aaeeba789882,
+  cremalleraVertical: {fileID: 3360288450163814309, guid: aefe2e9e202cc5349951aaeeba789882,
     type: 3}
+  capasRaycast:
+    serializedVersion: 2
+    m_Bits: 53
   right: 0
   left: 0
   top: 0
