@@ -22,7 +22,7 @@ public class GameController_ingame : MonoBehaviour
 
     void Awake()
     {
-        musica.Play(0);
+
     }
 
 
@@ -31,7 +31,7 @@ public class GameController_ingame : MonoBehaviour
     void Start()
     {
 
-        musica.Play(0);
+
 
         anim_UIingame.SetBool("activar", false);
         anim_victoria.SetBool("activar", false);
