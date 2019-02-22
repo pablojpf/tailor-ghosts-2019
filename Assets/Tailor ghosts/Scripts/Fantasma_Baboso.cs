@@ -10,7 +10,7 @@ public class Fantasma_Baboso: MonoBehaviour
 
     public GameObject fantasmaNormal;
     Rigidbody2D rb;
-    public GameObject gc;
+    GameObject gc;
 
     //Variables de los Controles
     Vector3 pincho;
@@ -22,7 +22,14 @@ public class Fantasma_Baboso: MonoBehaviour
     public static bool izda = false;
     public static bool dcha = false;
 
-
+    private void Awake()
+    {
+        gc = GameObject.Find("GameController");
+        if(gc == null)
+        {
+            Debug.LogError("No encuntro el GameController");
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

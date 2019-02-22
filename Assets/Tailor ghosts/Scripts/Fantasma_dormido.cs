@@ -4,18 +4,40 @@ using UnityEngine;
 
 public class Fantasma_dormido : MonoBehaviour
 {
-    
+    public GameObject fantasmaNormal;
+    GameObject gc;
+
+
     Fantasma_dormido scriptFantasmaDormido;
     public AudioController_InGame scriptACUnion;
-
+    private void Awake()
+    {
+        gc = GameObject.Find("GameController");
+        if (gc == null)
+        {
+            Debug.LogError("No encuntro el GameController");
+        }
+    }
     private void OnCollisionEnter2D(Collision2D col)
     {
         
         if (col.gameObject.CompareTag("Player"))
         {
-            scriptACUnion.AudioUnion();
-            transform.SetParent(col.transform);           
-            Destroy(scriptFantasmaDormido);
+            if (!col.transform.parent == transform)
+            {
+                GameObject nuevoFantasma;
+                nuevoFantasma = Instantiate(fantasmaNormal, transform.position, transform.rotation);
+                nuevoFantasma.transform.SetParent(col.transform);
+
+                transform.SetParent(col.transform);
+                scriptACUnion.AudioUnion();
+                Destroy(nuevoFantasma.GetComponent<Rigidbody2D>());
+
+
+                gc.GetComponent<GameController_ingame>().RestarFantasmas();
+                Destroy(gameObject);
+
+            }
         }
     }
 
