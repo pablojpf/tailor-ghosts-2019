@@ -14,7 +14,7 @@ public class Movimientos : MonoBehaviour
     Vector3 suelto;
     public GameObject fantasmaNormal;
     bool creado = false;
-
+    GameObject gc;
     RaycastHit2D hit;
     public LayerMask capas;
     public float distancia = 1f;
@@ -31,7 +31,14 @@ public class Movimientos : MonoBehaviour
     public bool colisionRight = false;
     public bool colisionLeft = false;
 
-
+    private void Awake()
+    {
+        gc = GameObject.Find("GameController");
+        if (gc == null)
+        {
+            Debug.LogError("No encuntro el GameController");
+        }
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -182,6 +189,8 @@ public class Movimientos : MonoBehaviour
                 {
                     GameObject nuevoFantasma;
                     nuevoFantasma = Instantiate(fantasmaNormal, transform.position, transform.rotation);
+                    gc.GetComponent<GameController_ingame>().RestarFantasmas();
+
                     nuevoFantasma.transform.SetParent(col.transform);
                     Destroy(nuevoFantasma.GetComponent<Rigidbody2D>());
                     creado = true;
