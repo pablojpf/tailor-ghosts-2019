@@ -288,8 +288,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb55761cd41d69c4eaa62089a9452d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritesBabas: {fileID: 0}
+  cremallera: {fileID: 6573248057736416967, guid: a1ac1f4f1e93c4641b3e23fbbb2a3933,
+    type: 3}
+  cremalleraVertical: {fileID: 6456760592183772538, guid: aefe2e9e202cc5349951aaeeba789882,
+    type: 3}
   right: 0
   left: 0
   top: 0
   bot: 0
+  unidoRight: 0
+  unidoLeft: 0
+  unidoTop: 0
+  unidoBot: 0

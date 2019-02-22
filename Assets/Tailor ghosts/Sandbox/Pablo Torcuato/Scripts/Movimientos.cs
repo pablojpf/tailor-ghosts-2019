@@ -182,9 +182,9 @@ public class Movimientos : MonoBehaviour
             if (!col.transform.parent == transform)
             {
                 rb.velocity = Vector2.zero;
-                //Debug.Log("hijobasoso");
-                Debug.Log("CreandoFantasma " + transform.name);
+                
                 Reposiciona();
+
                 if(creado == false)
                 {
                     GameObject nuevoFantasma;
