@@ -42,14 +42,18 @@ public class Cremallera : MonoBehaviour
 
             if (hitRight.transform.CompareTag("Player") && transform.parent != null)
             {
-                Debug.DrawRay(transform.position, transform.right * 0.6f, Color.green);
-                right = true;
-                if(unidoRight == false)
+                if (transform.parent == hitRight.transform)
                 {
-                    copiaCremallera = Instantiate(cremallera, transform.position + new Vector3(0.5f, 0, 0), transform.rotation);
-                    copiaCremallera.transform.SetParent(hitRight.transform);
-                    unidoRight = true;
+                    Debug.DrawRay(transform.position, transform.right * 0.6f, Color.green);
+                    right = true;
+                    if (unidoRight == false)
+                    {
+                        copiaCremallera = Instantiate(cremallera, transform.position + new Vector3(0.5f, 0, 0), transform.rotation);
+                        copiaCremallera.transform.SetParent(hitRight.transform);
+                        unidoRight = true;
+                    }
                 }
+
                
             }
 
@@ -62,14 +66,18 @@ public class Cremallera : MonoBehaviour
 
             if (hitLeft.transform.CompareTag("Player") && transform.parent != null)
             {
-                Debug.DrawRay(transform.position, transform.right * -0.6f, Color.green);
-                left = true;
-                if (unidoLeft == false)
+                if (transform.parent == hitLeft.transform)
                 {
-                    copiaCremallera = Instantiate(cremallera, transform.position - new Vector3(0.5f, 0, 0), transform.rotation);
-                    copiaCremallera.transform.SetParent(hitLeft.transform);
-                    unidoLeft = true;
+                    Debug.DrawRay(transform.position, transform.right * -0.6f, Color.green);
+                    left = true;
+                    if (unidoLeft == false)
+                    {
+                        copiaCremallera = Instantiate(cremallera, transform.position - new Vector3(0.5f, 0, 0), transform.rotation);
+                        copiaCremallera.transform.SetParent(hitLeft.transform);
+                        unidoLeft = true;
+                    }
                 }
+
             }
 
         }
@@ -79,16 +87,20 @@ public class Cremallera : MonoBehaviour
         if (hitTop)
         {
 
-            if (hitTop.transform.CompareTag("Player") && transform.parent != null && transform.parent.transform.parent == null)
+            if (hitTop.transform.CompareTag("Player") && transform.parent != null )
             {
                 Debug.DrawRay(transform.position, transform.up * 0.6f, Color.green);
-                top = true;
-                if (unidoTop == false)
+                if(transform.parent == hitTop.transform)
                 {
-                    copiaCremallera = Instantiate(cremalleraVertical, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
-                    copiaCremallera.transform.SetParent(hitTop.transform);
-                    unidoTop = true;
+                    top = true;
+                    if (unidoTop == false)
+                    {
+                        copiaCremallera = Instantiate(cremalleraVertical, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
+                        copiaCremallera.transform.SetParent(hitTop.transform);
+                        unidoTop = true;
+                    }
                 }
+
             }
 
         }
@@ -100,14 +112,18 @@ public class Cremallera : MonoBehaviour
 
             if (hitBot.transform.CompareTag("Player") && transform.parent != null)
             {
-                Debug.DrawRay(transform.position, transform.up * -0.6f, Color.green);
-                bot = true;
-                if (unidoBot == false)
+                if (transform.parent == hitBot.transform)
                 {
-                    copiaCremallera = Instantiate(cremalleraVertical, transform.position - new Vector3(0, 0.5f, 0), transform.rotation);
-                    copiaCremallera.transform.SetParent(hitBot.transform);
-                    unidoBot = true;
+                    Debug.DrawRay(transform.position, transform.up * -0.6f, Color.green);
+                    bot = true;
+                    if (unidoBot == false)
+                    {
+                        copiaCremallera = Instantiate(cremalleraVertical, transform.position - new Vector3(0, 0.5f, 0), transform.rotation);
+                        copiaCremallera.transform.SetParent(hitBot.transform);
+                        unidoBot = true;
+                    }
                 }
+
             }
 
         }
