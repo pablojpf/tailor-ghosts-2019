@@ -84,7 +84,35 @@ public class GameController_ingame : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName: "Nivel2_1");
     }
-    
+    public void Nivel2_2()
+    {
+        SceneManager.LoadScene(sceneName: "Nivel2_2");
+    }
+    public void Nivel3_1()
+    {
+        SceneManager.LoadScene(sceneName: "Nivel3_1");
+    }
+    public void Nivel3_2()
+    {
+        SceneManager.LoadScene(sceneName: "Nivel3_2");
+    }
+    public void Nivel4_1()
+    {
+        SceneManager.LoadScene(sceneName: "Nivel4_1");
+    }
+    public void Nivel4_2()
+    {
+        SceneManager.LoadScene(sceneName: "Nivel4_2");
+    }
+    public void Nivel5_1()
+    {
+        SceneManager.LoadScene(sceneName: "Nivel5_1");
+    }
+    public void Nivel5_2()
+    {
+        SceneManager.LoadScene(sceneName: "Nivel5_2");
+    }
+
     public void FinalNivel()
     {
         
