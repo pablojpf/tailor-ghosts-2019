@@ -134,6 +134,10 @@ public class Fantasma_desnudo : MonoBehaviour
         rb.velocity = Vector2.zero;
         Reposiciona();
         puedoMoverme = true;
+        if (collision.transform.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
     }
 
     public void Reposiciona()

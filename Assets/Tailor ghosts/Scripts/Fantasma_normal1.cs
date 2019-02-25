@@ -12,6 +12,7 @@ public class Fantasma_normal1 : MonoBehaviour
 
     Vector3 pincho;
     Vector3 suelto;
+    public Vector2 direccion;
 
     //Declaramos una velocidad 
     //Y un booleano para saber si podemos movernos o no para así impedir
@@ -107,12 +108,13 @@ public class Fantasma_normal1 : MonoBehaviour
                  if(dif.x>0)
                  {
                     rb.velocity = new Vector2(1, 0) * velocidad;
+                    direccion = rb.velocity;
 
                  }
                  else
                  {
                     rb.velocity = new Vector2(-1, 0) * velocidad;
-
+                    direccion = rb.velocity;
                  }
 
                  puedoMoverme = false;
@@ -124,12 +126,12 @@ public class Fantasma_normal1 : MonoBehaviour
                  if (dif.y>0)
                  {
                     rb.velocity = new Vector2(0, 1) * velocidad;
-
+                    direccion = rb.velocity;
                  }
                  else
                  {
                     rb.velocity = new Vector2(0, -1) * velocidad;
-
+                    direccion = rb.velocity;
                  }
 
                  puedoMoverme = false;
@@ -169,7 +171,7 @@ public class Fantasma_normal1 : MonoBehaviour
             }
             
             
-            if (! col.transform.parent == transform)
+            if (! col.transform.parent == transform && transform.CompareTag("Player"))
             {
                 transform.SetParent(col.transform);
                 if(transform.parent != null)
