@@ -124,20 +124,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: periodico (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6184017561717981747, guid: 3f32b80a00bb0404098505a5ca691e79,
-        type: 3}
-      propertyPath: m_TagString
-      value: Bloque
-      objectReference: {fileID: 0}
     - target: {fileID: 6184017561717981751, guid: 3f32b80a00bb0404098505a5ca691e79,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03999996
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6184017561717981751, guid: 3f32b80a00bb0404098505a5ca691e79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.01
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6184017561717981751, guid: 3f32b80a00bb0404098505a5ca691e79,
         type: 3}
@@ -1515,12 +1510,12 @@ PrefabInstance:
     - target: {fileID: 3280235156959243447, guid: 460578c9e67da2a4db7408ae32d1801e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.04
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3280235156959243447, guid: 460578c9e67da2a4db7408ae32d1801e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3280235156959243447, guid: 460578c9e67da2a4db7408ae32d1801e,
         type: 3}
@@ -1748,12 +1743,12 @@ PrefabInstance:
     - target: {fileID: 4647705640409927786, guid: acf14e08434d48f46b48b06ad9ce6c8f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.87
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4647705640409927786, guid: acf14e08434d48f46b48b06ad9ce6c8f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.96
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4647705640409927786, guid: acf14e08434d48f46b48b06ad9ce6c8f,
         type: 3}
@@ -2017,6 +2012,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6184017561717981748, guid: 3f32b80a00bb0404098505a5ca691e79,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f32b80a00bb0404098505a5ca691e79, type: 3}
 --- !u!1001 &1955827891
@@ -2113,12 +2113,12 @@ PrefabInstance:
     - target: {fileID: 266220010862257735, guid: a2bd4ff7920caea4694448bd84c6f3f7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.04
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 266220010862257735, guid: a2bd4ff7920caea4694448bd84c6f3f7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.01
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 266220010862257735, guid: a2bd4ff7920caea4694448bd84c6f3f7,
         type: 3}

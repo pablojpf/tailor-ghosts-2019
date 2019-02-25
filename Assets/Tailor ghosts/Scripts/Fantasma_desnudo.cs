@@ -123,7 +123,7 @@ public class Fantasma_desnudo : MonoBehaviour
         if (col.gameObject.CompareTag("Tela"))
         {
             Instantiate(fantasmaNormal, transform.position, transform.rotation);
-            gc.GetComponent<GameController_ingame>().RestarFantasmas();
+           
             Destroy(gameObject);
         }
     }
@@ -132,10 +132,12 @@ public class Fantasma_desnudo : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         rb.velocity = Vector2.zero;
+        collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         Reposiciona();
         puedoMoverme = true;
         if (collision.transform.CompareTag("Player"))
         {
+            
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
     }
