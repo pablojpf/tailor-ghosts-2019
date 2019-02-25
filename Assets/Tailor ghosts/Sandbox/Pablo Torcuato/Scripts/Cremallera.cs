@@ -7,6 +7,7 @@ public class Cremallera : MonoBehaviour
 {
     public GameObject cremallera;
     public GameObject cremalleraVertical;
+    public LayerMask capasRaycast;
     RaycastHit2D hitRight;
     RaycastHit2D hitLeft;
     RaycastHit2D hitTop;
@@ -33,34 +34,43 @@ public class Cremallera : MonoBehaviour
 
     public void Comprobador()
     {
+       
         GameObject copiaCremallera;
         //RayCast Derecho
         Debug.DrawRay(transform.position + new Vector3(0.6f, 0, 0), transform.right * 0.5f, Color.red);
-        hitRight = Physics2D.Raycast(transform.position + new Vector3(0.6f, 0, 0), transform.right, 0.6f);
+        hitRight = Physics2D.Raycast(transform.position + new Vector3(0.6f, 0, 0), transform.right, 0.6f, capasRaycast);
         if (hitRight)
         {
-
+            Debug.Log("Primer IF " + transform.name);
             if (hitRight.transform.CompareTag("Player") && transform.parent != null)
             {
+                Debug.Log("Segundo IF " + transform.name);
                 if (transform.parent == hitRight.transform)
                 {
+                    Debug.Log("Tercer IF " + transform.name);
                     Debug.DrawRay(transform.position, transform.right * 0.6f, Color.green);
                     right = true;
                     if (unidoRight == false)
                     {
-                        copiaCremallera = Instantiate(cremallera, transform.position + new Vector3(0.5f, 0, 0), transform.rotation);
-                        copiaCremallera.transform.SetParent(hitRight.transform);
+                        Debug.Log("Cuarto IF " + transform.name);
+                        copiaCremallera = Instantiate(cremallera, transform.position, transform.rotation);
+                        copiaCremallera.transform.SetParent(transform);
+                        copiaCremallera.transform.localPosition += new Vector3(0.5f, 0, 0);
                         unidoRight = true;
                     }
                 }
 
-               
+
+            }
+            else
+            {
+                Debug.LogWarning(transform.name + ":"+hitRight.transform.name);
             }
 
         }
         //RayCast Izquierdo
         Debug.DrawRay(transform.position - new Vector3(0.6f, 0, 0), transform.right * -0.5f, Color.red);
-        hitLeft = Physics2D.Raycast(transform.position - new Vector3(0.6f, 0, 0), transform.right * -1, 0.6f);
+        hitLeft = Physics2D.Raycast(transform.position - new Vector3(0.6f, 0, 0), transform.right * -1, 0.6f, capasRaycast);
         if (hitLeft)
         {
 
@@ -72,8 +82,9 @@ public class Cremallera : MonoBehaviour
                     left = true;
                     if (unidoLeft == false)
                     {
-                        copiaCremallera = Instantiate(cremallera, transform.position - new Vector3(0.5f, 0, 0), transform.rotation);
-                        copiaCremallera.transform.SetParent(hitLeft.transform);
+                        copiaCremallera = Instantiate(cremallera, transform.position, transform.rotation);
+                        copiaCremallera.transform.SetParent(transform);
+                        copiaCremallera.transform.localPosition -= new Vector3(0.5f, 0, 0);
                         unidoLeft = true;
                     }
                 }
@@ -83,7 +94,7 @@ public class Cremallera : MonoBehaviour
         }
         //RayCast Superior
         Debug.DrawRay(transform.position + new Vector3(0, 0.6f, 0), transform.up * 0.5f, Color.red);
-        hitTop = Physics2D.Raycast(transform.position + new Vector3(0, 0.6f, 0), transform.up, 0.6f);
+        hitTop = Physics2D.Raycast(transform.position + new Vector3(0, 0.6f, 0), transform.up, 0.6f, capasRaycast);
         if (hitTop)
         {
 
@@ -95,8 +106,9 @@ public class Cremallera : MonoBehaviour
                     top = true;
                     if (unidoTop == false)
                     {
-                        copiaCremallera = Instantiate(cremalleraVertical, transform.position + new Vector3(0, 0.5f, 0), transform.rotation);
-                        copiaCremallera.transform.SetParent(hitTop.transform);
+                        copiaCremallera = Instantiate(cremalleraVertical, transform.position, transform.rotation);
+                        copiaCremallera.transform.SetParent(transform);
+                        copiaCremallera.transform.localPosition += new Vector3(0, 0.5f, 0);
                         unidoTop = true;
                     }
                 }
@@ -106,7 +118,7 @@ public class Cremallera : MonoBehaviour
         }
         //RayCast Inferior
         Debug.DrawRay(transform.position - new Vector3(0, 0.6f, 0), transform.up * -0.5f, Color.red);
-        hitBot = Physics2D.Raycast(transform.position - new Vector3(0, 0.6f, 0), transform.up * -1, 0.6f);
+        hitBot = Physics2D.Raycast(transform.position - new Vector3(0, 0.6f, 0), transform.up * -1, 0.6f, capasRaycast);
         if (hitBot)
         {
 
@@ -118,8 +130,9 @@ public class Cremallera : MonoBehaviour
                     bot = true;
                     if (unidoBot == false)
                     {
-                        copiaCremallera = Instantiate(cremalleraVertical, transform.position - new Vector3(0, 0.5f, 0), transform.rotation);
-                        copiaCremallera.transform.SetParent(hitBot.transform);
+                        copiaCremallera = Instantiate(cremalleraVertical, transform.position, transform.rotation);
+                        copiaCremallera.transform.SetParent(transform);
+                        copiaCremallera.transform.localPosition -= new Vector3(0, 0.5f, 0);
                         unidoBot = true;
                     }
                 }

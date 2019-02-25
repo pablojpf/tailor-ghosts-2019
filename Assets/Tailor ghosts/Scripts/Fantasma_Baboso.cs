@@ -101,11 +101,17 @@ public class Fantasma_Baboso: MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             rb.velocity = Vector2.zero;
+            col.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
             if (!col.transform.parent == transform)
             {
+                GameObject nuevoFantasma;
+                nuevoFantasma = Instantiate(fantasmaNormal, transform.position, transform.rotation);               
+                nuevoFantasma.transform.SetParent(col.transform);
+                nuevoFantasma.GetComponent<Cremallera>().Comprobador();
+                Destroy(nuevoFantasma.GetComponent<Rigidbody2D>());
+
                 //Debug.Log("hijobasoso");
-                Instantiate(fantasmaNormal, transform.position, transform.rotation);
                 gc.GetComponent<GameController_ingame>().RestarFantasmas();
                 Destroy(gameObject);
             }

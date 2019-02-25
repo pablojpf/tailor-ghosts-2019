@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4792882455195805235}
   - component: {fileID: 346155939}
   - component: {fileID: 9159140900857067421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Baba
   m_TagString: Baba
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3}
+    oldSize: {x: 0.85714287, y: 0.85714287}
     newSize: {x: 0.77, y: 0.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

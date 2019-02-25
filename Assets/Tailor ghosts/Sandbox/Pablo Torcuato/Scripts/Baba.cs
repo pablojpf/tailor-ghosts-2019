@@ -53,7 +53,13 @@ public class Baba : MonoBehaviour
         {
             posicionPlayer = col.gameObject.transform;
             toca = true;
-            col.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+            Rigidbody2D rbTemp = col.GetComponent<Rigidbody2D>();
+            if(rbTemp != null)
+            {
+                rbTemp.velocity = Vector2.zero;
+            }
+               
             BabaController.dentro = true;
 
         }
