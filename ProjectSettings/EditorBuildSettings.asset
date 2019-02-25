@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tailor ghosts/Scenes/Levels/Nivel5_2.unity
     guid: 4144c5e71c7d8284ebf29e23906bda10
+  - enabled: 1
+    path: Assets/Tailor ghosts/Scenes/Others/Menu_trofeos.unity
+    guid: 62482584af1d7d242bb6f65efe24d88a
   m_configObjects: {}
