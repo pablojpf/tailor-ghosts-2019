@@ -64,8 +64,7 @@ public class Cremallera : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning(transform.name + ":"+hitRight.transform.tag);
-                Debug.LogWarning(transform.parent.name);
+                Debug.LogWarning(transform.name + ":"+hitRight.transform.name);
             }
 
         }
