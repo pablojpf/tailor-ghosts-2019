@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SonidoFantasmas))]
+
 public class Fantasma_desnudo : MonoBehaviour
 {
     public GameObject gc;
@@ -90,10 +92,10 @@ public class Fantasma_desnudo : MonoBehaviour
                 puedoMoverme = false;
             }
 
-            sonido.SonidoMover();
+            
         }
 
-
+        sonido.SonidoMover();
 
 
     }

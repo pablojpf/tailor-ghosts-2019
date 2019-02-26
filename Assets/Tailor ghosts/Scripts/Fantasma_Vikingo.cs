@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SonidoFantasmas))]
+
 public class Fantasma_Vikingo : MonoBehaviour
 {
     //Variables del personaje
@@ -20,13 +22,14 @@ public class Fantasma_Vikingo : MonoBehaviour
 
     public AudioController_InGame scriptACUnion;
 
-
+    SonidoFantasmas sonido;
 
     // Start is called before the first frame update
     void Start()
     {
         Reposiciona();
         rb = GetComponent<Rigidbody2D>();
+        sonido = GetComponent<SonidoFantasmas>();
     }
 
     // Update is called once per frame
@@ -109,6 +112,9 @@ public class Fantasma_Vikingo : MonoBehaviour
                 puedoMoverme = false;
             }
         }
+
+        sonido.SonidoMover();
+
     }
     //Cuando pincho obtengo la posición donde he pinchado y la guardo en el vector pincho
     void OnMouseDown()
