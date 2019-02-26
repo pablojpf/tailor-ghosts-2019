@@ -36,8 +36,8 @@ public class Divisor : MonoBehaviour
         if (col.gameObject.transform.CompareTag("Player"))
         {
             Comprobador();
-            Destroy(col.gameObject);
             quienChoca = col.transform;
+            Destroy(col.gameObject);          
         }
     }
 
@@ -45,6 +45,9 @@ public class Divisor : MonoBehaviour
 
     public void Comprobador()
     {
+
+        ControlaLanzadores();
+        Debug.Log("COMPROBADOR");
         //RayCast Superior
         hitTop = Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), transform.up, capas);
         if (hitTop)
@@ -52,6 +55,7 @@ public class Divisor : MonoBehaviour
             chocoTop = true;
             if (hitTop.transform == quienChoca)
             {
+                Debug.Log("ARRIBA ES TRUE");
                 arriba = true;
             }
 
@@ -72,7 +76,6 @@ public class Divisor : MonoBehaviour
         else { chocoRight = false; }
 
 
-        ControlaLanzadores();
     }
 
     public void ControlaLanzadores()
