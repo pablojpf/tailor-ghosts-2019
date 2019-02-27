@@ -176,8 +176,6 @@ MonoBehaviour:
   audioM: {fileID: 24100000, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   Musica: {fileID: 243830442549381834, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   Fx: {fileID: 243965227530828546, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
-  sonido_play: {fileID: 0}
-  sonido_atras: {fileID: 0}
 --- !u!1 &485850538
 GameObject:
   m_ObjectHideFlags: 0

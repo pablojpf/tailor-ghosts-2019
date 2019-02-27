@@ -41,18 +41,14 @@ public class Cremallera : MonoBehaviour
         hitRight = Physics2D.Raycast(transform.position + new Vector3(0.6f, 0, 0), transform.right, 0.6f, capasRaycast);
         if (hitRight)
         {
-            Debug.Log("Primer IF " + transform.name);
             if (hitRight.transform.CompareTag("Player") && transform.parent != null)
             {
-                Debug.Log("Segundo IF " + transform.name);
                 if (transform.parent == hitRight.transform)
                 {
-                    Debug.Log("Tercer IF " + transform.name);
                     Debug.DrawRay(transform.position, transform.right * 0.6f, Color.green);
                     right = true;
                     if (unidoRight == false)
                     {
-                        Debug.Log("Cuarto IF " + transform.name);
                         copiaCremallera = Instantiate(cremallera, transform.position, transform.rotation);
                         copiaCremallera.transform.SetParent(transform);
                         copiaCremallera.transform.localPosition += new Vector3(0.5f, 0, 0);

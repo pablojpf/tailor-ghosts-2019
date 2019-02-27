@@ -66,7 +66,7 @@ public class Fantasma_Vikingo : MonoBehaviour
                 Destroy(nuevoFantasma.GetComponent<Rigidbody2D>());
 
 
-                gc.GetComponent<GameController_ingame>().RestarFantasmas();
+                
                 Destroy(gameObject);
             }
 
