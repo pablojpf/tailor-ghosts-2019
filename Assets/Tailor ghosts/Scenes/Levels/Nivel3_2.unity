@@ -1575,6 +1575,11 @@ PrefabInstance:
       propertyPath: anim_victoria
       value: 
       objectReference: {fileID: 245689522}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: totalFantasmasNivel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5046212273423999334, guid: 6b9e20bbf1437f443bda5f8d05198055,
         type: 3}
       propertyPath: sonidoPausa

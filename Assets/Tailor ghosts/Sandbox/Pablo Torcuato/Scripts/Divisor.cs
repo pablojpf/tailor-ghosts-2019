@@ -24,6 +24,7 @@ public class Divisor : MonoBehaviour
     bool abajo = false;
 
     GameObject quienChoca;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +58,7 @@ public class Divisor : MonoBehaviour
         hitTop = Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), transform.up, 0.1f, capas);
         if (hitTop)
         {
+            Debug.Log(hitTop.transform.name);
             chocoTop = true;
             if (hitTop.transform.gameObject == quienChoca)
             {
@@ -147,9 +149,9 @@ public class Divisor : MonoBehaviour
 
     public void LanzadorArriba()
     {
-        GameObject nuevofantasma;
         if(chocoTop == false)
         {
+            GameObject nuevofantasma;
             nuevofantasma = Instantiate(fantasmaNormal, transform.position + new Vector3(0, 1, 0), transform.rotation);
             nuevofantasma.GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocidadLanzador);
         }
@@ -158,10 +160,9 @@ public class Divisor : MonoBehaviour
 
     public void LanzadorAbajo()
     {
-
-        GameObject nuevofantasma;
         if (chocoBot == false)
         {
+            GameObject nuevofantasma;
             nuevofantasma = Instantiate(fantasmaNormal, transform.position - new Vector3(0, 1, 0), transform.rotation);
             nuevofantasma.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -velocidadLanzador);
         }
@@ -169,9 +170,9 @@ public class Divisor : MonoBehaviour
 
     public void LanzadorIzquierdo()
     {
-        GameObject nuevofantasma;
         if (chocoLeft == false)
         {
+            GameObject nuevofantasma;
             nuevofantasma = Instantiate(fantasmaNormal, transform.position - new Vector3(1, 0, 0), transform.rotation);
             nuevofantasma.GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidadLanzador, 0);
         }
@@ -179,9 +180,9 @@ public class Divisor : MonoBehaviour
 
     public void LanzadorDerecho()
     {
-        GameObject nuevofantasma;
         if (chocoRight == false)
         {
+            GameObject nuevofantasma;
             nuevofantasma = Instantiate(fantasmaNormal, transform.position + new Vector3(1, 0, 0), transform.rotation);
             nuevofantasma.GetComponent<Rigidbody2D>().velocity = new Vector2(velocidadLanzador, 0);
         }
