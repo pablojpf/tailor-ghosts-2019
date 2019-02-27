@@ -132,5 +132,6 @@ public class GameController_ingame : MonoBehaviour
     public void RestarFantasmas()
     {
         totalFantasmasNivel--;
+        
     }
 }

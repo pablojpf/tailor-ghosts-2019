@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d01e4305bc84f04297584fe4e9f7955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalFantasmasNivel: 3
+  totalFantasmasNivel: 0
   numerodeestrellas: 0
   anim_UIingame: {fileID: 0}
   anim_pausa: {fileID: 0}
