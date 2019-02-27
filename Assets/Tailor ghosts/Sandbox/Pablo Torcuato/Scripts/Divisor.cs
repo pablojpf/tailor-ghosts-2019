@@ -10,6 +10,9 @@ public class Divisor : MonoBehaviour
 
     RaycastHit2D hitRight;
     RaycastHit2D hitTop;
+    RaycastHit2D hitLeft;
+    RaycastHit2D hitBot;
+
     public bool chocoTop = false;
     public bool chocoBot = false;
     public bool chocoRight = false;
@@ -19,7 +22,8 @@ public class Divisor : MonoBehaviour
     bool izquierdo = false;
     bool arriba = false;
     bool abajo = false;
-    Transform quienChoca;
+
+    GameObject quienChoca;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,39 +39,52 @@ public class Divisor : MonoBehaviour
     {
         if (col.gameObject.transform.CompareTag("Player"))
         {
-            Comprobador();
-            quienChoca = col.transform;
+
+            quienChoca = col.gameObject;
+            Check();
             Destroy(col.gameObject);          
         }
     }
 
 
 
-    public void Comprobador()
+    public void Check()
     {
 
-        ControlaLanzadores();
+       
         Debug.Log("COMPROBADOR");
         //RayCast Superior
-        hitTop = Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), transform.up, capas);
+        hitTop = Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), transform.up, 0.1f, capas);
         if (hitTop)
         {
             chocoTop = true;
-            if (hitTop.transform == quienChoca)
+            if (hitTop.transform.gameObject == quienChoca)
             {
-                Debug.Log("ARRIBA ES TRUE");
                 arriba = true;
             }
 
         }
         else { chocoTop = false; }
-        //RayCast Derecho
 
-        hitRight = Physics2D.Raycast(transform.position + new Vector3(0.5f, 0, 0), transform.right, capas);
+        //RayCast Inferior
+        hitBot = Physics2D.Raycast(transform.position - new Vector3(0, 0.5f, 0), transform.up * -1, 0.1f, capas);
+        if (hitBot)
+        {
+            chocoBot = true;
+            if (hitBot.transform.gameObject == quienChoca)
+            {
+                abajo = true;
+            }
+
+        }
+        else { chocoBot = false; }
+
+        //RayCast Derecho
+        hitRight = Physics2D.Raycast(transform.position + new Vector3(0.5f, 0, 0), transform.right, 0.1f, capas);
         if (hitRight)
         {
             chocoRight = true;
-            if (hitRight.transform == quienChoca)
+            if (hitRight.transform.gameObject == quienChoca)
             {
                 derecho = true;
             }
@@ -75,30 +92,55 @@ public class Divisor : MonoBehaviour
         }
         else { chocoRight = false; }
 
+        //RayCast Izquierdo
+        hitLeft = Physics2D.Raycast(transform.position - new Vector3(0.5f, 0, 0), transform.right *-1, 0.1f, capas);
+        if (hitLeft)
+        {
+            chocoLeft = true;
+            if (hitLeft.transform.gameObject == quienChoca)
+            {
+                izquierdo = true;
+            }
 
+        }
+        else { chocoLeft = false; }
+
+        ControlaLanzadores();
     }
 
     public void ControlaLanzadores()
     {
-        if(derecho == true)
-        {
-            LanzadorAbajo();
-
-            LanzadorIzquierdo();
-
-            LanzadorArriba();
-
-            derecho = false;
-        }
         if (arriba == true)
         {
             LanzadorAbajo();
-
             LanzadorIzquierdo();
-
             LanzadorDerecho();
 
             arriba = false;
+        }
+        if (abajo == true)
+        {
+            LanzadorDerecho();
+            LanzadorIzquierdo();
+            LanzadorArriba();
+
+            abajo = false;
+        }
+        if (izquierdo == true)
+        {
+            LanzadorAbajo();
+            LanzadorDerecho();
+            LanzadorArriba();
+
+            izquierdo = false;
+        }
+        if (derecho == true)
+        {
+            LanzadorAbajo();
+            LanzadorIzquierdo();
+            LanzadorArriba();
+
+            derecho = false;
         }
 
     }
