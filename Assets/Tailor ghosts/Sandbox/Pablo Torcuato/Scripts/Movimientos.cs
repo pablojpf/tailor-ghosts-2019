@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SonidoFantasmas))]
+
 public class Movimientos : MonoBehaviour
 {
     public float velocidad = 10f;
@@ -31,6 +33,8 @@ public class Movimientos : MonoBehaviour
     public bool colisionRight = false;
     public bool colisionLeft = false;
 
+    SonidoFantasmas sonido;
+
     private void Awake()
     {
         gc = GameObject.Find("GameController");
@@ -43,7 +47,7 @@ public class Movimientos : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Reposiciona();
-
+        sonido = GetComponent<SonidoFantasmas>();
     }
 
     // Update is called once per frame
@@ -160,7 +164,7 @@ public class Movimientos : MonoBehaviour
 
         }
 
-      
+        sonido.SonidoMover();
 
 
 

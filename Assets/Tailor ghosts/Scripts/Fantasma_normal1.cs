@@ -181,11 +181,7 @@ public class Fantasma_normal1 : MonoBehaviour
                 Reposiciona();
                 
                 Destroy(scriptFantasma);
-                Destroy(rb);
-               
-                Debug.Log("Me hago hijo de " + col.transform.name);
-               
-                
+                Destroy(rb);                                           
             }
 
             gc.GetComponent<GameController_ingame>().RestarFantasmas();
