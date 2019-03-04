@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6412e07cd9146054baa5f69ddc9fe5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonidoMovimiento: {fileID: 0}
+  sonidoMovimiento: {fileID: 8300000, guid: d56d211d6e277144ca3228278222c1bb, type: 3}
 --- !u!95 &265329230526167741
 Animator:
   serializedVersion: 3
