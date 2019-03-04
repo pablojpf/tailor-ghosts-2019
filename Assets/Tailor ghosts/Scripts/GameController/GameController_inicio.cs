@@ -8,6 +8,14 @@ using UnityEngine.Audio;
 
 public class GameController_inicio : MonoBehaviour
 {
+    //
+    //Game Controller que nos permite avanzar por el menu de inicio
+    //Cambia la música dependiendo del botón que toquemos
+    //Controles del audiomixer
+    //
+
+
+
     public Animator anim_UIajustes;
     public Animator anim_MenuLogros;
     public Animator anim_MusicaOnOff;

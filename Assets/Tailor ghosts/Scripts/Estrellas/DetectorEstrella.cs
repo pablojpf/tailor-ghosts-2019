@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class DetectorEstrella : MonoBehaviour
 {
+    //
+    //Controlamos las animaciones de las estrellas ingame, si un player toca la estrella esta se ilumina
+    //y nos suma + 1 al contador
+    //Cuando sale de la estrella esta se desactiva y cambia el numero de estrellas
+    //
+
+
+
     bool estrellaActiva = false;
     Animator anim_estrellas;
 
