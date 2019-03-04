@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Iman : MonoBehaviour
 {
+    public GameObject gc;
     RaycastHit2D hitRight;
     //Con esto hacemos que una variable privada se vea en el editor [SerializeField]
     public LayerMask capas;
@@ -15,7 +16,7 @@ public class Iman : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gc = GameObject.Find("GameController");
     }
 
     // Update is called once per frame
@@ -25,13 +26,15 @@ public class Iman : MonoBehaviour
         hitRight = Physics2D.Raycast(transform.position + new Vector3 (0f,altura/10,0f), transform.right, distancia, capas);
         if (hitRight)
         {
-            
             if (hitRight.transform.CompareTag("Player"))
             {
+                //AQUI JAVI
+
                 hitRight.rigidbody.velocity = Vector2.zero;
                 Debug.DrawRay(transform.position, transform.right * distancia, Color.green);
-                Vector2 miPosicion = new Vector2(transform.position.x +1f, transform.position.y);
+                Vector2 miPosicion = new Vector2(transform.position.x +0.91f, hitRight.transform.position.y);
                 Vector2 posicionDelNormal = new Vector2(hitRight.transform.position.x, hitRight.transform.position.y);
+               
                 hitRight.transform.position = Vector2.MoveTowards(posicionDelNormal, miPosicion, velocidad * Time.deltaTime);
             }
           
@@ -40,14 +43,16 @@ public class Iman : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
-        {                 
+        {
+            Debug.Log(col.transform.name);
             scriptACUnion.AudioUnion();
-            if (!col.transform.parent == transform)
+            if (col.transform.parent != transform)
             {
                 GameObject copiaNormal;
                 copiaNormal = Instantiate(fantasmaNormal, transform.position, transform.rotation);
                 copiaNormal.transform.SetParent(col.transform);
                 copiaNormal.GetComponent<Rigidbody2D>().simulated = false;
+                gc.GetComponent<GameController_ingame>().RestarFantasmas();
                 Destroy(gameObject);
                 //Si no desactivamos el rigidbody del fantasma al que nos unimos, solo se moverá 1
             }
