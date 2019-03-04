@@ -54,8 +54,8 @@ public class Fantasma_Vikingo : MonoBehaviour
             }
 
             col.gameObject.transform.position = col.gameObject.transform.position + new Vector3(ejeX, ejeY, 0f);
-            //ejeX = 0f;
-            //ejeY = 0f;
+            ejeX = 0f;
+            ejeY = 0f;
         }
         else if (col.gameObject.CompareTag("Player"))
         {
