@@ -6,12 +6,15 @@ using UnityEngine.Audio;
 public class MusicManager : MonoBehaviour
 {
 
-
+    //Declaramos las funciones que nos dirán si la música está activada o no en cada modo
     private bool musicaActiva = true;
     private bool musica_menu = true;
 
+    //Aquí declaramos el audioMixer para poder jugar con los valores del volumen, va acompañado de su grupo.
     public AudioMixer audioM;
     public AudioMixerGroup Musica;
+
+    //Aquí declaramos todos los clips de audio que va a reproducir nuestro audioSource
     public AudioClip musica_menus;
     public AudioClip musica_mundo1;
     public AudioClip musica_mundo2;
@@ -19,6 +22,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip musica_mundo4;
     public AudioClip musica_mundo5;
 
+    //Este es
     AudioSource ManagerMusica;
 
     public static MusicManager instance = null;
