@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Fantasma_dormido : MonoBehaviour
 {
+    //Si a este fantasma le toca uno normal, este se despierta y se convierte en uno normal
+    //si no, no puede moverse
+
+
     public GameObject fantasmaNormal;
     GameObject gc;
 

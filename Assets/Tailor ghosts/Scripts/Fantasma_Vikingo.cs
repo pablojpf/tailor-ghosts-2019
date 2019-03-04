@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Fantasma_Vikingo : MonoBehaviour
 {
+    //
+    //Este personaje se mueve tal y como un personaje normal 
+    //Pero si choca con un bloque lo mueve una unidad de unity en esa direccion
+    //Si el objeto con el que choca es un fantasma normal instanciamos un fantasma normal
+    //y destruye el mismo
+    //
+
+
 
     public float ejeX = 0f;
     public float ejeY = 0f;

@@ -122,6 +122,7 @@ public class Fantasma_desnudo : MonoBehaviour
 
         //Si el objeto con el que choco tiene el Tag TELA entonces me convierto en un
         //fantasma de tipo normal, lo instanciamos y destruimos el desnudo
+
         if (col.gameObject.CompareTag("Tela"))
         {
             Instantiate(fantasmaNormal, transform.position, transform.rotation);
@@ -130,6 +131,8 @@ public class Fantasma_desnudo : MonoBehaviour
         }
     }
 
+    //Si choco con algo me resposiciona y me permite moverme de nuevo
+    //Si con quien choco tiene el tag player la velocidad se convierte en 0
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -143,6 +146,8 @@ public class Fantasma_desnudo : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
     }
+
+    //Redondea mi posicion para que sea un numero exacto
 
     public void Reposiciona()
     {
