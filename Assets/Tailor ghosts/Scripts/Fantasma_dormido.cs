@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SonidoFantasmas))]
+
 public class Fantasma_dormido : MonoBehaviour
 {
     //Si a este fantasma le toca uno normal, este se despierta y se convierte en uno normal
     //si no, no puede moverse
 
+    SonidoFantasmas sonido;
 
     public GameObject fantasmaNormal;
     GameObject gc;
@@ -14,7 +17,16 @@ public class Fantasma_dormido : MonoBehaviour
 
     Fantasma_dormido scriptFantasmaDormido;
     public AudioController_InGame scriptACUnion;
-    private void Awake()
+
+    void Start()
+    {
+        sonido = GetComponent<SonidoFantasmas>();
+        sonido.SonidoMover();
+    }
+
+
+
+        private void Awake()
     {
         gc = GameObject.Find("GameController");
         if (gc == null)
@@ -22,6 +34,9 @@ public class Fantasma_dormido : MonoBehaviour
             Debug.LogError("No encuntro el GameController");
         }
     }
+
+
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         
