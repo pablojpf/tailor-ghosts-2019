@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 830150640118798139}
   - component: {fileID: 3514594413321152595}
   - component: {fileID: 1503187690254527785}
-  - component: {fileID: 5567006326716455862}
   - component: {fileID: 1120274616}
   - component: {fileID: 1120274614}
   - component: {fileID: 1120274615}
+  - component: {fileID: 265329230526167741}
   m_Layer: 0
   m_Name: fantasma_vikingo_01
   m_TagString: Player
@@ -148,25 +148,6 @@ MonoBehaviour:
   ejeX: 0
   ejeY: 0
   fantasmaNormal: {fileID: 0}
---- !u!95 &5567006326716455862
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096589063700734360}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a4c2889df0dd384a8e3b8bbb6209053, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &1120274616
 AudioSource:
   m_ObjectHideFlags: 0
@@ -292,3 +273,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonidoMovimiento: {fileID: 0}
+--- !u!95 &265329230526167741
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096589063700734360}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3962df86099beeb4d82dfb683e27ea9e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
