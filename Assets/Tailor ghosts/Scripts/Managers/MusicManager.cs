@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip musica_mundo4;
     public AudioClip musica_mundo5;
 
-    //Este es
+    //Este es el que va a reproducir los clips de audio (es, de algún modo, el altavoz)
     AudioSource ManagerMusica;
 
     public static MusicManager instance = null;
@@ -31,14 +31,18 @@ public class MusicManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Obtenemos el audioSource del objeto que lleva el script
         ManagerMusica = gameObject.GetComponent<AudioSource>();
+        //Le pasamos el clip de musica del menú y lo reproducimos al empezar
         ManagerMusica.clip = musica_menus;
         ManagerMusica.Play();
+        
     }
 
 
     void Awake()
     {
+        //Si el music Manager no existe en la escena, pasa a ser el que hay, si no, lo destruye y mantiene el que hay entre escenas.
         if (instance == null)
         {
             instance = this;
@@ -59,7 +63,7 @@ public class MusicManager : MonoBehaviour
     }
 
 
-
+    //En las siguientes funciones se hace lo mismo, se cambia el audioClip que se va a reproducir según el nivel y se reproduce.
 
     public void MusicaM1()
     {
@@ -105,9 +109,10 @@ public class MusicManager : MonoBehaviour
 
     public void Musicaonoff()
     {
+        //Alterna el valor de la booleana activada cada vez que se llama a la funcion, sería como darle a un interruptor de la luz: enciende/apaga.
         musicaActiva = !musicaActiva;
 
-
+        //Comprueba si la música está activada, y si lo está, accede a una variable pública que anteriormente se ha creado desde el audioMixer en el editor y ajusta su volumen normal (0 dB).Si está desactivada, le pone -80dB (le quita el volumen).
         if (musicaActiva)
         {
             audioM.SetFloat("volumenMusica", 0);
