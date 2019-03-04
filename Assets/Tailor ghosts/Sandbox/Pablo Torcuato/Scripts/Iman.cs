@@ -7,22 +7,32 @@ using UnityEngine;
 public class Iman : MonoBehaviour
 {
     public GameObject gc;
+    //Variable del raycast
     RaycastHit2D hitRight;
     //Con esto hacemos que una variable privada se vea en el editor [SerializeField]
+    //Esta es una variable que se le pasa al raycast para que ignore colisiones en ciertas capas
     public LayerMask capas;
+    //Distancia del rayo del raycast
     public float distancia = 1f;
+    //Velocidad de atracción a la costurera
     public float velocidad = 5f;
+    //Altura a la que se lanza el raycast para que detecte al jugador antes o después
     public float altura;
+    //Prefab del normal para crearlo cuando te unes
     public GameObject fantasmaNormal;
+    //Script con el que reproducimos el sonido de unión
     public AudioController_InGame scriptACUnion;
-
+    //Sonido de la costurera
     SonidoFantasmas sonido;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Busca el gameController en la escena
         gc = GameObject.Find("GameController");
+        //Sonido es un script que lleva el gameobject que posee este script
         sonido = GetComponent<SonidoFantasmas>();
+        //Activa una funcion del Script "Sonido"
         sonido.SonidoMover();
     }
 
@@ -52,7 +62,6 @@ public class Iman : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            Debug.Log(col.transform.name);
             scriptACUnion.AudioUnion();
             if (col.transform.parent != transform)
             {
