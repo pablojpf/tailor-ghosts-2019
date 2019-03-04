@@ -119,7 +119,13 @@ public class Fantasma_normal1 : MonoBehaviour
        
     }
 
+
     //Cuando choco con un colider puedo volver a moverme
+    //Si este collider es de tipo Player lo convierto en mi hijo si no lo es en ese instante
+    //le destruyo a mi hijo el rb y el script para que sea un sprite 
+    //resto del numero de fantasmas en pantalla y puedo volver a moverme
+
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         Reposiciona();
@@ -158,10 +164,14 @@ public class Fantasma_normal1 : MonoBehaviour
        
     }
 
+    //Si choco con un collider puedo volver a moverme
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         puedoMoverme = true;
     }
+
+    //Aproxima mi posicion para que sea un numero exacto
 
     public void Reposiciona()
     {

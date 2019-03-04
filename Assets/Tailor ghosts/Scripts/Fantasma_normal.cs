@@ -113,6 +113,11 @@ public class Fantasma_normal : MonoBehaviour
     }
 
     //Cuando choco con un colider puedo volver a moverme
+    //Si este collider es de tipo Player lo convierto en mi hijo si no lo es en ese instante
+    //le destruyo a mi hijo el rb y el script para que sea un sprite 
+    //resto del numero de fantasmas en pantalla y puedo volver a moverme
+
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
