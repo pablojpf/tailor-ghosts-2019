@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SonidoFantasmas))]
+
 public class Iman : MonoBehaviour
 {
     public GameObject gc;
@@ -13,10 +15,15 @@ public class Iman : MonoBehaviour
     public float altura;
     public GameObject fantasmaNormal;
     public AudioController_InGame scriptACUnion;
+
+    SonidoFantasmas sonido;
+
     // Start is called before the first frame update
     void Start()
     {
         gc = GameObject.Find("GameController");
+        sonido = GetComponent<SonidoFantasmas>();
+        sonido.SonidoMover();
     }
 
     // Update is called once per frame
@@ -28,7 +35,8 @@ public class Iman : MonoBehaviour
         {
             if (hitRight.transform.CompareTag("Player"))
             {
-                //AQUI JAVI
+                
+                
 
                 hitRight.rigidbody.velocity = Vector2.zero;
                 Debug.DrawRay(transform.position, transform.right * distancia, Color.green);
