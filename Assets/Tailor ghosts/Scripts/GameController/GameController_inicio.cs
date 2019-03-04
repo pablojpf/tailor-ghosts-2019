@@ -21,6 +21,8 @@ public class GameController_inicio : MonoBehaviour
     public Animator anim_MusicaOnOff;
     public Animator anim_SonidoOnOff;
     public Button botonPlay;
+    private float volumenMusicaActual;
+    private float volumenFxActual;
 
     private bool sonidoActivo = true;
     private bool musicaActiva = true;
@@ -34,8 +36,11 @@ public class GameController_inicio : MonoBehaviour
 
     void Start()
     {
-        
+        volumenMusicaActual = PlayerPrefs.GetFloat("VolumenMusica");
+        volumenFxActual = PlayerPrefs.GetFloat("VolumenFX");
 
+        audioM.SetFloat("volumenFX", volumenFxActual);
+        audioM.SetFloat("volumenMusica", volumenMusicaActual);
     }
 
     
@@ -82,12 +87,15 @@ public class GameController_inicio : MonoBehaviour
 
         if (sonidoActivo)
         {
-            audioM.SetFloat("volumenFX", 0);
+            volumenFxActual = 0f;
+            audioM.SetFloat("volumenFX", volumenFxActual);
         }
         else
         {
-            audioM.SetFloat("volumenFX", -80);
+            volumenFxActual = -80f;
+            audioM.SetFloat("volumenFX", volumenFxActual);
         }
+        PlayerPrefs.SetFloat("volumenFX", volumenFxActual);
     }
 
     public void Musicaonoff()
@@ -97,12 +105,15 @@ public class GameController_inicio : MonoBehaviour
 
         if(musicaActiva)
         {
-            audioM.SetFloat("volumenMusica", 0);
+            volumenMusicaActual = 0f;
+            audioM.SetFloat("volumenMusica", volumenMusicaActual);
         }
         else
         {
-            audioM.SetFloat("volumenMusica", -80);
+            volumenMusicaActual = -80f;
+            audioM.SetFloat("volumenMusica", volumenMusicaActual);
         }
+        PlayerPrefs.SetFloat("volumenMusica", volumenMusicaActual);
     }
 
 
