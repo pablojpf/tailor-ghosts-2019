@@ -8,6 +8,8 @@ using UnityEngine.Audio;
 public class GameController_ingame : MonoBehaviour
 {
 
+    
+
     public static int estrellas = 0;
     public int totalFantasmasNivel = 0 ;
     public int numerodeestrellas;
@@ -27,7 +29,8 @@ public class GameController_ingame : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
+    // Start Activamos la UI dentro del juego y el panel de victoria esta desactivado
+
     void Start()
     {
 
@@ -37,7 +40,9 @@ public class GameController_ingame : MonoBehaviour
         anim_victoria.SetBool("activar", false);
     }
 
-    // Update is called once per frame
+    // Update la variable que cuenta las estrellas se va actualizando cada frame
+    //Si el total de fantasmas baja de 1 se ejecuta la pantalla de victoria
+   
     void Update()
     {
         numerodeestrellas = estrellas;
@@ -48,6 +53,9 @@ public class GameController_ingame : MonoBehaviour
         }
     }
 
+    //La pantalla ingame se desactiva
+    //el menu de pausa aparece y paramos el tiempo
+
     public void Pausa()
     {
       
@@ -55,12 +63,19 @@ public class GameController_ingame : MonoBehaviour
         anim_pausa.SetBool("activar",true);
         Time.timeScale = 0f;
     }
+
+    //Activamos el tiempo y viceversa respecto a la pausa
+    //
+
     public void Play()
     {
         anim_UIingame.SetBool("activar",false);
         anim_pausa.SetBool("activar", false);
         Time.timeScale = 1f;
     }
+
+    //Recargamos el nivel, activamos el tiempo de nuevo y el contado de estrellas vuelve a cero
+    //
 
     public void ReiniciarNivel()
     {
@@ -70,12 +85,18 @@ public class GameController_ingame : MonoBehaviour
 
         estrellas --;
     }
+
+    //Volver al menu
+
     public void VolverMenu()
     {
         MusicManager.instance.MusicaMenu();
         SceneManager.LoadScene(sceneName: "Menu_seleccion_mundo");
         Time.timeScale = 1f;
     }
+
+    //Funciones para ir de un nivel a otro
+
     public void Nivel1_2()
     {
         MusicManager.instance.MusicaM1();
@@ -122,12 +143,16 @@ public class GameController_ingame : MonoBehaviour
         SceneManager.LoadScene(sceneName: "Nivel5_2");
     }
 
+    //Activar la pantalla de victoria
+
     public void FinalNivel()
     {
         
         anim_victoria.SetBool("activar",true);
         anim_victoria.SetInteger("contar", estrellas);
     }
+
+    //Resta el numero de fantasmas
 
     public void RestarFantasmas()
     {

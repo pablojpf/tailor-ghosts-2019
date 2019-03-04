@@ -59,7 +59,7 @@ public class Muelle : MonoBehaviour
         }
         if (paIzquierda == true)
         {
-            quienChoca.transform.position = Vector2.MoveTowards(quienChoca.transform.position, posFinalLeft, 100 * Time.deltaTime);
+            quienChoca.transform.position = Vector2.MoveTowards(quienChoca.transform.position, posFinalLeft, 10 * Time.deltaTime);
             if (new Vector2(quienChoca.transform.position.x, quienChoca.transform.position.y) == posFinalLeft)
             {
                 paIzquierda = false;
@@ -74,22 +74,22 @@ public class Muelle : MonoBehaviour
         quienChoca = col.gameObject;
         posInicial = quienChoca.transform.position;
         
-        if (col.gameObject.CompareTag("Player")&& top == true)
+        if (/*col.gameObject.CompareTag("Player")&&*/ top == true)
         {
             posFinalTop = new Vector2(quienChoca.transform.position.x, Mathf.Round(quienChoca.transform.position.y + 1));
             paRiba = true;
         }
-        if (col.gameObject.CompareTag("Player") && bot == true)
+        if (/*col.gameObject.CompareTag("Player") &&*/ bot == true)
         {
             posFinalBot = new Vector2(quienChoca.transform.position.x, Mathf.Round(quienChoca.transform.position.y - 1));
             paBajo = true;
         }
-        if (col.gameObject.CompareTag("Player") && right == true)
+        if (/*col.gameObject.CompareTag("Player") &&*/ right == true)
         {
             posFinalRight = new Vector2(Mathf.Round(quienChoca.transform.position.x + 1), quienChoca.transform.position.y);
             paDerecha = true;
         }
-        if (col.gameObject.CompareTag("Player") && left == true)
+        if (/*col.gameObject.CompareTag("Player") &&*/ left == true)
         {
             posFinalLeft = new Vector2(Mathf.Round(quienChoca.transform.position.x - 1), quienChoca.transform.position.y);
             paIzquierda = true;

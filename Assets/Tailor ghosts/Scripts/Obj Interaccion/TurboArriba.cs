@@ -21,6 +21,10 @@ public class TurboArriba : MonoBehaviour
 
     }
 
+    //
+    //Turbo hacia un vector up
+    //
+
     void OnTriggerEnter2D(Collider2D col)
     {
         rb = col.gameObject.GetComponent<Rigidbody2D>();

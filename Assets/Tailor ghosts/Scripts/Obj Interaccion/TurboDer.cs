@@ -21,6 +21,11 @@ public class TurboDer : MonoBehaviour
 
     }
 
+    //
+    //Va en direccion derecha
+    //
+
+
     void OnTriggerEnter2D(Collider2D col)
     {
         rb = col.gameObject.GetComponent<Rigidbody2D>();

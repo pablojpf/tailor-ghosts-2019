@@ -5,6 +5,12 @@ using UnityEngine;
 public class Turbo : MonoBehaviour
 {
 
+    //
+    //Declaramos una direccion
+    //una velocidad y el rigidbody
+    //
+
+
     public Vector3 vectorTurbo;
     public float velocidad = 15f;
     public Rigidbody2D rb;
@@ -20,6 +26,11 @@ public class Turbo : MonoBehaviour
     {
         
     }
+
+    //
+    //Cuando un objeto entra en nuestro trigger le añadimos 
+    //la velocidad en la dirección en la que está apuntando 
+    //
 
     void OnTriggerEnter2D(Collider2D col)
     {

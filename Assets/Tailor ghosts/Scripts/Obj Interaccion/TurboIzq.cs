@@ -21,6 +21,9 @@ public class TurboIzq : MonoBehaviour
 
     }
 
+    //
+    //Va en direccion izq
+    //
     void OnTriggerEnter2D(Collider2D col)
     {
         rb = col.gameObject.GetComponent<Rigidbody2D>();
