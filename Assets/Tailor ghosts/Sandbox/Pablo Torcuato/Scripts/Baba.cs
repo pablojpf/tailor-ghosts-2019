@@ -65,7 +65,7 @@ public class Baba : MonoBehaviour
                 //Si se esta moviendo lo para
                 rbTemp.velocity = Vector2.zero;
             }
-               
+            //Le decimos al controlador de las babas que hay alguien dentro   
             BabaController.dentro = true;
 
         }
@@ -75,6 +75,7 @@ public class Baba : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            //Cuando salimos del collider, llamamos a la funcion que indica que estamos fuera de la baba pero queremos que tenga un poco de delay y ponemos 1 segundo
             Invoke("Fuera", 1f);
         }
     }
@@ -91,18 +92,21 @@ public class Baba : MonoBehaviour
 
     public void Comprobador()
     {
+        //Comprobador es una funcion que se activa desde la booleana "Comprueba" y esta a su vez desde el baba controller cada vez que se instancia una baba.
+
         //RayCast Derecho
         Debug.DrawRay(transform.position + new Vector3(0.6f, 0, 0), transform.right * 0.5f, Color.red);
         hitRight = Physics2D.Raycast(transform.position + new Vector3(0.6f, 0, 0), transform.right, 0.6f);
         if (hitRight)
         {
-
+            //Lanza un raycast a la derecha para comprobar si tiene una baba justo a su derecha, los siguientes raycast hacen lo mismo en las direcciones restantes.
             if (hitRight.transform.CompareTag("Baba"))
             {
                 Debug.DrawRay(transform.position, transform.right * 0.6f, Color.green);
                 right = true;
                 if (colRight == false)
                 {
+                    //Si detecta una baba y no tenía ninguna anteriormente detectada, suma a 1 al numero de babas que esta baba esta detectando para simplificar el cambio de sprite
                     colisiones++;
                     colRight = true;
                 }
@@ -164,13 +168,18 @@ public class Baba : MonoBehaviour
 
         }
 
-
+        //Cuando ya hemos terminado de comprobar en todas las direcciones procedemos a hacer el cambio de sprite (si procede)
         CambiaBabas();
     }
 
     public void CambiaBabas()
     {
+        //Para simplificar los cambios de sprite, creamos la condicion dependiendo del numero de babas que haya alrededor de la nuestra,
+        //Es decir, si hay 1 baba en nuestro alrededor, solo puede ser arriba, abajo, izquierda o derecha y nunca vamos a ser, por ejemplo, una esquina.
+        //Después comprueba la direccion y cambia el sprite que le hemos pasado a la tabla desde el editor (los numeros se ponen de acuerdo con el sprite)
+
         //1 colision
+
         if (colisiones == 1)
         {
             if (left == true)
