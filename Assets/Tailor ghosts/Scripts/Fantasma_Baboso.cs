@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SonidoFantasmas))]
+//Obligamos al objeto que tiene el script a llevar el script de sonidoFantasmas
 public class Fantasma_Baboso: MonoBehaviour
 {
 
@@ -17,6 +18,7 @@ public class Fantasma_Baboso: MonoBehaviour
     Vector3 suelto;
     public float velocidad = 10f;
     public bool puedoMoverme = true;
+    //Creamos variables bool para saber la direccion del baboso
     public static bool baja = false;
     public static bool sube = false;
     public static bool izda = false;
@@ -24,6 +26,7 @@ public class Fantasma_Baboso: MonoBehaviour
 
     private void Awake()
     {
+        //Comprobamos que tenga el GameController
         gc = GameObject.Find("GameController");
         if(gc == null)
         {
@@ -65,6 +68,7 @@ public class Fantasma_Baboso: MonoBehaviour
                 if (dif.x > 0)
                 {
                     rb.velocity = new Vector2(1, 0) * velocidad;
+                    //En cada movimiento activamos la direccion que lleve el baboso
                     dcha = true;
                 }
                 else
@@ -92,11 +96,12 @@ public class Fantasma_Baboso: MonoBehaviour
             }
 
         }
-
+        //Reproduce el sonido de mover
         sonido.SonidoMover();
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
+        //Recuadra el sprite
         Reposiciona();
         if (col.gameObject.CompareTag("Player"))
         {
@@ -105,6 +110,7 @@ public class Fantasma_Baboso: MonoBehaviour
 
             if (!col.transform.parent == transform)
             {
+                //Estas lineas de codigo la comparten todos los fantasmas, crea un normal cuando chocan
                 GameObject nuevoFantasma;
                 nuevoFantasma = Instantiate(fantasmaNormal, transform.position, transform.rotation);               
                 nuevoFantasma.transform.SetParent(col.transform);
@@ -125,6 +131,7 @@ public class Fantasma_Baboso: MonoBehaviour
         }
         if(rb.velocity == Vector2.zero)
         {
+            //Cuando el baboso está parado, no va en ninguna direccion 
             baja = false;
             sube = false;
             izda = false;

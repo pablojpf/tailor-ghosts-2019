@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Baba : MonoBehaviour
 {
+    //Vector de la posicion de la baba para atraer al jugador cuando caiga encima
     Vector2 posicionBaba;
+    //Booleana para comprobar si esta tocando al player
     bool toca = false;
     Transform posicionPlayer;
+    //Declaramos una tabla para pasar todos los sprites de las babas
     public Sprite[] spritesBabas;
+    //Declaramos los raycast que vamos a lanzar en todas las direcciones
     RaycastHit2D hitRight;
     RaycastHit2D hitLeft;
     RaycastHit2D hitTop;
     RaycastHit2D hitBot;
+    //
     public bool right = false;
     public bool left = false;
     public bool top = false;
@@ -48,7 +53,7 @@ public class Baba : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-
+        //Si detecta a un player y este esta dentro de la baba activa toca y el vector para hacer el moveTowards pasa a ser el del player que detecta
         if (col.gameObject.transform.CompareTag("Player") && BabaController.dentro == false)
         {
             posicionPlayer = col.gameObject.transform;
@@ -57,6 +62,7 @@ public class Baba : MonoBehaviour
             Rigidbody2D rbTemp = col.GetComponent<Rigidbody2D>();
             if(rbTemp != null)
             {
+                //Si se esta moviendo lo para
                 rbTemp.velocity = Vector2.zero;
             }
                
