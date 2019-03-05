@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Divisor : MonoBehaviour
 {
+    //Le pasamos un fantasma normal para hacer las copias
     public GameObject fantasmaNormal;
+    //Velocidad a la que lanza la copia
     public float velocidadLanzador = 6f;
+    //Mascara de capas del Raycast
     public LayerMask capas;
 
+    //Variables de los Raycast
     RaycastHit2D hitRight;
     RaycastHit2D hitTop;
     RaycastHit2D hitLeft;
     RaycastHit2D hitBot;
 
+    //Variables que se activan en oncollision
     public bool chocoTop = false;
     public bool chocoBot = false;
     public bool chocoRight = false;
     public bool chocoLeft = false;
 
+    //Variables de deteccion del Raycast
     bool derecho = false;
     bool izquierdo = false;
     bool arriba = false;
     bool abajo = false;
 
+    //Creamos una variable que sirve para comprobar que el objeto que choca con nosotros es el mismo que ha detectado el raycast
     GameObject quienChoca;
 
     // Start is called before the first frame update
@@ -38,11 +45,18 @@ public class Divisor : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
+        //Para facilitar el entendimiento del código, voy a enumerar los pasos que sigue la ejecución de este en el juego
+
         if (col.gameObject.transform.CompareTag("Player"))
         {
 
+            //Si un player choca con nosotros, lo pasamos a la variable quienChoca y llamamos a la funcion Check
             quienChoca = col.gameObject;
+            //1
             Check();
+
+            //4
+            //Cuando ya hemos hecho todas las comprobaciones lo destruimos
             Destroy(col.gameObject);          
         }
     }
@@ -51,21 +65,22 @@ public class Divisor : MonoBehaviour
 
     public void Check()
     {
+        //Lanzamos un raycast en cada direccion
 
-       
-        Debug.Log("COMPROBADOR");
         //RayCast Superior
         hitTop = Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), transform.up, 0.1f, capas);
         if (hitTop)
         {
-            Debug.Log(hitTop.transform.name);
+            //Activamos la variable de que estamos detectando a alquien arriba y comprobamos que el objeto que detectamos es el que ha chocado con nosotros antes
             chocoTop = true;
             if (hitTop.transform.gameObject == quienChoca)
             {
+                //Como se ha comprobado que si lo es, le decimos que efectivamente viene de arriba
                 arriba = true;
             }
 
         }
+        //Si no detecta nada, lo volvemos false, esto lo hacemos por si en algun otro check habia un objeto pero en este ya no esta
         else { chocoTop = false; }
 
         //RayCast Inferior
@@ -107,17 +122,23 @@ public class Divisor : MonoBehaviour
         }
         else { chocoLeft = false; }
 
+        //2
+        //LLamamos a la funcion que lanza los fantasmas si es que ha detectado a alguno
         ControlaLanzadores();
     }
 
     public void ControlaLanzadores()
     {
+        //Va comprobando la direccion por la que ha llegado el fantasma, si es true, lanza fantasmas por las direcciones restantes
         if (arriba == true)
         {
+            //3
+            //Activamos las funciones que lanzan los fantasmas
             LanzadorAbajo();
             LanzadorIzquierdo();
             LanzadorDerecho();
 
+            //Lo vuelve false para que solo lance 1 vez
             arriba = false;
         }
         if (abajo == true)
@@ -149,8 +170,10 @@ public class Divisor : MonoBehaviour
 
     public void LanzadorArriba()
     {
+        //Cada vez que lanza a un fantasma, antes comprueba que no haya fantasmas en la salida del divisor para que no se colapse
         if(chocoTop == false)
         {
+            //Crea un fantasma nuevo y le aplica una fuerza hacia la direccion en la que sale
             GameObject nuevofantasma;
             nuevofantasma = Instantiate(fantasmaNormal, transform.position + new Vector3(0, 1, 0), transform.rotation);
             nuevofantasma.GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocidadLanzador);
