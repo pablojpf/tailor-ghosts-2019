@@ -418,6 +418,8 @@ GameObject:
   - component: {fileID: 151841713}
   - component: {fileID: 151841715}
   - component: {fileID: 151841714}
+  - component: {fileID: 151841717}
+  - component: {fileID: 151841716}
   m_Layer: 5
   m_Name: Mundo 2_1
   m_TagString: Untagged
@@ -485,6 +487,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151841712}
   m_CullTransparentMesh: 0
+--- !u!114 &151841716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151841712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b08442e7b80e8468843a6bfaf4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mundo: 3
+  estrellas: 0
+--- !u!95 &151841717
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151841712}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedb0708e6b4c4649b2b739a6059a130, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &170072607
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +531,8 @@ GameObject:
   - component: {fileID: 170072608}
   - component: {fileID: 170072610}
   - component: {fileID: 170072609}
+  - component: {fileID: 170072612}
+  - component: {fileID: 170072611}
   m_Layer: 5
   m_Name: Mundo 3_2
   m_TagString: Untagged
@@ -563,6 +600,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170072607}
   m_CullTransparentMesh: 0
+--- !u!114 &170072611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170072607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b08442e7b80e8468843a6bfaf4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mundo: 6
+  estrellas: 0
+--- !u!95 &170072612
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170072607}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedb0708e6b4c4649b2b739a6059a130, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &227808612
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +718,8 @@ GameObject:
   - component: {fileID: 233740426}
   - component: {fileID: 233740428}
   - component: {fileID: 233740427}
+  - component: {fileID: 233740430}
+  - component: {fileID: 233740429}
   m_Layer: 5
   m_Name: Mundo 3_1
   m_TagString: Untagged
@@ -715,6 +787,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233740425}
   m_CullTransparentMesh: 0
+--- !u!114 &233740429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233740425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b08442e7b80e8468843a6bfaf4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mundo: 5
+  estrellas: 0
+--- !u!95 &233740430
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233740425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedb0708e6b4c4649b2b739a6059a130, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &244181786
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +984,8 @@ GameObject:
   - component: {fileID: 329728246}
   - component: {fileID: 329728248}
   - component: {fileID: 329728247}
+  - component: {fileID: 329728250}
+  - component: {fileID: 329728249}
   m_Layer: 5
   m_Name: Mundo 1_2
   m_TagString: Untagged
@@ -946,6 +1053,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329728245}
   m_CullTransparentMesh: 0
+--- !u!114 &329728249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329728245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b08442e7b80e8468843a6bfaf4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mundo: 2
+  estrellas: 0
+--- !u!95 &329728250
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329728245}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedb0708e6b4c4649b2b739a6059a130, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &335662617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,6 +1245,8 @@ GameObject:
   - component: {fileID: 340315399}
   - component: {fileID: 340315401}
   - component: {fileID: 340315400}
+  - component: {fileID: 340315403}
+  - component: {fileID: 340315402}
   m_Layer: 5
   m_Name: Mundo 4_1
   m_TagString: Untagged
@@ -1172,6 +1314,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340315398}
   m_CullTransparentMesh: 0
+--- !u!114 &340315402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340315398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b08442e7b80e8468843a6bfaf4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mundo: 7
+  estrellas: 0
+--- !u!95 &340315403
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340315398}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedb0708e6b4c4649b2b739a6059a130, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &354706114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,6 +1536,8 @@ GameObject:
   - component: {fileID: 511342045}
   - component: {fileID: 511342047}
   - component: {fileID: 511342046}
+  - component: {fileID: 511342049}
+  - component: {fileID: 511342048}
   m_Layer: 5
   m_Name: Mundo 4_2
   m_TagString: Untagged
@@ -1428,6 +1605,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511342044}
   m_CullTransparentMesh: 0
+--- !u!114 &511342048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511342044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b08442e7b80e8468843a6bfaf4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mundo: 8
+  estrellas: 0
+--- !u!95 &511342049
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511342044}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedb0708e6b4c4649b2b739a6059a130, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &537462459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,6 +2794,8 @@ GameObject:
   - component: {fileID: 1033482219}
   - component: {fileID: 1033482221}
   - component: {fileID: 1033482220}
+  - component: {fileID: 1033482223}
+  - component: {fileID: 1033482222}
   m_Layer: 5
   m_Name: Mundo 5_1
   m_TagString: Untagged
@@ -2651,6 +2863,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033482218}
   m_CullTransparentMesh: 0
+--- !u!114 &1033482222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033482218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b08442e7b80e8468843a6bfaf4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mundo: 9
+  estrellas: 0
+--- !u!95 &1033482223
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033482218}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedb0708e6b4c4649b2b739a6059a130, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1034973572
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,6 +3740,8 @@ GameObject:
   - component: {fileID: 1292544133}
   - component: {fileID: 1292544135}
   - component: {fileID: 1292544134}
+  - component: {fileID: 1292544137}
+  - component: {fileID: 1292544136}
   m_Layer: 5
   m_Name: Mundo 2_2
   m_TagString: Untagged
@@ -3562,6 +3809,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292544132}
   m_CullTransparentMesh: 0
+--- !u!114 &1292544136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292544132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b08442e7b80e8468843a6bfaf4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mundo: 4
+  estrellas: 0
+--- !u!95 &1292544137
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292544132}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedb0708e6b4c4649b2b739a6059a130, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1323843326
 GameObject:
   m_ObjectHideFlags: 0
@@ -3903,6 +4183,8 @@ GameObject:
   - component: {fileID: 1572246058}
   - component: {fileID: 1572246060}
   - component: {fileID: 1572246059}
+  - component: {fileID: 1572246062}
+  - component: {fileID: 1572246061}
   m_Layer: 5
   m_Name: Mundo 5_2
   m_TagString: Untagged
@@ -3970,6 +4252,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572246057}
   m_CullTransparentMesh: 0
+--- !u!114 &1572246061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572246057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b08442e7b80e8468843a6bfaf4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mundo: 10
+  estrellas: 0
+--- !u!95 &1572246062
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572246057}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedb0708e6b4c4649b2b739a6059a130, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1593817502
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,6 +5147,8 @@ GameObject:
   - component: {fileID: 1974518983}
   - component: {fileID: 1974518985}
   - component: {fileID: 1974518984}
+  - component: {fileID: 1974518987}
+  - component: {fileID: 1974518986}
   m_Layer: 5
   m_Name: Mundo 1_1
   m_TagString: Untagged
@@ -4899,3 +5216,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974518982}
   m_CullTransparentMesh: 0
+--- !u!95 &1974518986
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974518982}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dedb0708e6b4c4649b2b739a6059a130, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1974518987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974518982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b08442e7b80e8468843a6bfaf4a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mundo: 1
+  estrellas: 0

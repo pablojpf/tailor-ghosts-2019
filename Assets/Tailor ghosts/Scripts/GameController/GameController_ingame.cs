@@ -13,6 +13,7 @@ public class GameController_ingame : MonoBehaviour
     public static int estrellas = 0;
     public int totalFantasmasNivel = 0 ;
     public int numerodeestrellas;
+    public int numeroMundo = 1;
 
 
     public Animator anim_UIingame;
@@ -147,7 +148,7 @@ public class GameController_ingame : MonoBehaviour
 
     public void FinalNivel()
     {
-        
+        PlayerPrefs.SetInt("nivel" + numeroMundo, estrellas);
         anim_victoria.SetBool("activar",true);
         anim_victoria.SetInteger("contar", estrellas);
     }

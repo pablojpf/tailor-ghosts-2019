@@ -337,6 +337,11 @@ PrefabInstance:
       propertyPath: anim_victoria
       value: 
       objectReference: {fileID: 1195422428}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: numeroMundo
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5046212273423999331, guid: 6b9e20bbf1437f443bda5f8d05198055,
         type: 3}
       propertyPath: m_PlayOnAwake

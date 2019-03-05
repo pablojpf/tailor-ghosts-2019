@@ -2015,6 +2015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalFantasmasNivel: 4
   numerodeestrellas: 0
+  numeroMundo: 9
   anim_UIingame: {fileID: 156137182}
   anim_pausa: {fileID: 156137181}
   anim_victoria: {fileID: 156137180}

@@ -173,6 +173,8 @@ MonoBehaviour:
   anim_MusicaOnOff: {fileID: 1033595484}
   anim_SonidoOnOff: {fileID: 2043110245}
   botonPlay: {fileID: 2131919112}
+  volumenMusicaActual: 0
+  volumenFxActual: 0
   audioM: {fileID: 24100000, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   Musica: {fileID: 243830442549381834, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   Fx: {fileID: 243965227530828546, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
@@ -1890,7 +1892,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

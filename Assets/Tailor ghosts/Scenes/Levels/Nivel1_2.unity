@@ -1665,6 +1665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalFantasmasNivel: 2
   numerodeestrellas: 0
+  numeroMundo: 2
   anim_UIingame: {fileID: 544607480}
   anim_pausa: {fileID: 544607479}
   anim_victoria: {fileID: 544607481}

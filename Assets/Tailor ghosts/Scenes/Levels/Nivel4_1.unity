@@ -984,6 +984,11 @@ PrefabInstance:
       propertyPath: anim_victoria
       value: 
       objectReference: {fileID: 898764708}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: numeroMundo
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5046212273423999334, guid: 6b9e20bbf1437f443bda5f8d05198055,
         type: 3}
       propertyPath: sonidoPausa
