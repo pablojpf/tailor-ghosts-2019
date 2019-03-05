@@ -5,28 +5,33 @@ using UnityEngine;
 
 public class Cremallera : MonoBehaviour
 {
+    //Cargamos los dos gameobjects que van a llevar los sprites de cremallera
     public GameObject cremallera;
     public GameObject cremalleraVertical;
+    //Mascara para el raycast
     public LayerMask capasRaycast;
+    //Raycast en las 4 direcciones
     RaycastHit2D hitRight;
     RaycastHit2D hitLeft;
     RaycastHit2D hitTop;
     RaycastHit2D hitBot;
+    //Variables de deteccion del raycast
     public bool right = false;
     public bool left = false;
     public bool top = false;
     public bool bot = false;
+    //Variables de union (para no sobreponer cremalleras)
     public bool unidoRight = false;
     public bool unidoLeft = false;
     public bool unidoTop = false;
     public bool unidoBot = false;
-    // Start is called before the first frame update
+
     void Start()
     {
+        //Justo al empezar comprueba, porque hay niveles que empiezan con los fantasmas ya unidos
         Comprobador();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -34,17 +39,20 @@ public class Cremallera : MonoBehaviour
 
     public void Comprobador()
     {
-       
+        //Creamos como con todas las instancias una copia para poder interactuar directamente despues
         GameObject copiaCremallera;
         //RayCast Derecho
         Debug.DrawRay(transform.position + new Vector3(0.6f, 0, 0), transform.right * 0.5f, Color.red);
         hitRight = Physics2D.Raycast(transform.position + new Vector3(0.6f, 0, 0), transform.right, 0.6f, capasRaycast);
         if (hitRight)
         {
+            //Si detectamos a un Player con el raycast y no tenemos padre, nos convertimos en su hijo
             if (hitRight.transform.CompareTag("Player") && transform.parent != null)
             {
+                //Si nuestro padre es el objeto que ha detectado el raycast
                 if (transform.parent == hitRight.transform)
                 {
+                    //Activamos la colision en la derecha y si no estabamos unidos anteriormente, creamos la cremallera y la hacemos nuestra hija
                     Debug.DrawRay(transform.position, transform.right * 0.6f, Color.green);
                     right = true;
                     if (unidoRight == false)
@@ -56,13 +64,14 @@ public class Cremallera : MonoBehaviour
                     }
                 }
 
-
+                
             }
             else
             {
                 Debug.LogWarning(transform.name + ":"+hitRight.transform.name);
             }
 
+            //El resto de lineas son iguales que esta pero en las direcciones restantes
         }
         //RayCast Izquierdo
         Debug.DrawRay(transform.position - new Vector3(0.6f, 0, 0), transform.right * -0.5f, Color.red);
