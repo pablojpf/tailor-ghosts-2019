@@ -39,8 +39,6 @@ public class Fantasma_normal1 : MonoBehaviour
         scriptFantasma = GetComponent<Fantasma_normal1>();
         Reposiciona();
         sonido = GetComponent<SonidoFantasmas>();
-        
-
     }
 
     // Update is called once per frame

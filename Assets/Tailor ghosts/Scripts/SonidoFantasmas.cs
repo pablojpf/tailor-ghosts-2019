@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
+
 public class SonidoFantasmas : MonoBehaviour
 {
     public AudioClip sonidoMovimiento;
-    AudioSource fuenteSonido; //definimos que vamos a usar los sonidos
+    AudioSource fuenteSonido;
+
+    private int numeroPrivado = 1;
+    public int numeroPublico = 1;
+    public static int numeroEstatico = 1;
 
     private void Start()
     {
+        //Le decimos que la variable de audiosource es el audiosource que lleva el objeto de este script
         fuenteSonido = GetComponent<AudioSource>();
     }
 
@@ -19,5 +25,12 @@ public class SonidoFantasmas : MonoBehaviour
         fuenteSonido.Play();
     }
 
-   
+    private void Update()
+    {
+        numeroEstatico = numeroPublico;
+    }
+    public static void Hola()
+    {
+        Debug.Log("Hola");
+    }
 }
