@@ -1570,16 +1570,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 981890615829880162, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 759276a4988992c4d8e731fe1d096f0e, type: 3}
-    - target: {fileID: 981890615829880162, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3591259286682201343, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1709,10 +1699,10 @@ PrefabInstance:
     - target: {fileID: 525262821, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1729232750}
+      objectReference: {fileID: 0}
     - target: {fileID: 525262821, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: AudioPausa
+      value: SonidoDeAtras
       objectReference: {fileID: 0}
     - target: {fileID: 525262821, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1963,6 +1953,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 981890615829880162, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 759276a4988992c4d8e731fe1d096f0e, type: 3}
+    - target: {fileID: 981890615829880162, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 602135687, guid: 7dd28fd4f5d8e8c4290e02fb193a8da2, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2016,6 +2016,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046212273423999334, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: sonidoPausa
+      value: 
+      objectReference: {fileID: 696517204}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: anim_UIingame
+      value: 
+      objectReference: {fileID: 1121019208}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: anim_pausa
+      value: 
+      objectReference: {fileID: 109293883}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: anim_victoria
+      value: 
+      objectReference: {fileID: 922608683}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: musica
+      value: 
+      objectReference: {fileID: 1571405871}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: totalFantasmasNivel
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5046212273423999330, guid: 6b9e20bbf1437f443bda5f8d05198055,
         type: 3}
@@ -2072,35 +2102,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: anim_UIingame
-      value: 
-      objectReference: {fileID: 1121019208}
-    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: anim_pausa
-      value: 
-      objectReference: {fileID: 109293883}
-    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: anim_victoria
-      value: 
-      objectReference: {fileID: 922608683}
-    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: musica
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: totalFantasmasNivel
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5046212273423999334, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: sonidoPausa
-      value: 
-      objectReference: {fileID: 696517204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b9e20bbf1437f443bda5f8d05198055, type: 3}
