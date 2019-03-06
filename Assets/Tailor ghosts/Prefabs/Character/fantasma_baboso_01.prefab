@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 300
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: b55baf0f3ec983d44998a7d180a533ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,7 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fantasmaNormal: {fileID: 4647705640409927777, guid: acf14e08434d48f46b48b06ad9ce6c8f,
     type: 3}
-  gc: {fileID: 0}
   velocidad: 10
   puedoMoverme: 1
 --- !u!61 &7486442694889715681
@@ -259,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonidoMovimiento: {fileID: 8300000, guid: e720b470724268242a9ddef2298dc003, type: 3}
+  numeroPublico: 1
 --- !u!95 &1445994575875125394
 Animator:
   serializedVersion: 3

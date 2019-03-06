@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 300
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 6e876a06ad8c853429e6595e9d580d8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonidoMovimiento: {fileID: 8300000, guid: 8dec49e27075a2049871040efcbf8282, type: 3}
+  numeroPublico: 1
 --- !u!114 &4813174771000502172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 5046212273423999328, guid: 6b9e20bbf1437f443bda5f8d05198055, type: 3}
+  direccion: {x: 0, y: 0}
   velocidad: 10
   puedoMoverme: 1
 --- !u!114 &8101303182226972102
