@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 27
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 4d0f92b35d9ed7e4aa873265b94e6505, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonidoMovimiento: {fileID: 8300000, guid: 313f37f9aa264244196dcbe0f612e6f1, type: 3}
+  numeroPublico: 1
 --- !u!114 &6110470601759677579
 MonoBehaviour:
   m_ObjectHideFlags: 0
