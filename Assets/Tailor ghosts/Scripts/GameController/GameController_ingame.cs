@@ -14,7 +14,7 @@ public class GameController_ingame : MonoBehaviour
     public int totalFantasmasNivel = 0 ;
     public int numerodeestrellas;
     public int numeroMundo = 1;
-
+    public int numeroNivel;
 
     public Animator anim_UIingame;
     public Animator anim_pausa;
@@ -22,7 +22,8 @@ public class GameController_ingame : MonoBehaviour
 
     public AudioSource musica;
 
-
+    bool completado = false;
+    public bool nivel2 = false;
     void Awake()
     {
 
@@ -151,6 +152,25 @@ public class GameController_ingame : MonoBehaviour
         PlayerPrefs.SetInt("nivel" + numeroMundo, estrellas);
         anim_victoria.SetBool("activar",true);
         anim_victoria.SetInteger("contar", estrellas);
+        if(completado == false)
+        {
+            if (nivel2 == true)
+            {
+                if(numeroNivel > PlayerPrefs.GetInt("Niveles"))
+                {
+                    MundosManager.SumaNivel();
+                }
+                
+            }
+            else
+            {
+                NivelesSecundariosManager.SumaSecundario();
+            }
+            
+            
+            completado = true;
+        }
+        
     }
 
     //Resta el numero de fantasmas

@@ -395,6 +395,11 @@ MonoBehaviour:
   audioM: {fileID: 24100000, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   Musica: {fileID: 243830442549381834, guid: cc53ebeebe10e594ca51ea2ca30c269c, type: 2}
   musica_menus: {fileID: 8300000, guid: c151a3296cc4f274a88296f0af433b28, type: 3}
+  musica_mundo1: {fileID: 0}
+  musica_mundo2: {fileID: 0}
+  musica_mundo3: {fileID: 0}
+  musica_mundo4: {fileID: 0}
+  musica_mundo5: {fileID: 0}
 --- !u!4 &224656148
 Transform:
   m_ObjectHideFlags: 0
@@ -419,6 +424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 599996947}
   - component: {fileID: 599996946}
+  - component: {fileID: 599996948}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -452,6 +458,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599996948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599996945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0c63e02a8466e4a89c752dfe8a512c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nivel: {fileID: 1290644122}
+  nivelActual: 2
 --- !u!1 &603123290
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +836,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1290644123}
   m_OnClick:
     m_PersistentCalls:

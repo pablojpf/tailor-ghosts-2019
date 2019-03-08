@@ -1540,11 +1540,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
-    - target: {fileID: 5046212273423999334, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: sonidoPausa
-      value: 
-      objectReference: {fileID: 245689524}
     - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
         type: 3}
       propertyPath: anim_UIingame
@@ -1570,6 +1565,21 @@ PrefabInstance:
       propertyPath: numeroMundo
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: nivel2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: numeroNivel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046212273423999334, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: sonidoPausa
+      value: 
+      objectReference: {fileID: 245689524}
     - target: {fileID: 5046212273423999330, guid: 6b9e20bbf1437f443bda5f8d05198055,
         type: 3}
       propertyPath: m_LocalPosition.x

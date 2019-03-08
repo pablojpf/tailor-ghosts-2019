@@ -601,11 +601,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
-    - target: {fileID: 5046212273423999334, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: sonidoPausa
-      value: 
-      objectReference: {fileID: 1699793742}
     - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
         type: 3}
       propertyPath: totalFantasmasNivel
@@ -636,6 +631,16 @@ PrefabInstance:
       propertyPath: numeroMundo
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: numeroNivel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046212273423999334, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: sonidoPausa
+      value: 
+      objectReference: {fileID: 1699793742}
     - target: {fileID: 5046212273423999330, guid: 6b9e20bbf1437f443bda5f8d05198055,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1181,16 +1186,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4647705640409927789, guid: acf14e08434d48f46b48b06ad9ce6c8f,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4813174771000502172, guid: acf14e08434d48f46b48b06ad9ce6c8f,
         type: 3}
       propertyPath: gc
       value: 
       objectReference: {fileID: 1416644222}
+    - target: {fileID: 4647705640409927789, guid: acf14e08434d48f46b48b06ad9ce6c8f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acf14e08434d48f46b48b06ad9ce6c8f, type: 3}
 --- !u!1 &1358061470
@@ -1370,16 +1375,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4647705640409927789, guid: acf14e08434d48f46b48b06ad9ce6c8f,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4813174771000502172, guid: acf14e08434d48f46b48b06ad9ce6c8f,
         type: 3}
       propertyPath: gc
       value: 
       objectReference: {fileID: 1416644222}
+    - target: {fileID: 4647705640409927789, guid: acf14e08434d48f46b48b06ad9ce6c8f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acf14e08434d48f46b48b06ad9ce6c8f, type: 3}
 --- !u!1001 &1699793741
