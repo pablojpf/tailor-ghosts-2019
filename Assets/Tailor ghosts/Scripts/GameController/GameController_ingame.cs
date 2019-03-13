@@ -24,12 +24,7 @@ public class GameController_ingame : MonoBehaviour
 
     bool completado = false;
     public bool nivel2 = false;
-    void Awake()
-    {
-
-    }
-
-
+    public bool nivelDivisor = false;
 
     // Start Activamos la UI dentro del juego y el panel de victoria esta desactivado
 
@@ -48,11 +43,21 @@ public class GameController_ingame : MonoBehaviour
     void Update()
     {
         numerodeestrellas = estrellas;
-         
-        if (totalFantasmasNivel <= 1)
+        if(nivelDivisor == false)
         {
-            FinalNivel();
+            if (totalFantasmasNivel <= 1)
+            {
+                FinalNivel();
+            }
         }
+        else
+        {
+            if (totalFantasmasNivel <= 0)
+            {
+                FinalNivel();
+            }
+        }
+
     }
 
     //La pantalla ingame se desactiva
@@ -177,7 +182,11 @@ public class GameController_ingame : MonoBehaviour
 
     public void RestarFantasmas()
     {
-        totalFantasmasNivel--;
-        
+        totalFantasmasNivel--;       
+    }
+    //Creada para solucinar el bug del divisor
+    public void SumarFantasmas()
+    {
+        totalFantasmasNivel++;
     }
 }

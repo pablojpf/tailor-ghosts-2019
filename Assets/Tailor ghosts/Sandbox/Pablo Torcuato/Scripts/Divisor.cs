@@ -29,13 +29,16 @@ public class Divisor : MonoBehaviour
     bool arriba = false;
     bool abajo = false;
 
+    //Llamamos al Gamecontroller para aumentar el numero maximo de fantasmas cuando creamos nuevos
+    public GameObject gc;
+
     //Creamos una variable que sirve para comprobar que el objeto que choca con nosotros es el mismo que ha detectado el raycast
     GameObject quienChoca;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
+    private void Awake()
+    {
+        gc = GameObject.Find("GameController");
     }
 
     // Update is called once per frame
@@ -57,7 +60,8 @@ public class Divisor : MonoBehaviour
 
             //4
             //Cuando ya hemos hecho todas las comprobaciones lo destruimos
-            Destroy(col.gameObject);          
+            Destroy(col.gameObject);
+            Invoke("RestaF", 0.5f);
         }
     }
 
@@ -177,6 +181,7 @@ public class Divisor : MonoBehaviour
             GameObject nuevofantasma;
             nuevofantasma = Instantiate(fantasmaNormal, transform.position + new Vector3(0, 1, 0), transform.rotation);
             nuevofantasma.GetComponent<Rigidbody2D>().velocity = new Vector2(0, velocidadLanzador);
+            gc.GetComponent<GameController_ingame>().SumarFantasmas();
         }
 
     }
@@ -188,6 +193,7 @@ public class Divisor : MonoBehaviour
             GameObject nuevofantasma;
             nuevofantasma = Instantiate(fantasmaNormal, transform.position - new Vector3(0, 1, 0), transform.rotation);
             nuevofantasma.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -velocidadLanzador);
+            gc.GetComponent<GameController_ingame>().SumarFantasmas();
         }
     }
 
@@ -198,6 +204,7 @@ public class Divisor : MonoBehaviour
             GameObject nuevofantasma;
             nuevofantasma = Instantiate(fantasmaNormal, transform.position - new Vector3(1, 0, 0), transform.rotation);
             nuevofantasma.GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidadLanzador, 0);
+            gc.GetComponent<GameController_ingame>().SumarFantasmas();
         }
     }
 
@@ -208,6 +215,12 @@ public class Divisor : MonoBehaviour
             GameObject nuevofantasma;
             nuevofantasma = Instantiate(fantasmaNormal, transform.position + new Vector3(1, 0, 0), transform.rotation);
             nuevofantasma.GetComponent<Rigidbody2D>().velocity = new Vector2(velocidadLanzador, 0);
+            gc.GetComponent<GameController_ingame>().SumarFantasmas();
         }
+    }
+    public void RestaF()
+    {
+        gc.GetComponent<GameController_ingame>().RestarFantasmas();
+        gc.GetComponent<GameController_ingame>().nivelDivisor = false;
     }
 }
