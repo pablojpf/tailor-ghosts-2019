@@ -45,6 +45,7 @@ public class Movimientos : MonoBehaviour
     }
     void Start()
     {
+        direccion = Vector2.zero;
         rb = GetComponent<Rigidbody2D>();
         Reposiciona();
         sonido = GetComponent<SonidoFantasmas>();
@@ -58,51 +59,6 @@ public class Movimientos : MonoBehaviour
         {
             rb.velocity = Movimientos.direccion;
         }
-        /*
-        if (right == true)
-        {
-            Debug.DrawRay(transform.position + new Vector3(puntoSalida, 0, 0), transform.right * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position + new Vector3(puntoSalida, 0, 0), transform.right, distancia);
-            if (hit)
-            {
-                Debug.Log(hit.transform.name);
-                Debug.DrawRay(transform.position + new Vector3(puntoSalida, 0, 0), transform.right * distancia, Color.green);
-                colisionRight = true;
-            }
-        }
-        if (left == true)
-        {
-            Debug.DrawRay(transform.position + new Vector3(-puntoSalida, 0, 0), (transform.right * -1) * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position + new Vector3(-puntoSalida, 0, 0), transform.right * -1, distancia);
-            if (hit)
-            {
-                Debug.Log(hit.transform.name);
-                Debug.DrawRay(transform.position + new Vector3(-puntoSalida, 0, 0), (transform.right * -1) * distancia, Color.green);
-                colisionLeft = true;
-            }
-        }
-        if (top == true)
-        {
-            Debug.DrawRay(transform.position + new Vector3(0, puntoSalida, 0), transform.up * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position + new Vector3(0, puntoSalida, 0), transform.up, distancia);
-            if (hit)
-            {
-                Debug.Log(hit.transform.name);
-                Debug.DrawRay(transform.position + new Vector3(0, puntoSalida, 0), transform.up * distancia, Color.green);
-                colisionTop = true;
-            }
-        }
-        if (bot == true)
-        {
-            Debug.DrawRay(transform.position + new Vector3(0, -puntoSalida, 0), (transform.up * -1) * distancia, Color.red);
-            hit = Physics2D.Raycast(transform.position + new Vector3(0, -puntoSalida, 0), transform.up * -1, distancia);
-            if (hit)
-            {
-                Debug.Log(hit.transform.name);
-                Debug.DrawRay(transform.position + new Vector3(0, -puntoSalida, 0), (transform.up * -1) * distancia, Color.green);
-                colisionTop = true;
-            }
-        }*/
     }
     void OnMouseDown()
     {
