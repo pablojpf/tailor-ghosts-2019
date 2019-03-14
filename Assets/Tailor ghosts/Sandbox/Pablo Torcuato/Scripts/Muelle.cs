@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SonidoFantasmas))]
+
 public class Muelle : MonoBehaviour
 {
     public static bool top = false;
@@ -21,10 +23,13 @@ public class Muelle : MonoBehaviour
     Vector2 posFinalBot;
     Vector2 posFinalRight;
     Vector2 posFinalLeft;
+
+    SonidoFantasmas sonido;
+
     // Start is called before the first frame update
     void Start()
     {
-   
+        sonido = GetComponent<SonidoFantasmas>();
     }
 
     // Update is called once per frame
@@ -78,21 +83,29 @@ public class Muelle : MonoBehaviour
         {
             posFinalTop = new Vector2(quienChoca.transform.position.x, Mathf.Round(quienChoca.transform.position.y + 1));
             paRiba = true;
+
+            sonido.SonidoMover();
         }
         if (/*col.gameObject.CompareTag("Player") &&*/ bot == true)
         {
             posFinalBot = new Vector2(quienChoca.transform.position.x, Mathf.Round(quienChoca.transform.position.y - 1));
             paBajo = true;
+
+            sonido.SonidoMover();
         }
         if (/*col.gameObject.CompareTag("Player") &&*/ right == true)
         {
             posFinalRight = new Vector2(Mathf.Round(quienChoca.transform.position.x + 1), quienChoca.transform.position.y);
             paDerecha = true;
+
+            sonido.SonidoMover();
         }
         if (/*col.gameObject.CompareTag("Player") &&*/ left == true)
         {
             posFinalLeft = new Vector2(Mathf.Round(quienChoca.transform.position.x - 1), quienChoca.transform.position.y);
             paIzquierda = true;
+
+            sonido.SonidoMover();
         }
     }
 
