@@ -566,6 +566,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 68048086279762943, guid: b8d8575a71e297b4db7f8c2165c3ae96,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1173037935768587570, guid: b8d8575a71e297b4db7f8c2165c3ae96,
         type: 3}
       propertyPath: gc
@@ -722,7 +727,7 @@ PrefabInstance:
     - target: {fileID: 301378655726111917, guid: 6b7be734a5b10074e8ff3575ecdcf90b,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 275
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7be734a5b10074e8ff3575ecdcf90b, type: 3}
@@ -796,7 +801,7 @@ PrefabInstance:
     - target: {fileID: 301378655726111917, guid: 6b7be734a5b10074e8ff3575ecdcf90b,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 275
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7be734a5b10074e8ff3575ecdcf90b, type: 3}
@@ -1672,6 +1677,7 @@ MonoBehaviour:
   anim_victoria: {fileID: 544607481}
   musica: {fileID: 252135650}
   nivel2: 1
+  nivelDivisor: 0
 --- !u!114 &1502468321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1956,7 +1962,7 @@ PrefabInstance:
     - target: {fileID: 301378655726111917, guid: 6b7be734a5b10074e8ff3575ecdcf90b,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 275
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7be734a5b10074e8ff3575ecdcf90b, type: 3}
