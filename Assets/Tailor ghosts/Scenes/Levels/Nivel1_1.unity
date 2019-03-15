@@ -679,7 +679,7 @@ PrefabInstance:
     - target: {fileID: 301378655726111917, guid: 6b7be734a5b10074e8ff3575ecdcf90b,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7be734a5b10074e8ff3575ecdcf90b, type: 3}
@@ -1117,7 +1117,7 @@ PrefabInstance:
     - target: {fileID: 301378655726111917, guid: 6b7be734a5b10074e8ff3575ecdcf90b,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b7be734a5b10074e8ff3575ecdcf90b, type: 3}
@@ -2017,36 +2017,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
-    - target: {fileID: 5046212273423999334, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: sonidoPausa
-      value: 
-      objectReference: {fileID: 696517204}
-    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: anim_UIingame
-      value: 
-      objectReference: {fileID: 1121019208}
-    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: anim_pausa
-      value: 
-      objectReference: {fileID: 109293883}
-    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: anim_victoria
-      value: 
-      objectReference: {fileID: 922608683}
-    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: musica
-      value: 
-      objectReference: {fileID: 1571405871}
-    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
-        type: 3}
-      propertyPath: totalFantasmasNivel
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5046212273423999330, guid: 6b9e20bbf1437f443bda5f8d05198055,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2102,5 +2072,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: anim_UIingame
+      value: 
+      objectReference: {fileID: 1121019208}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: anim_pausa
+      value: 
+      objectReference: {fileID: 109293883}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: anim_victoria
+      value: 
+      objectReference: {fileID: 922608683}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: musica
+      value: 
+      objectReference: {fileID: 1571405871}
+    - target: {fileID: 5046212273423999329, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: totalFantasmasNivel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046212273423999334, guid: 6b9e20bbf1437f443bda5f8d05198055,
+        type: 3}
+      propertyPath: sonidoPausa
+      value: 
+      objectReference: {fileID: 696517204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b9e20bbf1437f443bda5f8d05198055, type: 3}
